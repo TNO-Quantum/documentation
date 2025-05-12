@@ -1,0 +1,15 @@
+communication.qkd_key_rate.quantum
+==================================
+
+.. automodule:: tno.quantum.communication.qkd_key_rate.quantum
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. toctree::
+   :maxdepth: 1
+
+   bb84
+   bb84_single_photon
+   bbm92
+

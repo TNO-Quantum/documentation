@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>communication.qkd_key_rate.classical.winnow &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="utils" href="../../tno.quantum.utils/main.html" />
+    <link rel="prev" title="communication.qkd_key_rate.classical.privacy_amplification" href="privacy_amplification.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">communication.qkd_key_rate</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="main.html">communication.qkd_key_rate.classical</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">communication.qkd_key_rate</a></li>
+          <li class="breadcrumb-item"><a href="main.html">communication.qkd_key_rate.classical</a></li>
+      <li class="breadcrumb-item active">communication.qkd_key_rate.classical.winnow</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-tno.quantum.communication.qkd_key_rate.classical.winnow">
+<span id="communication-qkd-key-rate-classical-winnow"></span><h1>communication.qkd_key_rate.classical.winnow<a class="headerlink" href="#module-tno.quantum.communication.qkd_key_rate.classical.winnow" title="Permalink to this heading"></a></h1>
+<p>Classes to perform a Winnow error correction protocol.</p>
+<p>The Winnow error correction protocol is based on Hamming codes. An advantage of the protocol
+is that it requires less communication than other error correction protocols. The protocol
+however might introduce errors in specific cases. With every communication, the Winnow protocol
+leaks information to potential eavesdroppers. This can be overcome by discarding message bits
+equal to the amount of information leaks, thereby achieving privacy maintenance.</p>
+<p>Typical usage example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.classical</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="gp">... </span>    <span class="n">Message</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">Schedule</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">Permutations</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.classical.winnow</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="gp">... </span>    <span class="n">WinnowCorrector</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">WinnowReceiver</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">WinnowSender</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">message_length</span> <span class="o">=</span> <span class="mi">100_000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">error_rate</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">input_message</span> <span class="o">=</span> <span class="n">Message</span><span class="o">.</span><span class="n">random_message</span><span class="p">(</span><span class="n">message_length</span><span class="o">=</span><span class="n">message_length</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">43</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">error_message</span> <span class="o">=</span> <span class="n">input_message</span><span class="o">.</span><span class="n">apply_errors</span><span class="p">(</span><span class="n">error_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schedule</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">schedule_from_error_rate</span><span class="p">(</span><span class="n">error_rate</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">number_of_passes</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">schedule</span><span class="o">.</span><span class="n">schedule</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">permutations</span> <span class="o">=</span> <span class="n">Permutations</span><span class="o">.</span><span class="n">random_permutation</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">number_of_passes</span><span class="o">=</span><span class="n">number_of_passes</span><span class="p">,</span> <span class="n">message_size</span><span class="o">=</span><span class="n">message_length</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alice</span> <span class="o">=</span> <span class="n">WinnowSender</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">message</span><span class="o">=</span><span class="n">input_message</span><span class="p">,</span> <span class="n">permutations</span><span class="o">=</span><span class="n">permutations</span><span class="p">,</span> <span class="n">schedule</span><span class="o">=</span><span class="n">schedule</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bob</span> <span class="o">=</span> <span class="n">WinnowReceiver</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">message</span><span class="o">=</span><span class="n">error_message</span><span class="p">,</span> <span class="n">permutations</span><span class="o">=</span><span class="n">permutations</span><span class="p">,</span> <span class="n">schedule</span><span class="o">=</span><span class="n">schedule</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">corrector</span> <span class="o">=</span> <span class="n">WinnowCorrector</span><span class="p">(</span><span class="n">alice</span><span class="o">=</span><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="o">=</span><span class="n">bob</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">corrector</span><span class="o">.</span><span class="n">correct_errors</span><span class="p">())</span>  
+<span class="go">Corrector summary:</span>
+<span class="go">input_alice (Message):   00111001111000101101111101011000100010000100000011...</span>
+<span class="go">output_alice (Message):  01111111100100100011010100110110101100010110101111...</span>
+<span class="go">input_bob (Message):     00111001110000101101111101011100100010000110000011...</span>
+<span class="go">output_bob (Message):    01111111100100100011010100110110101100010110101111...</span>
+<span class="go">input_error (float):     0.04959</span>
+<span class="go">output_error (float):    0.0</span>
+<span class="go">output_length (int):     52063</span>
+<span class="go">number_of_exposed_bits (int):    3647</span>
+<span class="go">key_reconciliation_rate (float):         0.48416</span>
+<span class="go">number_of_communication_rounds (int):    15</span>
+<span class="go">schedule (list[int]):    [2, 1, 1, 0, 0, 1, 1, 1]</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.communication.qkd_key_rate.classical.winnow.</span></span><span class="sig-name descname"><span class="pre">WinnowCorrector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bob</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowCorrector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Corrector" title="tno.quantum.communication.qkd_key_rate.classical._corrector.Corrector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Corrector</span></code></a></p>
+<p>Winnow corrector.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bob</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowCorrector.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrector.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of WinnowCorrector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alice</strong> (<a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowSender</span></code></a>) – Sender party.</p></li>
+<li><p><strong>bob</strong> (<a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowReceiver</span></code></a>) – Receiver party.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If permutations alice are not same as permutations bob.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrector.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowCorrector.summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrector.summary" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate a summary object for the error correction.</p>
+<dl class="simple">
+<dt>Summary contains</dt><dd><ul class="simple">
+<li><p>original message</p></li>
+<li><p>corrected message</p></li>
+<li><p>error rate (before and after correction)</p></li>
+<li><p>number_of_exposed_bits</p></li>
+<li><p>key_reconciliation_rate</p></li>
+<li><p>protocol specific parameters</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrectorOutput" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrectorOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowCorrectorOutput</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrectorOutput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.communication.qkd_key_rate.classical.winnow.</span></span><span class="sig-name descname"><span class="pre">WinnowCorrectorOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_alice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_alice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_bob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_bob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_exposed_bits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_reconciliation_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_communication_rounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowCorrectorOutput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrectorOutput" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.CorrectorOutputBase" title="tno.quantum.communication.qkd_key_rate.classical._corrector.CorrectorOutputBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">CorrectorOutputBase</span></code></a></p>
+<p>Data class for Winnow Corrector output.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrectorOutput.schedule">
+<span class="sig-name descname"><span class="pre">schedule</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Schedule" title="tno.quantum.communication.qkd_key_rate.classical._schedule.Schedule"><span class="pre">Schedule</span></a></em><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowCorrectorOutput.schedule" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.communication.qkd_key_rate.classical.winnow.</span></span><span class="sig-name descname"><span class="pre">WinnowReceiver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permutations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowReceiver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowSender</span></code></a>, <a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.ReceiverBase" title="tno.quantum.communication.qkd_key_rate.classical._receiver.ReceiverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReceiverBase</span></code></a></p>
+<p>This class encodes all functions only available to the receiver.</p>
+<p>The receiver is assumed to have a string with errors and is thus assumed to
+correct the errors.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permutations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowReceiver.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of WinnowReceiver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Message" title="tno.quantum.communication.qkd_key_rate.classical._message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>) – Input message of the sender party</p></li>
+<li><p><strong>permutations</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Permutations" title="tno.quantum.communication.qkd_key_rate.classical._permutations.Permutations"><code class="xref py py-class docutils literal notranslate"><span class="pre">Permutations</span></code></a>) – List containing permutations for each pass</p></li>
+<li><p><strong>schedule</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Schedule" title="tno.quantum.communication.qkd_key_rate.classical._schedule.Schedule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Schedule</span></code></a>) – The winnow schedule.</p></li>
+<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]) – Name of the receiver party</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver.correct_errors">
+<span class="sig-name descname"><span class="pre">correct_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alice</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowReceiver.correct_errors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver.correct_errors" title="Permalink to this definition"></a></dt>
+<dd><p>The main routine, finds all errors and corrects them.</p>
+<p>It is assumed that Alice and Bob use one communication round to agree on
+the used permutations. Afterwards, they use two communication rounds per
+iteration to communicate the syndromes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>alice</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.SenderBase" title="tno.quantum.communication.qkd_key_rate.classical._sender.SenderBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SenderBase</span></code></a>) – The sending party</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If alice is not a WinnowSender.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver.fix_errors_with_syndrome">
+<span class="sig-name descname"><span class="pre">fix_errors_with_syndrome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alice</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowReceiver.fix_errors_with_syndrome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver.fix_errors_with_syndrome" title="Permalink to this definition"></a></dt>
+<dd><p>Corrects errors using the syndrome strings of alice and bob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>alice</strong> (<a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowSender</span></code></a>) – The sending party</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.communication.qkd_key_rate.classical.winnow.</span></span><span class="sig-name descname"><span class="pre">WinnowSender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permutations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.SenderBase" title="tno.quantum.communication.qkd_key_rate.classical._sender.SenderBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SenderBase</span></code></a></p>
+<p>This class encodes all functions available to both sender and receiver.</p>
+<p>It keeps track of the number of exposed bits and can compute syndromes and
+parities. Furthermore, it keeps track of the blocks with errors</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permutations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of a WinnowSender.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Message" title="tno.quantum.communication.qkd_key_rate.classical._message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>) – Input message of the sender party</p></li>
+<li><p><strong>permutations</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Permutations" title="tno.quantum.communication.qkd_key_rate.classical._permutations.Permutations"><code class="xref py py-class docutils literal notranslate"><span class="pre">Permutations</span></code></a>) – List containing permutations for each pass</p></li>
+<li><p><strong>schedule</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Schedule" title="tno.quantum.communication.qkd_key_rate.classical._schedule.Schedule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Schedule</span></code></a>) – The winnow schedule</p></li>
+<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]) – Name of the sender party</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.build_parity_string">
+<span class="sig-name descname"><span class="pre">build_parity_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.build_parity_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.build_parity_string" title="Permalink to this definition"></a></dt>
+<dd><p>Builds a parity string for all blocks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.build_syndrome_string">
+<span class="sig-name descname"><span class="pre">build_syndrome_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alice</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.build_syndrome_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.build_syndrome_string" title="Permalink to this definition"></a></dt>
+<dd><p>Create a syndrome string for all disagreeing blocks.</p>
+<p>Computes the syndrome for blocks with disagreeing parity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>alice</strong> (<a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowSender</span></code></a>) – The sending party</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.create_parity_check_matrix">
+<span class="sig-name descname"><span class="pre">create_parity_check_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.create_parity_check_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.create_parity_check_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a parity check matrix.</p>
+<p>This matrix is used to encode the bit strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.disagreeing_block_parities">
+<span class="sig-name descname"><span class="pre">disagreeing_block_parities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alice</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.disagreeing_block_parities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.disagreeing_block_parities" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the disagreeing block parities.</p>
+<p>The found parities of both parties are compared. This can be done with
+two communication rounds (one both ways).
+Afterwards, both separately process the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>alice</strong> (<a class="reference internal" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender" title="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender"><code class="xref py py-class docutils literal notranslate"><span class="pre">WinnowSender</span></code></a>) – The sending party</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.discard_parity_bits">
+<span class="sig-name descname"><span class="pre">discard_parity_bits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.discard_parity_bits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.discard_parity_bits" title="Permalink to this definition"></a></dt>
+<dd><p>The first bit of every parity block is discarded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.discard_syndrome_bits">
+<span class="sig-name descname"><span class="pre">discard_syndrome_bits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.discard_syndrome_bits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.discard_syndrome_bits" title="Permalink to this definition"></a></dt>
+<dd><p>Discards syndrome bits.</p>
+<p>Bits at indices <span class="math notranslate nohighlight">\(2^j-1\)</span> are removed. These correspond to the linearly
+independent columns of the parity check matrix.</p>
+<p>In this function the number of bad blocks is known.</p>
+<p>No communication is needed to discard syndrome bits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.first_pass">
+<span class="sig-name descname"><span class="pre">first_pass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.first_pass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.first_pass" title="Permalink to this definition"></a></dt>
+<dd><p>First pass with initializations and parity determination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.get_parity">
+<span class="sig-name descname"><span class="pre">get_parity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_end</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.get_parity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.get_parity" title="Permalink to this definition"></a></dt>
+<dd><p>Get the parity of a specific message part between two indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Start index of the message</p></li>
+<li><p><strong>index_end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – End index of the message</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Parity of substring</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.get_syndrome">
+<span class="sig-name descname"><span class="pre">get_syndrome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_block</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.get_syndrome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.get_syndrome" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the syndrome of a block.</p>
+<p>Both parties compute their syndrome individually, hence, no
+communication is needed here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.next_pass">
+<span class="sig-name descname"><span class="pre">next_pass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.next_pass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.next_pass" title="Permalink to this definition"></a></dt>
+<dd><p>Performs computations to prepare for the next pass.</p>
+<p>Computations include permuting the message and creating a new parity string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.permute_buffer">
+<span class="sig-name descname"><span class="pre">permute_buffer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/winnow.html#WinnowSender.permute_buffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.permute_buffer" title="Permalink to this definition"></a></dt>
+<dd><p>Permutes the message string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="privacy_amplification.html" class="btn btn-neutral float-left" title="communication.qkd_key_rate.classical.privacy_amplification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../tno.quantum.utils/main.html" class="btn btn-neutral float-right" title="utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

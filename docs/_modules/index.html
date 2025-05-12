@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview: module code &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview: module code</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>All modules for which code is available</h1>
+<ul><li><a href="tno/quantum/communication/qkd_key_rate/classical/_corrector.html">tno.quantum.communication.qkd_key_rate.classical._corrector</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_message.html">tno.quantum.communication.qkd_key_rate.classical._message</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_parity_strategy.html">tno.quantum.communication.qkd_key_rate.classical._parity_strategy</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_permutations.html">tno.quantum.communication.qkd_key_rate.classical._permutations</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_receiver.html">tno.quantum.communication.qkd_key_rate.classical._receiver</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_required_linktime.html">tno.quantum.communication.qkd_key_rate.classical._required_linktime</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_schedule.html">tno.quantum.communication.qkd_key_rate.classical._schedule</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/_sender.html">tno.quantum.communication.qkd_key_rate.classical._sender</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/cascade.html">tno.quantum.communication.qkd_key_rate.classical.cascade</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/privacy_amplification.html">tno.quantum.communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/classical/winnow.html">tno.quantum.communication.qkd_key_rate.classical.winnow</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/quantum/_detector.html">tno.quantum.communication.qkd_key_rate.quantum._detector</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/quantum/_keyrate.html">tno.quantum.communication.qkd_key_rate.quantum._keyrate</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/quantum/bb84.html">tno.quantum.communication.qkd_key_rate.quantum.bb84</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/quantum/bb84_single_photon.html">tno.quantum.communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li><a href="tno/quantum/communication/qkd_key_rate/quantum/bbm92.html">tno.quantum.communication.qkd_key_rate.quantum.bbm92</a></li>
+<li><a href="tno/quantum/ml/classifiers/vc/_variational_classifier.html">tno.quantum.ml.classifiers.vc._variational_classifier</a></li>
+<li><a href="tno/quantum/ml/classifiers/vc/models/_base.html">tno.quantum.ml.classifiers.vc.models._base</a></li>
+<li><a href="tno/quantum/ml/classifiers/vc/models/expected_value_model.html">tno.quantum.ml.classifiers.vc.models.expected_value_model</a></li>
+<li><a href="tno/quantum/ml/classifiers/vc/models/probability_model.html">tno.quantum.ml.classifiers.vc.models.probability_model</a></li>
+<li><a href="tno/quantum/ml/datasets/_datasets.html">tno.quantum.ml.datasets._datasets</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_freq.html">tno.quantum.optimization.qubo.components._freq</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_postprocessing/_postprocessor.html">tno.quantum.optimization.qubo.components._postprocessing._postprocessor</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_postprocessing/_postprocessor_config.html">tno.quantum.optimization.qubo.components._postprocessing._postprocessor_config</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_preprocessing/_partial_solution.html">tno.quantum.optimization.qubo.components._preprocessing._partial_solution</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_preprocessing/_preprocessor.html">tno.quantum.optimization.qubo.components._preprocessing._preprocessor</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_preprocessing/_preprocessor_config.html">tno.quantum.optimization.qubo.components._preprocessing._preprocessor_config</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_qubo.html">tno.quantum.optimization.qubo.components._qubo</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_results/_basic_result.html">tno.quantum.optimization.qubo.components._results._basic_result</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_results/_result_interface.html">tno.quantum.optimization.qubo.components._results._result_interface</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_solvers/_solver.html">tno.quantum.optimization.qubo.components._solvers._solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/components/_solvers/_solver_config.html">tno.quantum.optimization.qubo.components._solvers._solver_config</a></li>
+<li><a href="tno/quantum/optimization/qubo/postprocessors/_dwave/_steepest_descent_postprocessor.html">tno.quantum.optimization.qubo.postprocessors._dwave._steepest_descent_postprocessor</a></li>
+<li><a href="tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html">tno.quantum.optimization.qubo.preprocessors._qpro_plus</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_classical/_iterative_result.html">tno.quantum.optimization.qubo.solvers._classical._iterative_result</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_classical/_neighborhood_solver.html">tno.quantum.optimization.qubo.solvers._classical._neighborhood_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_classical/_rs_solver.html">tno.quantum.optimization.qubo.solvers._classical._rs_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_custom_solver.html">tno.quantum.optimization.qubo.solvers._dwave._custom_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_dimod_sample_set_result.html">tno.quantum.optimization.qubo.solvers._dwave._dimod_sample_set_result</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_dwave_clique_sampler_solver.html">tno.quantum.optimization.qubo.solvers._dwave._dwave_clique_sampler_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_dwave_sampler_solver.html">tno.quantum.optimization.qubo.solvers._dwave._dwave_sampler_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_exact_sampler_solver.html">tno.quantum.optimization.qubo.solvers._dwave._exact_sampler_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_kerberos_sampler_solver.html">tno.quantum.optimization.qubo.solvers._dwave._kerberos_sampler_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_leap_hybrid_solver.html">tno.quantum.optimization.qubo.solvers._dwave._leap_hybrid_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_random_sampler_solver.html">tno.quantum.optimization.qubo.solvers._dwave._random_sampler_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_simulated_annealing_solver.html">tno.quantum.optimization.qubo.solvers._dwave._simulated_annealing_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_steepest_descent_solver.html">tno.quantum.optimization.qubo.solvers._dwave._steepest_descent_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_tabu_solver.html">tno.quantum.optimization.qubo.solvers._dwave._tabu_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_dwave/_tree_decomposition_solver.html">tno.quantum.optimization.qubo.solvers._dwave._tree_decomposition_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_pipeline/_pipeline_result.html">tno.quantum.optimization.qubo.solvers._pipeline._pipeline_result</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_pipeline/_pipeline_solver.html">tno.quantum.optimization.qubo.solvers._pipeline._pipeline_solver</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_pipeline/_preprocess_result.html">tno.quantum.optimization.qubo.solvers._pipeline._preprocess_result</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_qaoa/_qaoa_result.html">tno.quantum.optimization.qubo.solvers._qaoa._qaoa_result</a></li>
+<li><a href="tno/quantum/optimization/qubo/solvers/_qaoa/_qaoa_solver.html">tno.quantum.optimization.qubo.solvers._qaoa._qaoa_solver</a></li>
+<li><a href="tno/quantum/problems/portfolio_optimization/_components/_io.html">tno.quantum.problems.portfolio_optimization._components._io</a></li>
+<li><a href="tno/quantum/problems/portfolio_optimization/_components/_visualization.html">tno.quantum.problems.portfolio_optimization._components._visualization</a></li>
+<li><a href="tno/quantum/problems/portfolio_optimization/_components/qubos/_qubo_factory.html">tno.quantum.problems.portfolio_optimization._components.qubos._qubo_factory</a></li>
+<li><a href="tno/quantum/problems/portfolio_optimization/_portfolio_optimizer.html">tno.quantum.problems.portfolio_optimization._portfolio_optimizer</a></li>
+<li><a href="tno/quantum/utils/_base_arguments.html">tno.quantum.utils._base_arguments</a></li>
+<li><a href="tno/quantum/utils/_base_config.html">tno.quantum.utils._base_config</a></li>
+<li><a href="tno/quantum/utils/_bit_vector.html">tno.quantum.utils._bit_vector</a></li>
+<li><a href="tno/quantum/utils/_utils.html">tno.quantum.utils._utils</a></li>
+<li><a href="tno/quantum/utils/serialization.html">tno.quantum.utils.serialization</a></li>
+<li><a href="tno/quantum/utils/validation.html">tno.quantum.utils.validation</a></li>
+</ul>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QKD key-rate &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Portfolio optimization" href="portfolio_optimization.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">QKD key-rate</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qkd-key-rate">
+<h1>QKD key-rate<a class="headerlink" href="#qkd-key-rate" title="Permalink to this heading"></a></h1>
+<p>This page contains advanced examples for the <a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/main.html#module-tno.quantum.communication.qkd_key_rate" title="tno.quantum.communication.qkd_key_rate"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.communication.qkd_key_rate</span></code></a> package.
+Examples of basic usage can be found in the module documentation.</p>
+<p>The package provides python code to compute optimal protocol parameters for different quantum key distribution (QKD) protocols.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<p>Install the following dependencies to run the examples below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>tno.quantum.communication.qkd_key_rate~<span class="o">=</span><span class="m">2</span>.0
+pip<span class="w"> </span>install<span class="w"> </span>matplotlib
+pip<span class="w"> </span>install<span class="w"> </span>tqdm
+</pre></div>
+</div>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<p><em>Example 1:</em> Compute secure key-rate for various BB84 protocols as function of the loss.</p>
+<a class="reference internal image-reference" href="../../_images/example1.png"><img alt="Secure key-rate for various BB84 protocols as function of the loss." class="align-center" src="../../_images/example1.png" style="width: 1200px;" /></a>
+<div class="toggle docutils container">
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Example that shows how to plot optimal key-rate versus attenuation&quot;&quot;&quot;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.quantum.bb84</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 7</span>    <span class="n">BB84AsymptoticKeyRateEstimate</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="n">BB84FiniteKeyRateEstimate</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="n">BB84FullyAsymptoticKeyRateEstimate</span><span class="p">,</span>
+<span class="linenos">10</span><span class="p">)</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.quantum.bb84_single_photon</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">12</span>    <span class="n">BB84SingleAsymptoticKeyRateEstimate</span><span class="p">,</span>
+<span class="linenos">13</span><span class="p">)</span>
+<span class="linenos">14</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.quantum</span><span class="w"> </span><span class="kn">import</span> <span class="n">standard_detector</span>
+<span class="linenos">15</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.quantum</span><span class="w"> </span><span class="kn">import</span> <span class="n">KeyRate</span>
+<span class="linenos">16</span><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># Create a custom detector</span>
+<span class="linenos">19</span><span class="n">detector</span> <span class="o">=</span> <span class="n">standard_detector</span><span class="o">.</span><span class="n">customise</span><span class="p">(</span>
+<span class="linenos">20</span>    <span class="n">dark_count_rate</span><span class="o">=</span><span class="mf">6e-7</span><span class="p">,</span>
+<span class="linenos">21</span>    <span class="n">polarization_drift</span><span class="o">=</span><span class="mf">0.0707</span><span class="p">,</span>
+<span class="linenos">22</span>    <span class="n">error_detector</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span>
+<span class="linenos">23</span>    <span class="n">efficiency_detector</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+<span class="linenos">24</span><span class="p">)</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="linenos">27</span><span class="n">attenuation_factor</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">28</span><span class="n">attenuation</span> <span class="o">=</span> <span class="n">attenuation_factor</span> <span class="o">*</span> <span class="n">distance</span>
+<span class="linenos">29</span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="n">protocols</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">KeyRate</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">32</span>    <span class="s2">&quot;Fully Asymptotic BB84&quot;</span><span class="p">:</span> <span class="n">BB84FullyAsymptoticKeyRateEstimate</span><span class="p">(</span>
+<span class="linenos">33</span>        <span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span>
+<span class="linenos">34</span>    <span class="p">),</span>
+<span class="linenos">35</span>    <span class="s2">&quot;Asymptotic BB84&quot;</span><span class="p">:</span> <span class="n">BB84AsymptoticKeyRateEstimate</span><span class="p">(</span>
+<span class="linenos">36</span>        <span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">number_of_decoy</span><span class="o">=</span><span class="mi">2</span>
+<span class="linenos">37</span>    <span class="p">),</span>
+<span class="linenos">38</span>    <span class="s2">&quot;Single photon Asymptotic BB84&quot;</span><span class="p">:</span> <span class="n">BB84SingleAsymptoticKeyRateEstimate</span><span class="p">(</span>
+<span class="linenos">39</span>        <span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span>
+<span class="linenos">40</span>    <span class="p">),</span>
+<span class="linenos">41</span>    <span class="s2">&quot;Finite BB84&quot;</span><span class="p">:</span> <span class="n">BB84FiniteKeyRateEstimate</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">number_of_pulses</span><span class="o">=</span><span class="mf">1e12</span><span class="p">),</span>
+<span class="linenos">42</span><span class="p">}</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">protocol</span> <span class="ow">in</span> <span class="n">protocols</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="linenos">45</span>    <span class="n">key_rate</span><span class="p">,</span> <span class="n">intensity</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="linenos">46</span>    <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">attenuation</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">):</span>
+<span class="linenos">47</span>        <span class="n">x</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">optimize_rate</span><span class="p">(</span><span class="n">attenuation</span><span class="o">=</span><span class="n">att</span><span class="p">)</span>
+<span class="linenos">48</span>        <span class="n">key_rate</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+<span class="linenos">49</span>        <span class="n">intensity</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;mu&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span>    <span class="n">ax1</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">attenuation</span><span class="p">,</span> <span class="n">key_rate</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+<span class="linenos">52</span>    <span class="n">ax2</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">attenuation</span><span class="p">,</span> <span class="n">intensity</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+<span class="linenos">53</span>
+<span class="linenos">54</span><span class="c1"># Labels/axis</span>
+<span class="linenos">55</span><span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Loss (dB)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="linenos">56</span><span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Key-rate&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="linenos">57</span><span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Secure key-rate&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="linenos">58</span><span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="linenos">59</span>
+<span class="linenos">60</span><span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Loss (dB)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="linenos">61</span><span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Laser intensity&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="linenos">62</span><span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Intensity settings&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="linenos">63</span><span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="linenos">64</span>
+<span class="linenos">65</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;BB84 Protocol&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="linenos">66</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Processing<span class="w"> </span>Fully<span class="w"> </span>Asymptotic<span class="w"> </span>BB84:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">40</span>/40<span class="w"> </span><span class="o">[</span><span class="m">00</span>:01&lt;<span class="m">00</span>:00,<span class="w"> </span><span class="m">30</span>.07it/s<span class="o">]</span>
+Processing<span class="w"> </span>Asymptotic<span class="w"> </span>BB84:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>█████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">40</span>/40<span class="w"> </span><span class="o">[</span><span class="m">00</span>:23&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.72it/s<span class="o">]</span>
+Processing<span class="w"> </span>Single<span class="w"> </span>photon<span class="w"> </span>Asymptotic<span class="w"> </span>BB84:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">40</span>/40<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;<span class="m">00</span>:00,<span class="w"> </span><span class="m">42</span>.25it/s<span class="o">]</span>
+Processing<span class="w"> </span>Finite<span class="w"> </span>BB84:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>█████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">40</span>/40<span class="w"> </span><span class="o">[</span><span class="m">12</span>:27&lt;<span class="m">00</span>:00,<span class="w"> </span><span class="m">18</span>.68s/it<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<p><em>Example 2:</em> Compute secure key-rate as a function of the number of pulses for the BB84 finite key-rate protocol.</p>
+<a class="reference internal image-reference" href="../../_images/example2.png"><img alt="Secure key-rate as function of the number of pulses for BB84 finite key-rate protocol." class="align-center" src="../../_images/example2.png" style="width: 1200px;" /></a>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;Example BB84 FiniteKeyRate estimate for various number of pulses.&quot;&quot;&quot;</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.quantum.bb84</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 7</span>    <span class="n">BB84FiniteKeyRateEstimate</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.quantum</span><span class="w"> </span><span class="kn">import</span> <span class="n">standard_detector</span>
+<span class="linenos">10</span><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># Create a custom detector</span>
+<span class="linenos">13</span><span class="n">detector</span> <span class="o">=</span> <span class="n">standard_detector</span><span class="o">.</span><span class="n">customise</span><span class="p">(</span>
+<span class="linenos">14</span>    <span class="n">dark_count_rate</span><span class="o">=</span><span class="mf">6e-7</span><span class="p">,</span>
+<span class="linenos">15</span>    <span class="n">polarization_drift</span><span class="o">=</span><span class="mf">0.0707</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="n">error_detector</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="n">efficiency_detector</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+<span class="linenos">18</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="linenos">21</span><span class="n">attenuation_factor</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">22</span><span class="n">attenuation</span> <span class="o">=</span> <span class="n">attenuation_factor</span> <span class="o">*</span> <span class="n">distance</span>
+<span class="linenos">23</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="n">power_number_of_pulses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="linenos">27</span><span class="k">for</span> <span class="n">power</span> <span class="ow">in</span> <span class="n">power_number_of_pulses</span><span class="p">:</span>
+<span class="linenos">28</span>    <span class="n">label</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;N=$10^</span><span class="se">{{</span><span class="si">{</span><span class="n">power</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
+<span class="linenos">29</span>    <span class="n">protocol</span> <span class="o">=</span> <span class="n">BB84FiniteKeyRateEstimate</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">number_of_pulses</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="n">power</span><span class="p">)</span>
+<span class="linenos">30</span>    <span class="n">key_rate</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">31</span>    <span class="k">for</span> <span class="n">att</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">attenuation</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Processing N=10^</span><span class="si">{</span><span class="n">power</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">):</span>
+<span class="linenos">32</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">33</span>            <span class="n">_</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">optimize_rate</span><span class="p">(</span><span class="n">attenuation</span><span class="o">=</span><span class="n">att</span><span class="p">)</span>
+<span class="linenos">34</span>            <span class="n">key_rate</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+<span class="linenos">35</span>        <span class="k">except</span><span class="p">:</span>
+<span class="linenos">36</span>            <span class="k">break</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>    <span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">attenuation</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">key_rate</span><span class="p">)],</span> <span class="n">key_rate</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="c1"># Labels/axis</span>
+<span class="linenos">41</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Loss (dB)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="linenos">42</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Key-rate&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="linenos">43</span><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Secure key-rate&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="linenos">44</span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="linenos">45</span>
+<span class="linenos">46</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="portfolio_optimization.html" class="btn btn-neutral float-left" title="Portfolio optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

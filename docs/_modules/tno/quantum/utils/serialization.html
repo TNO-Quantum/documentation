@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.utils.serialization &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.utils.serialization</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.utils.serialization</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the :py:class:`Serializable` class.</span>
+
+<span class="sd">The module provides the tools to give any class support for default serialization and</span>
+<span class="sd">deserialization.</span>
+
+<span class="sd">For example, when defining a class that inherits from :py:class:`Serializable`, methods</span>
+<span class="sd">such as :py:meth:`~Serializable.to_json` and :py:meth:`~Serializable.from_json` are</span>
+<span class="sd">automatically added to the class.</span>
+
+<span class="sd">    &gt;&gt;&gt; from tno.quantum.utils.serialization import Serializable</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Define a class that inherits from Serializable</span>
+<span class="sd">    &gt;&gt;&gt; class Point(Serializable):</span>
+<span class="sd">    ...     def __init__(self, x, y):</span>
+<span class="sd">    ...         self.x = x</span>
+<span class="sd">    ...         self.y = y</span>
+<span class="sd">    ...</span>
+<span class="sd">    ...     def __repr__(self):</span>
+<span class="sd">    ...         return f&quot;Point(x={self.x}, y={self.y})&quot;</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Create an instance and serialize to JSON</span>
+<span class="sd">    &gt;&gt;&gt; point = Point(1, 2)</span>
+<span class="sd">    &gt;&gt;&gt; point_json = point.to_json()</span>
+<span class="sd">    &gt;&gt;&gt; print(point_json)  # doctest: +ELLIPSIS</span>
+<span class="sd">    {&quot;x&quot;: 1, &quot;y&quot;: 2, &quot;__class__&quot;: &quot;...&quot;}</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Deserialize JSON to instance of Point</span>
+<span class="sd">    &gt;&gt;&gt; Point.from_json(point_json)  # doctest: +SKIP</span>
+<span class="sd">    Point(x=1, y=2)</span>
+
+<span class="sd">.. note::</span>
+<span class="sd">   By default, serialization is performed by storing the attributes of a class as found</span>
+<span class="sd">   in the :py:const:`__init__` of the class. Therefore, make sure your class has</span>
+<span class="sd">   attributes that match the signature of the constructor of your class.</span>
+
+<span class="sd">Information about the class is stored in the serialized data, so that it is possible to</span>
+<span class="sd">deserialize without knowing the target class. For example:</span>
+
+<span class="sd">    &gt;&gt;&gt; Serializable.from_json(point_json)  # doctest: +SKIP</span>
+<span class="sd">    Point(x=1, y=2)</span>
+
+<span class="sd">If your class contains attributes which are instances of third-party classes, it is</span>
+<span class="sd">possible to register serialization and deserialization methods for these third-party</span>
+<span class="sd">classes. For example, (de)serialization methods for NumPy arrays are registered (by</span>
+<span class="sd">default) as follows:</span>
+
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; from numpy.typing import NDArray</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; def serialize_ndarray(value: NDArray[Any]) -&gt; dict[str, Any]:</span>
+<span class="sd">    ...     return {&quot;dtype&quot;: str(value.dtype), &quot;array&quot;: value.tolist()}</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; def deserialize_ndarray(data: dict[str, Any]) -&gt; NDArray[Any]:</span>
+<span class="sd">    ...     dtype = np.dtype(data[&quot;dtype&quot;])</span>
+<span class="sd">    ...     array = data[&quot;array&quot;]</span>
+<span class="sd">    ...     return np.array(array, dtype=dtype)</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; Serializable.register(np.ndarray, serialize_ndarray, deserialize_ndarray)</span>
+
+<span class="sd">NumPy arrays will now automatically be (de)serialized, as in the following example:</span>
+
+<span class="sd">    &gt;&gt;&gt; class LinearSystem(Serializable):</span>
+<span class="sd">    ...     matrix: NDArray[np.float64]</span>
+<span class="sd">    ...     vector: NDArray[np.float64]</span>
+<span class="sd">    ...</span>
+<span class="sd">    ...     def __init__(self, matrix, vector):</span>
+<span class="sd">    ...         self.matrix = matrix</span>
+<span class="sd">    ...         self.vector = vector</span>
+<span class="sd">    ...</span>
+<span class="sd">    ...     def __repr__(self):</span>
+<span class="sd">    ...         return f&quot;LinearSystem(matrix={self.matrix}, vector={self.vector})&quot;</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; system = LinearSystem(np.array([[1.0, 2.0], [3.0, 4.0]]), np.array([1.0, 1.0]))</span>
+<span class="sd">    &gt;&gt;&gt; system_json = system.to_json()</span>
+<span class="sd">    &gt;&gt;&gt; print(system_json)  # doctest: +ELLIPSIS</span>
+<span class="sd">    {&quot;matrix&quot;: {&quot;dtype&quot;: &quot;float64&quot;, &quot;array&quot;: [[1.0, 2.0], [3.0, 4.0]], &quot;__class__&quot;: &quot;numpy.ndarray&quot;}, &quot;vector&quot;: {&quot;dtype&quot;: &quot;float64&quot;, &quot;array&quot;: [1.0, 1.0], &quot;__class__&quot;: &quot;numpy.ndarray&quot;}, &quot;__class__&quot;: &quot;...&quot;}</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; Serializable.from_json(system_json)  # doctest: +SKIP</span>
+<span class="sd">    LinearSystem(matrix=[[1. 2.]</span>
+<span class="sd">    [3. 4.]], vector=[1. 1.])</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        Instances of classes are (de)serialized to and from :py:const:`dict`&#39;s via the</span>
+<span class="sd">        private methods :py:const:`Serializable._serialize(self) -&gt; dict[str, Any]` and</span>
+<span class="sd">        :py:const:`Serializable._deserialize(cls, data: dict[str, Any]) -&gt; Any`. If your</span>
+<span class="sd">        class requires special (de)serialization, it is possible to override these</span>
+<span class="sd">        methods in your class. These must be implemented in such a way that they are</span>
+<span class="sd">        inverse to each other.</span>
+<span class="sd">&quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_path</span>
+
+<span class="n">_externals</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span>
+    <span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Any</span><span class="p">]]</span>
+<span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<div class="viewcode-block" id="Serializable"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Serializable</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Framework for serializable objects.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Serializable.to_json"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.to_json">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">indent</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize to JSON.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            indent: If provided, JSON will be pretty-printed with given indent level.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            JSON string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serialize</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="n">indent</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Serializable.to_yaml"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.to_yaml">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_yaml</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize to YAML.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            YAML string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serialize</span><span class="p">(),</span> <span class="n">Dumper</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">Dumper</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Serializable.to_json_file"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.to_json_file">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_json_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">indent</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize and write to JSON file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path: Path of the file to write to.</span>
+<span class="sd">            indent: If provided, JSON will be pretty-printed with given indent level.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">check_path</span><span class="p">(</span>
+            <span class="n">path</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">,</span>
+            <span class="n">must_exist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">required_suffix</span><span class="o">=</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span>
+            <span class="n">safe</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serialize</span><span class="p">(),</span> <span class="n">file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="n">indent</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Serializable.to_yaml_file"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.to_yaml_file">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_yaml_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize and write to YAML file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path: Path of the file to write to.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">check_path</span><span class="p">(</span>
+            <span class="n">path</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">,</span>
+            <span class="n">must_exist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">required_suffix</span><span class="o">=</span><span class="s2">&quot;.yaml&quot;</span><span class="p">,</span>
+            <span class="n">safe</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serialize</span><span class="p">(),</span> <span class="n">file</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Serializable.serialize"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.serialize">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize self to dict, list or primitive.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Representation of self as dict, list, string, boolean or ``None``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span>
+
+        <span class="c1"># bool, str, None, int, float</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">value</span>
+
+        <span class="c1"># list</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">Serializable</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]</span>
+
+        <span class="c1"># tuple</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">tuple</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;__tuple__&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Serializable</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]}</span>
+
+        <span class="c1"># dict</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="n">dict_</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Could not serialize dict with key of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="n">dict_</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">dict_</span>
+
+        <span class="c1"># Serializable</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Serializable</span><span class="p">):</span>
+            <span class="n">dict_</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">_serialize</span><span class="p">()</span>  <span class="c1"># noqa: SLF001</span>
+            <span class="n">dict_</span><span class="p">[</span><span class="s2">&quot;__class__&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_class_to_path</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">dict_</span>
+
+        <span class="c1"># External</span>
+        <span class="k">if</span> <span class="n">external</span> <span class="o">:=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_get_external</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+            <span class="n">dict_</span> <span class="o">=</span> <span class="n">external</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">value</span><span class="p">)</span>
+            <span class="n">dict_</span><span class="p">[</span><span class="s2">&quot;__class__&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_class_to_path</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">dict_</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Could not serialize value of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize to dict.</span>
+
+<span class="sd">        Classes derived from ``Serializable`` may override this method for custom</span>
+<span class="sd">        serialization. In this case, override ``_deserialize`` accordingly.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">init_signature</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="fm">__init__</span><span class="p">)</span>
+        <span class="n">init_args</span> <span class="o">=</span> <span class="p">[</span><span class="n">parameter</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">init_signature</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+        <span class="n">init_args</span> <span class="o">=</span> <span class="n">init_args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># remove first argument `self`</span>
+
+        <span class="n">dict_</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">init_args</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Failed to serialize value of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="si">}</span><span class="s2">: missing &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;attribute &#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#39; which is expected by __init__ of </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="n">dict_</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">dict_</span>
+
+<div class="viewcode-block" id="Serializable.from_json"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.from_json">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_json</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deserialize from JSON.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: JSON string to deserialize.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deserialized instance of `cls`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `data` is ill-formed.</span>
+<span class="sd">            NotImplementedError: If no deserialization method exists to deserialize.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_deserialize_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Serializable.from_yaml"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.from_yaml">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_yaml</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deserialize from YAML.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: YAML string to deserialize.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deserialized instance of `cls`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `data` is ill-formed.</span>
+<span class="sd">            NotImplementedError: If no deserialization method exists to deserialize.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_deserialize_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">data</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Serializable.from_json_file"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.from_json_file">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_json_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read and deserialize from JSON file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path: Path to JSON file to deserialize.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deserialized instance of `cls`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `data` is ill-formed.</span>
+<span class="sd">            NotImplementedError: If no deserialization method exists to deserialize.</span>
+<span class="sd">            FileNotFoundError: If file at `path` not found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">check_path</span><span class="p">(</span>
+            <span class="n">path</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">,</span>
+            <span class="n">must_exist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">must_be_file</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">required_suffix</span><span class="o">=</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span>
+            <span class="n">safe</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_deserialize_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Serializable.from_yaml_file"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.from_yaml_file">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_yaml_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read and deserialize from YAML file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path: Path to YAML file to deserialize.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deserialized instance of `cls`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `data` is ill-formed.</span>
+<span class="sd">            NotImplementedError: If no deserialization method exists to deserialize.</span>
+<span class="sd">            FileNotFoundError: If file at `path` not found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">check_path</span><span class="p">(</span>
+            <span class="n">path</span><span class="p">,</span>
+            <span class="s2">&quot;path&quot;</span><span class="p">,</span>
+            <span class="n">must_exist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">must_be_file</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">required_suffix</span><span class="o">=</span><span class="s2">&quot;.yaml&quot;</span><span class="p">,</span>
+            <span class="n">safe</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_deserialize_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">file</span><span class="p">))</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_class</span><span class="p">(</span><span class="n">class_obj</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">Serializable</span><span class="p">],</span> <span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deserialize data into an instance of `class_obj`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deserialized instance of type `class_obj`.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If deserialized instance is not of type `class_obj`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">deserialized_obj</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">class_obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Serializable</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">deserialized_obj</span><span class="p">,</span> <span class="n">class_obj</span>
+        <span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Deserialized object of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">deserialized_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">,&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot; but expected </span><span class="si">{</span><span class="n">class_obj</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">deserialized_obj</span>
+
+<div class="viewcode-block" id="Serializable.deserialize"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.deserialize">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deserialize</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deserialize data.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Deserialized object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># bool, str, None, int, float</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">data</span>
+
+        <span class="c1"># list</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">dict</span><span class="p">:</span>
+            <span class="c1"># tuple</span>
+            <span class="n">tuple_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;__tuple__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tuple_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">tuple_data</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">:</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Failed to deserialize tuple, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">tuple_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">tuple_data</span><span class="p">)</span>
+
+            <span class="c1"># dict</span>
+            <span class="n">cls_path</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;__class__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cls_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="n">key</span><span class="p">:</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                <span class="p">}</span>
+
+            <span class="bp">cls</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_class_from_path</span><span class="p">(</span><span class="n">cls_path</span><span class="p">)</span>
+
+            <span class="c1"># Serializable</span>
+            <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">Serializable</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="c1"># External classes</span>
+            <span class="k">if</span> <span class="n">external</span> <span class="o">:=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_get_external</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">external</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Could not deserialize class </span><span class="si">{</span><span class="n">cls_path</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Failed to deserialize type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deserialize data into an instance of `cls`.</span>
+
+<span class="sd">        Classes derived from ``Serializable`` may override this method for custom</span>
+<span class="sd">        deserialization. In this case, override ``_serialize`` accordingly.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Serializable.register"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.register">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span>
+        <span class="n">class_obj</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">serialize</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+        <span class="n">deserialize</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Register serialization and deserialization functions for external class.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            class_obj: Class to be serialized and deserialized.</span>
+<span class="sd">            serialize: Function that serializes instances of class `cls`.</span>
+<span class="sd">            deserialize: Function that deserializes into instance of class `cls`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cls_name</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_class_to_path</span><span class="p">(</span><span class="n">class_obj</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cls_name</span> <span class="ow">in</span> <span class="n">_externals</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Serialization functions for class </span><span class="si">{</span><span class="n">class_obj</span><span class="si">}</span><span class="s2"> already provided&quot;</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">_externals</span><span class="p">[</span><span class="n">cls_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">serialize</span><span class="p">,</span> <span class="n">deserialize</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_external</span><span class="p">(</span>
+        <span class="n">class_obj</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get external serialization and deserialization functions for `cls`.</span>
+
+<span class="sd">        Returns ``None`` if they do not exist.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cls_name</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">_class_to_path</span><span class="p">(</span><span class="n">class_obj</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cls_name</span> <span class="ow">in</span> <span class="n">_externals</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_externals</span><span class="p">[</span><span class="n">cls_name</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_class_to_path</span><span class="p">(</span><span class="n">class_obj</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct path of class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">class_obj</span><span class="o">.</span><span class="vm">__module__</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">class_obj</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_class_from_path</span><span class="p">(</span><span class="n">cls_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Obtain class from its path.&quot;&quot;&quot;</span>
+        <span class="n">module_name</span><span class="p">,</span> <span class="n">class_name</span> <span class="o">=</span> <span class="n">cls_path</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">module_name</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Failed to deserialize because module name is empty&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">module_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Failed to deserialize because module name </span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2"> is relative&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ModuleNotFoundError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Failed to deserialize because could not import module </span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">raise</span> <span class="ne">ModuleNotFoundError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">class_name</span><span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Failed to deserialize because class </span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2"> &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;was not found in module </span><span class="si">{</span><span class="n">module_name</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="bp">cls</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">class_name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Failed to deserialize because </span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s2"> is not a class&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span></div>
+
+
+<span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;numpy&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomState</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">NDArray</span>
+
+    <span class="c1"># Register `numpy.ndarray` as serializable</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_ndarray</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;dtype&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">dtype</span><span class="p">),</span> <span class="s2">&quot;array&quot;</span><span class="p">:</span> <span class="n">value</span><span class="o">.</span><span class="n">tolist</span><span class="p">()}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_ndarray</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;dtype&quot;</span><span class="p">])</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;array&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">Serializable</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">_serialize_ndarray</span><span class="p">,</span> <span class="n">_deserialize_ndarray</span><span class="p">)</span>
+
+    <span class="c1"># Register `&#39;numpy.random.mtrand.RandomState&#39;` as serializable</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_random_state</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">RandomState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Serializable</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">get_state</span><span class="p">()]}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_random_state</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">RandomState</span><span class="p">:</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">])</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">RandomState</span><span class="p">()</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rng</span>
+
+    <span class="n">Serializable</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+        <span class="n">RandomState</span><span class="p">,</span> <span class="n">_serialize_random_state</span><span class="p">,</span> <span class="n">_deserialize_random_state</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># Register `timedelta` as serializable</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_serialize_timedelta</span><span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;seconds&quot;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_timedelta</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">timedelta</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;seconds&quot;</span><span class="p">])</span>
+
+
+<span class="n">Serializable</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">timedelta</span><span class="p">,</span> <span class="n">_serialize_timedelta</span><span class="p">,</span> <span class="n">_deserialize_timedelta</span><span class="p">)</span>
+
+
+<span class="c1"># Register `complex` as serializable</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_serialize_complex</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">complex</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;real&quot;</span><span class="p">:</span> <span class="n">value</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="s2">&quot;imag&quot;</span><span class="p">:</span> <span class="n">value</span><span class="o">.</span><span class="n">imag</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_complex</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">complex</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">complex</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;real&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;imag&quot;</span><span class="p">])</span>
+
+
+<span class="n">Serializable</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">complex</span><span class="p">,</span> <span class="n">_serialize_complex</span><span class="p">,</span> <span class="n">_deserialize_complex</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="check_serializable"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.check_serializable">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">check_serializable</span><span class="p">(</span><span class="n">serializable_object</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test if object is serializable and can be reconstructed from its serialization.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        serializable_object: Object to be serialized and reconstructed.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        AssertionError: If the object is not Serializable, or if the reconstruction of</span>
+<span class="sd">            the object is not equal to the original object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Test if object is Serializable</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">serializable_object</span><span class="p">,</span> <span class="n">Serializable</span><span class="p">),</span> <span class="s2">&quot;Object is not Serializable&quot;</span>  <span class="c1"># noqa: S101</span>
+    <span class="c1"># Test to and from JSON</span>
+    <span class="k">assert</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">serializable_object</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span> <span class="o">==</span> <span class="n">serializable_object</span>  <span class="c1"># noqa: S101</span>
+    <span class="c1"># Test to and from YAML</span>
+    <span class="k">assert</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">from_yaml</span><span class="p">(</span><span class="n">serializable_object</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">())</span> <span class="o">==</span> <span class="n">serializable_object</span>  <span class="c1"># noqa: S101</span>
+
+    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">temp_dir</span><span class="p">:</span>
+        <span class="c1"># Test to and from JSON file</span>
+        <span class="n">temp_file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">temp_dir</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;test_file.json&quot;</span>
+        <span class="n">serializable_object</span><span class="o">.</span><span class="n">to_json_file</span><span class="p">(</span><span class="n">temp_file_path</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">from_json_file</span><span class="p">(</span><span class="n">temp_file_path</span><span class="p">)</span> <span class="o">==</span> <span class="n">serializable_object</span>  <span class="c1"># noqa: S101</span>
+
+        <span class="c1"># Test to and from YAML file</span>
+        <span class="n">temp_file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">temp_dir</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;test_file.yaml&quot;</span>
+        <span class="n">serializable_object</span><span class="o">.</span><span class="n">to_yaml_file</span><span class="p">(</span><span class="n">temp_file_path</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">from_yaml_file</span><span class="p">(</span><span class="n">temp_file_path</span><span class="p">)</span> <span class="o">==</span> <span class="n">serializable_object</span>  <span class="c1"># noqa: S101</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

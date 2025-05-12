@@ -1,0 +1,8 @@
+communication.qkd_key_rate.classical.winnow
+===========================================
+
+.. automodule:: tno.quantum.communication.qkd_key_rate.classical.winnow
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

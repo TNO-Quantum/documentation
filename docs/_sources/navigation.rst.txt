@@ -1,0 +1,33 @@
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Instructions
+
+   content/instructions/installation.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Packages
+
+   content/packages/packages/tno.quantum.optimization.qubo/main
+   content/packages/packages/tno.quantum.ml/main
+   content/packages/packages/tno.quantum.communication.qkd_key_rate/main
+   content/packages/packages/tno.quantum.utils/main
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Problems
+
+   content/problems/packages/tno.quantum.problems.portfolio_optimization/main
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Examples
+
+   content/examples/variational_classifier.rst
+   content/examples/portfolio_optimization.rst
+   content/examples/communication_qkd.rst
+

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.optimization.qubo.components._qubo &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.optimization.qubo.components._qubo</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.optimization.qubo.components._qubo</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the ``QUBO`` class.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapping</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">copy</span><span class="w"> </span><span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numbers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Real</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bounds</span><span class="p">,</span> <span class="n">minimize</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">BitVector</span><span class="p">,</span> <span class="n">BitVectorLike</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">Serializable</span>
+
+<span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;dimod&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">dimod</span><span class="w"> </span><span class="kn">import</span> <span class="n">BinaryQuadraticModel</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Self</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.figure</span><span class="w"> </span><span class="kn">import</span> <span class="n">Figure</span>
+
+
+<div class="viewcode-block" id="QUBO"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">QUBO</span><span class="p">(</span><span class="n">Serializable</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class representing a Quadratic Unconstrained Binary Optimization (QUBO) problem.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; from tno.quantum.optimization.qubo.components import QUBO</span>
+<span class="sd">        &gt;&gt;&gt; QUBO([</span>
+<span class="sd">        ...     [1, 2, 3],</span>
+<span class="sd">        ...     [4, 5, 6],</span>
+<span class="sd">        ...     [7, 8, 9]</span>
+<span class="sd">        ... ])</span>
+<span class="sd">        QUBO of dim: 3x3, with 9 non zero elements.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="QUBO.__init__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">ArrayLike</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="n">BinaryQuadraticModel</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="n">offset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init :py:class:`QUBO`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: Valid QUBO matrix, or mapping containing matrix coefficients,</span>
+<span class="sd">                or BQM.</span>
+<span class="sd">            offset: The offset of the QUBO (constant value).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parse_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">+</span> <span class="n">offset</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="k">else</span> <span class="n">offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_valid</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_histogram_base</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_negated</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_parse_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">ArrayLike</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="n">BinaryQuadraticModel</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse data properties from data.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: Valid QUBO matrix or BQM.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># `BinaryQuadraticModel`</span>
+        <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;dimod&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">BinaryQuadraticModel</span>
+        <span class="p">):</span>
+            <span class="n">qubo_object</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">from_bqm</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_matrix</span> <span class="o">=</span> <span class="n">qubo_object</span><span class="o">.</span><span class="n">matrix</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="n">qubo_object</span><span class="o">.</span><span class="n">offset</span>
+            <span class="k">return</span>
+
+        <span class="c1"># `Mapping[tuple[int, int], float]`</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+            <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">indices</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">matrix</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_matrix</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">return</span>
+
+        <span class="c1"># `ArrayLike`</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<div class="viewcode-block" id="QUBO.from_bqm"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.from_bqm">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_bqm</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">bqm</span><span class="p">:</span> <span class="n">BinaryQuadraticModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Self</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct a :py:class:`QUBO` object from a :py:class:`~dimod.binary.BinaryQuadraticModel`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            bqm: Binary quadratic model to construct a :py:class:`QUBO` from.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A tuple with a :py:class:`QUBO` of the :py:class:`~dimod.binary.BinaryQuadraticModel`</span>
+<span class="sd">            and a list of variable labels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>  <span class="c1"># noqa : E501</span>
+        <span class="k">if</span> <span class="n">bqm</span><span class="o">.</span><span class="n">vartype</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;SPIN&quot;</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;BQM has vartype &#39;SPIN&#39;, this will be changed to &#39;BINARY&#39;&quot;</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">1</span>
+            <span class="p">)</span>
+            <span class="n">bqm</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">bqm</span><span class="p">)</span>
+            <span class="n">bqm</span><span class="o">.</span><span class="n">change_vartype</span><span class="p">(</span><span class="s2">&quot;BINARY&quot;</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+        <span class="n">variables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bqm</span><span class="o">.</span><span class="n">variables</span><span class="p">)</span>
+        <span class="n">lin</span><span class="p">,</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">quad_val</span><span class="p">),</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">bqm</span><span class="o">.</span><span class="n">to_numpy_vectors</span><span class="p">(</span>
+            <span class="n">variable_order</span><span class="o">=</span><span class="n">variables</span>
+        <span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+        <span class="n">qubo_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">variables</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">variables</span><span class="p">)))</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">qubo_matrix</span><span class="p">,</span> <span class="n">lin</span><span class="p">)</span>
+        <span class="n">qubo_matrix</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">quad_val</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">qubo_matrix</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">offset</span><span class="p">)),</span> <span class="n">variables</span></div>
+
+<div class="viewcode-block" id="QUBO.to_bqm"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.to_bqm">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_bqm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variables</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BinaryQuadraticModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert the :py:class:`QUBO` into a :py:class:`~dimod.binary.BinaryQuadraticModel`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            variables: list of variable labels. If ``None`` (default), integer labels</span>
+<span class="sd">                will be used.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The :py:class:`~dimod.binary.BinaryQuadraticModel` of the :py:class:`QUBO`</span>
+<span class="sd">            with the variable labels described by `variables`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+        <span class="n">bqm</span> <span class="o">=</span> <span class="n">BinaryQuadraticModel</span><span class="o">.</span><span class="n">from_qubo</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+        <span class="k">if</span> <span class="n">variables</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bqm</span><span class="o">.</span><span class="n">relabel_variables</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">variables</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;BinaryQuadraticModel&quot;</span><span class="p">,</span> <span class="n">bqm</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.to_ising"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.to_ising">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_ising</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert the :py:class:`QUBO` into a Lenz-Ising model.</span>
+
+<span class="sd">        The QUBO problem is transformed to the Lenz-Ising model problem by using the</span>
+<span class="sd">        following change of variables: $x_i \to (1 - s_i) / 2$.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Tuple of a 1D Array, 2D Array and float representing the external fields,</span>
+<span class="sd">            interactions and offset of the corresponding Lenz-Ising model respectively.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">external_fields</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.25</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">interactions</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">interactions</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">external_fields</span><span class="p">,</span> <span class="n">interactions</span><span class="p">,</span> <span class="n">offset</span></div>
+
+<div class="viewcode-block" id="QUBO.check_valid"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.check_valid">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">check_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check the validity of the QUBO, if not valid raise an error.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            TypeError: If the `dtype` of the :py:class:`QUBO` matrix can not be cast to</span>
+<span class="sd">                float.</span>
+<span class="sd">            ValueError: If the :py:class:`QUBO` matrix is not square.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">can_cast</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&quot;Unrecognized dtype.&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&quot;The QUBO matrix is not square.&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Serialize QUBO to dict.&quot;&quot;&quot;</span>
+        <span class="n">upper_tri_qubo</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_upper_tri_form</span><span class="p">(</span><span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">matrix</span>
+        <span class="n">non_zero_entries</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">j</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">upper_tri_qubo</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])]</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">upper_tri_qubo</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;non_zero_entries&quot;</span><span class="p">:</span> <span class="n">non_zero_entries</span><span class="p">,</span>
+            <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deserialize data into an instance of `QUBO`.&quot;&quot;&quot;</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;offset&quot;</span><span class="p">]</span>
+        <span class="n">matrix</span> <span class="o">=</span> <span class="p">{(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;non_zero_entries&quot;</span><span class="p">]}</span>
+        <span class="k">return</span> <span class="n">QUBO</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span>
+
+<div class="viewcode-block" id="QUBO.__eq__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__eq__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if two QUBOs are equal.</span>
+
+<span class="sd">        Two QUBOs are equal if they have equal symmetric form and have the same</span>
+<span class="sd">        ``offset``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">QUBO</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">offset</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># Standardize qubo representation to symmetric form</span>
+        <span class="n">qubo1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">qubo2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">qubo1</span><span class="p">,</span> <span class="n">qubo2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__add__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__add__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rhs</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add two QUBOs element-wise.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span> <span class="n">QUBO</span><span class="p">):</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&quot;Only addition between two instances of QUBO is supported.&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">QUBO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">+</span> <span class="n">rhs</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">+</span> <span class="n">rhs</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__sub__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__sub__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rhs</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Subtract two QUBOs element-wise.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span> <span class="n">QUBO</span><span class="p">):</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&quot;Only subtraction between two instances of QUBO is supported.&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">QUBO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">-</span> <span class="n">rhs</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">-</span> <span class="n">rhs</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__mul__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__mul__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalar</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Multiply the QUBO and offset by a scalar.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scalar</span><span class="p">,</span> <span class="n">Real</span><span class="p">):</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;Multiplication with a QUBO is only defined for real valued scalars.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">QUBO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">*</span> <span class="n">scalar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">*</span> <span class="n">scalar</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__rmul__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__rmul__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalar</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Multiply the QUBO and offset by a scalar.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__mul__</span><span class="p">(</span><span class="n">scalar</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__truediv__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__truediv__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalar</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Division of the QUBO and offset by a scalar.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scalar</span><span class="p">,</span> <span class="n">Real</span><span class="p">):</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&quot;Division with a QUBO is only defined for real valued scalars.&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">QUBO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">/</span> <span class="n">scalar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">/</span> <span class="n">scalar</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__repr__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__repr__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;String representation of the QUBO.&quot;&quot;&quot;</span>
+        <span class="n">non_zero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;QUBO of dim: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2">, with </span><span class="si">{</span><span class="n">non_zero</span><span class="si">}</span><span class="s2"> non zero elements.&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.__len__"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.__len__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Size of the QUBO, that is, its number of variables.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span></div>
+
+<div class="viewcode-block" id="QUBO.to_symmetric_form"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.to_symmetric_form">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_symmetric_form</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rewrite QUBO into symmetric form.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            copy: If true, the changes are applied to a copy of the QUBO, and this copy</span>
+<span class="sd">                is returned.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The rewritten QUBO, or a copy of it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">qubo</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="k">if</span> <span class="n">copy</span> <span class="k">else</span> <span class="bp">self</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="p">):</span>
+            <span class="n">qubo</span><span class="o">.</span><span class="n">_matrix</span> <span class="o">=</span> <span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span> <span class="o">+</span> <span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># noqa: SLF001</span>
+
+        <span class="k">return</span> <span class="n">qubo</span></div>
+
+<div class="viewcode-block" id="QUBO.to_upper_tri_form"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.to_upper_tri_form">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_upper_tri_form</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rewrite QUBO into upper triangular form.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            copy: If true, the changes are applied to a copy of the QUBO, and this copy</span>
+<span class="sd">                is returned.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The rewritten QUBO, or a copy of it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">qubo</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="k">if</span> <span class="n">copy</span> <span class="k">else</span> <span class="bp">self</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="n">triu_qubo</span> <span class="o">:=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span><span class="p">)):</span>
+            <span class="n">qubo</span><span class="o">.</span><span class="n">_matrix</span> <span class="o">=</span> <span class="n">triu_qubo</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># noqa: SLF001</span>
+
+        <span class="k">return</span> <span class="n">qubo</span></div>
+
+<div class="viewcode-block" id="QUBO.delta_x"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.delta_x">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delta_x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">BitVectorLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the change in QUBO objective value due to a single bit flip.</span>
+
+<span class="sd">        Effectively this computes the following:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            Q.delta_x(x)[i] = Q.evaluate(x.flip_indices(i)) - Q.evaluate(x)</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Input bit vector.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Change in QUBO objective value for all single-bit flips of the input vector.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            The computational complexity of this method is $O(n^2)$.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">BitVector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># pre compute the interaction terms (complexity is O(n^2))</span>
+        <span class="n">diagonal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
+        <span class="n">interaction_terms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">@</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">x</span>
+        <span class="n">signs</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to_ising</span><span class="p">()</span>
+
+        <span class="c1"># compute the n evaluations (complexity is O(n))</span>
+        <span class="k">return</span> <span class="n">diagonal</span> <span class="o">+</span> <span class="n">signs</span> <span class="o">*</span> <span class="n">interaction_terms</span></div>
+
+<div class="viewcode-block" id="QUBO.delta_x2"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.delta_x2">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delta_x2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">BitVectorLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the change in QUBO objective value due to two bit flips.</span>
+
+<span class="sd">        Effectively this computes the following for `$j \ge i$`:</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            Q.delta_x2(x)[i, j] = Q.evaluate(x.flip_indices(i, j)) - Q.evaluate(x)</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Input bit vector.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Changes in QUBO objective value for double-bit flips of the input vector.</span>
+<span class="sd">            Values are returned in an upper triangular matrix.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            The computational complexity of this method is $O(n^2)$.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">BitVector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># pre compute the interaction terms (complexity is O(n^2))</span>
+        <span class="n">interaction_terms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">@</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">x</span>
+        <span class="n">signs</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to_ising</span><span class="p">()</span>
+
+        <span class="c1"># compute the n(n-1)/2 evaluations (complexity is O(n^2))</span>
+        <span class="c1"># use vectorized numpy evaluation for speed</span>
+        <span class="n">evaluations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span> <span class="o">+</span> <span class="n">signs</span> <span class="o">*</span> <span class="n">interaction_terms</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">evaluations</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">signs</span><span class="p">,</span> <span class="n">signs</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span>
+        <span class="n">evaluations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">evaluations</span> <span class="o">+</span> <span class="n">evaluations</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">evaluations</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_x</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">evaluations</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.negate"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.negate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">negate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QUBO</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negate QUBO so that &#39;maximization&#39; and &#39;minimization&#39; are interchanged.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            copy: If true, the changes are applied to a copy of the QUBO, and this copy</span>
+<span class="sd">                is returned.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The negated QUBO, or a copy of it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">qubo</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="k">if</span> <span class="n">copy</span> <span class="k">else</span> <span class="bp">self</span>
+
+        <span class="n">qubo</span><span class="o">.</span><span class="n">is_negated</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">qubo</span><span class="o">.</span><span class="n">is_negated</span>
+        <span class="n">qubo</span><span class="o">.</span><span class="n">_matrix</span> <span class="o">=</span> <span class="o">-</span><span class="n">qubo</span><span class="o">.</span><span class="n">matrix</span>  <span class="c1"># noqa: SLF001</span>
+        <span class="n">qubo</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="o">-</span><span class="n">qubo</span><span class="o">.</span><span class="n">offset</span>  <span class="c1"># noqa: SLF001</span>
+
+        <span class="c1"># Clear cached upper and lower bounds</span>
+        <span class="n">qubo</span><span class="o">.</span><span class="n">_upper_bound</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># noqa: SLF001</span>
+        <span class="n">qubo</span><span class="o">.</span><span class="n">_lower_bound</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># noqa: SLF001</span>
+
+        <span class="k">return</span> <span class="n">qubo</span></div>
+
+<div class="viewcode-block" id="QUBO.evaluate"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.evaluate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">BitVectorLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate the QUBO on a bitvector.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Bitvector to evaluate the QUBO on.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Evaluation of the QUBO on `x`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">BitVector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bits</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">@</span> <span class="n">x</span><span class="o">.</span><span class="n">bits</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span></div>
+
+<div class="viewcode-block" id="QUBO.evaluate_weighted"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.evaluate_weighted">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate_weighted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">BitVectorLike</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate the QUBO on a mapping of bitvectors.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Bitvector-weight pairs.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Weighted sum of evaluations of the QUBO on multiple bitvectors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">weighted_sum</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">number_of_shots</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">frequency</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">weighted_sum</span> <span class="o">+=</span> <span class="n">frequency</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">weighted_sum</span> <span class="o">/</span> <span class="n">number_of_shots</span></div>
+
+<div class="viewcode-block" id="QUBO.to_string"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.to_string">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Format the values in the QUBO matrix as a string.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            kwargs: Optional keyword arguments to pass to :py:func:`numpy.array2string`</span>
+<span class="sd">                formatting.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Formatted string representation of the QUBO matrix.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array2string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Size of the QUBO, that is, its number of variables.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Size of the QUBO.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">matrix</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;QUBO matrix.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_matrix</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Offset of the QUBO problem.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">upper_bound</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Upper bound of QUBO.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_bounds</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lower_bound</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Lower bound of QUBO.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_bounds</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span>
+
+<div class="viewcode-block" id="QUBO.eig"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.eig">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">eig</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the eigenvalues and right eigenvectors of the QUBO matrix.</span>
+
+<span class="sd">        This method computes the eigenvalues and right eigenvectors of the QUBO using</span>
+<span class="sd">        the linalg module of NumPy.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            The eigenvalues and eigenvectors depend on the current form of the QUBO</span>
+<span class="sd">            matrix. That is, this function may return different results based on whether</span>
+<span class="sd">            the QUBO matrix is in symmetric form or upper triangular form.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Eigenvalues and right eigenvectors.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            LinAlgError: If the computation of eigenvalues and eigenvectors does not</span>
+<span class="sd">                converge.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_matrix</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBO.spectral_gap"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.spectral_gap">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">spectral_gap</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">A</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>  <span class="c1"># noqa: N803</span>
+        <span class="n">B</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>  <span class="c1"># noqa: N803</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">plot</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">Figure</span><span class="p">]:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Create a spectral gap figure and compute the minimum spectral gap.</span>
+
+<span class="sd">        Simulates a `quantum annealing process`__ as described by the Hamiltonian</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            H_\text{ising} = - \frac{A(s)}{2} \left(\sum_i {\sigma_x^{(i)}}\right)</span>
+<span class="sd">            + \frac{B(s)}{2} \left(\sum_i h_i {\sigma_z^{(i)}} + \sum_{i &gt; j}</span>
+<span class="sd">            J_{i, j} {\sigma_z^{(i)}} {\sigma_z^{(j)}}\right)</span>
+
+<span class="sd">        where</span>
+<span class="sd">            - $s \in [0, 1]$ is the time parameter,</span>
+<span class="sd">            - $A(s)$ and $B(s)$ are the annealing functions,</span>
+<span class="sd">            - $\sigma_x^{(i)}$ and $\sigma_z^{(i)}$ are Pauli matrices acting on</span>
+<span class="sd">              qubit $i$,</span>
+<span class="sd">            - $h_i$ are the qubit biases,</span>
+<span class="sd">            - $J_{i, j}$ are the coupling strengths.</span>
+<span class="sd">        The spectral graph figure is a plot of the energy eigenvalues of</span>
+<span class="sd">        $H_\text{ising}$ over time. The minimum spectral gap is the minimum difference</span>
+<span class="sd">        between the two lowest energy eigenvalues.</span>
+
+<span class="sd">        Not recommended for use when size of QUBO $\ge 10$.</span>
+
+<span class="sd">        __  https://docs.dwavesys.com/docs/latest/c_gs_2.html</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            A: List of values of `$A$` for the annealing process.</span>
+<span class="sd">            B: List of values of `$B$` for the annealing process.</span>
+<span class="sd">            plot: Boolean value, if True (default) we plot here. If False we do not plot</span>
+<span class="sd">                  here.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The minimum spectral gap and a matplotlib figure containing the spectral gap</span>
+<span class="sd">            figure.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If A and B do not have equal length, or have length zero.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;A and B do not have equal length (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="si">}</span><span class="s2">).&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;A and B must have positive length.&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="n">external_fields</span><span class="p">,</span> <span class="n">interactions</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_ising</span><span class="p">()</span>
+
+        <span class="n">pauli_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+        <span class="n">pauli_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">enclose_in_identity</span><span class="p">(</span><span class="n">matrix</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Encloses the provided matrix in identity matrices.</span>
+
+<span class="sd">            Computes the tensor product I_{2^i} ⊗ A ⊗ I_{2^{n - i - 1}},</span>
+<span class="sd">            corresponding to A acting on qubit i.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span><span class="p">),</span> <span class="n">matrix</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Compute initial and final Lenz-Ising Hamiltonian.</span>
+        <span class="n">ham_initial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span>
+            <span class="n">enclose_in_identity</span><span class="p">(</span><span class="n">pauli_x</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">ham_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span>
+            <span class="nb">sum</span><span class="p">(</span>
+                <span class="n">external_fields</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">enclose_in_identity</span><span class="p">(</span><span class="n">pauli_z</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span>
+                <span class="n">interactions</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                <span class="o">*</span> <span class="n">enclose_in_identity</span><span class="p">(</span><span class="n">pauli_z</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="o">*</span> <span class="n">enclose_in_identity</span><span class="p">(</span><span class="n">pauli_z</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Compute eigenvalues</span>
+        <span class="n">eigs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvals</span><span class="p">(</span><span class="o">-</span><span class="n">a</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">ham_initial</span> <span class="o">+</span> <span class="n">b</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">ham_final</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Compute minimum gap</span>
+        <span class="n">gap</span> <span class="o">=</span> <span class="n">eigs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">eigs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">min_gap_idx</span> <span class="o">=</span> <span class="n">gap</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+        <span class="n">min_gap</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">gap</span><span class="p">[</span><span class="n">min_gap_idx</span><span class="p">])</span>
+
+        <span class="c1"># Plot spectral graph</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Spectral graph&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Energy&quot;</span><span class="p">)</span>
+
+        <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">eigs</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">s</span><span class="p">[</span><span class="n">min_gap_idx</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">min_gap_idx</span><span class="p">]],</span> <span class="n">eigs</span><span class="p">[</span><span class="n">min_gap_idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;minimum gap = </span><span class="si">{</span><span class="n">min_gap</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s2">&quot;axes fraction&quot;</span><span class="p">,</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset fontsize&quot;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+            <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">min_gap</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="QUBO.compute_bounds"><a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.components.QUBO.compute_bounds">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">compute_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute an upper and lower bound for the QUBO problem.</span>
+
+<span class="sd">        First the objective function is convexified and then the integrality constraints</span>
+<span class="sd">        are dropped (see https://link.springer.com/article/10.1007/s10107-005-0637-9).</span>
+<span class="sd">        The resulting (convex, constrained) continuous optimization problem is solved</span>
+<span class="sd">        via COBYLA algorithm. The solution gives a lower bound. An upper bound is</span>
+<span class="sd">        obtained by rounding the solution to the relaxation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            kwargs: Optional keyword arguments to pass to COBYLA algorithm.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Solution to the convex relaxation of the QUBO.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Issue warning if function has been called before and</span>
+        <span class="c1"># no parameters are given</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">kwargs</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;QUBO bounds are being recomputed &quot;</span>
+                <span class="s2">&quot;but no optimization arguments were passed &quot;</span><span class="p">,</span>
+                <span class="n">stacklevel</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Make sure matrix is symmetric</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">to_symmetric_form</span><span class="p">()</span>
+
+        <span class="c1"># Convexification step</span>
+        <span class="n">eigenvalues</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eig</span><span class="p">()</span>  <span class="c1"># Note: Q is symmetric so eigenvalues are real</span>
+        <span class="n">lambda_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
+        <span class="n">shift</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">lambda_min</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">qmat_conv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrix</span> <span class="o">-</span> <span class="n">shift</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">q_conv</span> <span class="o">=</span> <span class="n">shift</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="c1"># Variable bounds 0 &lt;= x &lt;= 1</span>
+        <span class="n">bounds</span> <span class="o">=</span> <span class="n">Bounds</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="c1"># Define function to optimize</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">qubo_fun</span><span class="p">(</span>
+            <span class="n">x</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">],</span> <span class="n">qmat</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">],</span> <span class="n">q</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span> <span class="o">@</span> <span class="n">qmat</span> <span class="o">@</span> <span class="n">x</span> <span class="o">+</span> <span class="n">q</span> <span class="o">@</span> <span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Optimize</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">x0</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;disp&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+        <span class="n">options</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span>
+            <span class="n">qubo_fun</span><span class="p">,</span>
+            <span class="n">x0</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="s2">&quot;COBYLA&quot;</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">qmat_conv</span><span class="p">,</span> <span class="n">q_conv</span><span class="p">),</span>
+            <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+            <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">x_relax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Get bounds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lower_bound</span> <span class="o">=</span> <span class="n">qubo_fun</span><span class="p">(</span><span class="n">x_relax</span><span class="p">,</span> <span class="n">qmat_conv</span><span class="p">,</span> <span class="n">q_conv</span><span class="p">)</span>
+        <span class="n">x_feas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">x_relax</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_upper_bound</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_feas</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">x_relax</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

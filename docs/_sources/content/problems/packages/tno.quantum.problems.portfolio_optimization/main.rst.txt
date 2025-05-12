@@ -1,0 +1,12 @@
+problems.portfolio_optimization
+===============================
+
+.. raw:: html
+
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.0</div>
+
+.. automodule:: tno.quantum.problems.portfolio_optimization
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

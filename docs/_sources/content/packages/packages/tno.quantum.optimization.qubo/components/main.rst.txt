@@ -1,0 +1,12 @@
+optimization.qubo.components
+============================
+
+.. raw:: html
+
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div>
+
+.. automodule:: tno.quantum.optimization.qubo.components
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

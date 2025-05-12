@@ -1,0 +1,20 @@
+optimization.qubo
+=================
+
+.. raw:: html
+
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div>
+
+.. automodule:: tno.quantum.optimization.qubo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. toctree::
+   :maxdepth: 1
+
+   components/main
+   solvers/main
+   postprocessors/main
+   preprocessors/main
+

@@ -1,0 +1,12 @@
+ml.datasets
+===========
+
+.. raw:: html
+
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.1</div>
+
+.. automodule:: tno.quantum.ml.datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

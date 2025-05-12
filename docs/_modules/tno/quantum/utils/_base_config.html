@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.utils._base_config &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.utils._base_config</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.utils._base_config</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the ``BaseConfig`` class.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Mapping</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">ClassVar</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">TypeVar</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils._base_arguments</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseArguments</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils._utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_to_snake_case</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">check_kwarglike</span><span class="p">,</span>
+    <span class="n">check_snake_case</span><span class="p">,</span>
+    <span class="n">check_string</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># ruff: noqa:  UP007</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="BaseConfig"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BaseConfig</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">BaseArguments</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base configuration class for creating instances of a specific class.</span>
+
+<span class="sd">    The :py:class:`BaseConfig` class allows users to easily create configuration classes</span>
+<span class="sd">    that can be used to instantiate arbitrary class objects. For instance, see</span>
+<span class="sd">    :py:class:`~BackendConfig` or :py:class:`~OptimizerConfig`.</span>
+
+<span class="sd">    Each configuration class must implement a :py:meth:`supported_items` method that</span>
+<span class="sd">    returns a dictionary with as keys the `snake_case` class names and as values</span>
+<span class="sd">    constructors of supported classes. These can be either the class or callable objects</span>
+<span class="sd">    that return class instances.</span>
+
+<span class="sd">    From a configuration object, instances can be created using the</span>
+<span class="sd">    :py:meth:`get_instance` method.</span>
+
+<span class="sd">    The `name` attribute can be provided in either snake_case, camelCase or PascalCase,</span>
+<span class="sd">    that is, ``&quot;TestSolver&quot;`` and ``&quot;test_solver&quot;`` will be treated the same.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; from tno.quantum.utils import BaseConfig</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; def add(x, y):</span>
+<span class="sd">        ...     return x + y</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; def mul(x, y):</span>
+<span class="sd">        ...     return x * y</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; class IntegerConfig(BaseConfig[int]):</span>
+<span class="sd">        ...     @staticmethod</span>
+<span class="sd">        ...     def supported_items():</span>
+<span class="sd">        ...         return { &quot;add&quot;: add, &quot;mul&quot;: mul }</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; config = IntegerConfig(name=&quot;mul&quot;, options={&quot;x&quot;: 6, &quot;y&quot;: 7})</span>
+<span class="sd">        &gt;&gt;&gt; config.get_instance()</span>
+<span class="sd">        42</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_name</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Name used to determine the name of the to instantiate class.&quot;&quot;&quot;</span>
+    <span class="n">_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Keyword arguments to be passed to the constructor of the class.&quot;&quot;&quot;</span>
+    <span class="n">_supported_custom_items</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="BaseConfig.__init__"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init :py:class:`BaseConfig`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Name used to determine the name of the to instantiate class.</span>
+<span class="sd">            options: Keyword arguments to be passed to the constructor of the class.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            TypeError: If `name` is not a string or `options` is not a mapping.</span>
+<span class="sd">            KeyError: If `options` has a key that is not a string.</span>
+<span class="sd">            KeyError: If `name` does not match any of the supported items.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">check_string</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">convert_to_snake_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_options</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">check_kwarglike</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="s2">&quot;options&quot;</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">options</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="p">{}</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_items</span><span class="p">()</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_custom_items</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Name &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s2">&#39; does not match any of the supported items.&quot;</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Name used to determine the name of the to instantiate class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Keyword arguments to be passed to the constructor of the class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_options</span>
+
+<div class="viewcode-block" id="BaseConfig.supported_items"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.supported_items">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">supported_items</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span>
+        <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span>
+        <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">]]</span>
+        <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">]]</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the supported classes.</span>
+
+<span class="sd">        This method must be implemented for each configuration class and should return a</span>
+<span class="sd">        dictionary with as keys the `snake_case` class names and values the supported</span>
+<span class="sd">        classes or callable objects that return supported classes.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary with constructors of supported classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="BaseConfig.supported_custom_items"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.supported_custom_items">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">supported_custom_items</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span>
+        <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span>
+        <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">]]</span>
+        <span class="o">|</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">]]</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the supported custom classes.&quot;&quot;&quot;</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">prefix</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">full_name</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="p">:]:</span> <span class="n">item</span>
+            <span class="k">for</span> <span class="n">full_name</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_supported_custom_items</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">full_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="BaseConfig.register_custom_item"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.register_custom_item">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">register_custom_item</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Register a custom item to the supported custom items.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Name of the custom item to be added. Will be converted to</span>
+<span class="sd">                snake_case version.</span>
+<span class="sd">            item: Custom item to be added. Item needs to be a constructor of the</span>
+<span class="sd">                custom class and can be the class itself or a callable function that</span>
+<span class="sd">                returns the class instance.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `name` already exists in supported items or supported</span>
+<span class="sd">                custom items.</span>
+<span class="sd">            TypeError: If `item` is not a class or callable object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">check_snake_case</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">warn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">convert_to_snake_case</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Provided item </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2"> is not a class or callable object.&quot;</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">supported_items</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The custom item with name `</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">` can&#39;t be added because there &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;already exists a similar named item within `supported_items`.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">supported_custom_items</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The custom item with name `</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">` can&#39;t be added because there &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;already exists a similar named item within `supported_custom_items`.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="bp">cls</span><span class="o">.</span><span class="n">_supported_custom_items</span><span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">prefix</span><span class="p">()</span> <span class="o">+</span> <span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span></div>
+
+<div class="viewcode-block" id="BaseConfig.prefix"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.prefix">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">prefix</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute prefix that prevents naming conflicts in storage of custom items.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">-&quot;</span></div>
+
+<div class="viewcode-block" id="BaseConfig.get_instance"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.get_instance">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">additional_args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">additional_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates configured object instance.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            additional_args: Additional constructor arguments to be passed to the class.</span>
+<span class="sd">            additional_kwargs: Additional constructor keyword arguments that are not</span>
+<span class="sd">                provided by the options, If the keyword argument is also provided in the</span>
+<span class="sd">                options, the``additional_kwargs`` take priority.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A configured object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">supported_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_items</span><span class="p">()</span>
+        <span class="n">supported_custom_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_custom_items</span><span class="p">()</span>
+        <span class="n">all_supported_items</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">T</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">**</span><span class="n">supported_items</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">supported_custom_items</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="n">name_snake_case</span> <span class="o">=</span> <span class="n">convert_to_snake_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">name_snake_case</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">all_supported_items</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The provided configuration with name `</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s2">` is invalid. &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Allowed values are: </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">all_supported_items</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">object_class</span> <span class="o">=</span> <span class="n">all_supported_items</span><span class="p">[</span><span class="n">name_snake_case</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">object_class</span><span class="p">(</span><span class="o">*</span><span class="n">additional_args</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_options</span><span class="p">,</span> <span class="o">**</span><span class="n">additional_kwargs</span><span class="p">})</span></div></div>
+
+
+<span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;pennylane&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">pennylane.devices</span><span class="w"> </span><span class="kn">import</span> <span class="n">Device</span>
+
+<div class="viewcode-block" id="BackendConfig"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BackendConfig">[docs]</a>    <span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">BackendConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">[</span><span class="n">Device</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Configuration class for creating PennyLane device instances.</span>
+
+<span class="sd">        Supported backends can be found by calling</span>
+<span class="sd">        :py:meth:`~BackendConfig.supported_items`.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from tno.quantum.utils import BackendConfig</span>
+<span class="sd">            &gt;&gt;&gt;</span>
+<span class="sd">            &gt;&gt;&gt; # List all supported backends</span>
+<span class="sd">            &gt;&gt;&gt; sorted(BackendConfig.supported_items())[:4]</span>
+<span class="sd">            [&#39;default.clifford&#39;, &#39;default.gaussian&#39;, &#39;default.mixed&#39;, &#39;default.qubit&#39;]</span>
+<span class="sd">            &gt;&gt;&gt;</span>
+<span class="sd">            &gt;&gt;&gt; # Instantiate a backend</span>
+<span class="sd">            &gt;&gt;&gt; config = BackendConfig(name=&quot;default.qubit&quot;, options={&quot;wires&quot;: 5})</span>
+<span class="sd">            &gt;&gt;&gt; type(config.get_instance())</span>
+<span class="sd">            &lt;class &#39;pennylane.devices.default_qubit.DefaultQubit&#39;&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BackendConfig.__init__"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BackendConfig.__init__">[docs]</a>        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Init :py:class:`BackendConfig`.</span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                name: Name of the PennyLane :py:class:`~pennylane.devices.Device`,</span>
+<span class="sd">                    for example ``&quot;default.qubit&quot;``.</span>
+<span class="sd">                options: Keyword arguments to be passed to the constructor of the device</span>
+<span class="sd">                    class.</span>
+
+<span class="sd">            Raises:</span>
+<span class="sd">                TypeError: If `name` is not a string or `options` is not a mapping.</span>
+<span class="sd">                KeyError: If `options` has a key that is not a string.</span>
+<span class="sd">                KeyError: If `name` does not match any of the supported backends.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BackendConfig.supported_items"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BackendConfig.supported_items">[docs]</a>        <span class="nd">@staticmethod</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">supported_items</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Device</span><span class="p">]]:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Obtain all supported PennyLane backend devices.</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                Dictionary with callable that instantiate Pennylane Device instances.</span>
+
+<span class="sd">            Raises:</span>
+<span class="sd">                ModuleNotFoundError: If PennyLane can not be detected and no backends</span>
+<span class="sd">                    can be found.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="kn">import</span><span class="w"> </span><span class="nn">pennylane</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qml</span>
+
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="n">device_name</span><span class="p">:</span> <span class="n">partial</span><span class="p">(</span><span class="n">qml</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">device_name</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">device_name</span> <span class="ow">in</span> <span class="n">qml</span><span class="o">.</span><span class="n">plugin_devices</span>
+                <span class="p">}</span>
+            <span class="k">except</span> <span class="ne">ModuleNotFoundError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;PennyLane can&#39;t be detected and hence no devices can be found.&quot;</span>
+                <span class="k">raise</span> <span class="ne">ModuleNotFoundError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exception</span></div></div>
+
+
+<span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;torch&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim.optimizer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optimizer</span>
+
+<div class="viewcode-block" id="OptimizerConfig"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.OptimizerConfig">[docs]</a>    <span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">OptimizerConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">[</span><span class="n">Optimizer</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Configuration class for creating instances of a PyTorch optimizer.</span>
+
+<span class="sd">        Currently only a selection of PyTorch optimizers are supported. See the</span>
+<span class="sd">        documentation of :py:meth:`~OptimizerConfig.supported_items` for information on</span>
+<span class="sd">        which optimizers are supported.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; import torch</span>
+<span class="sd">            &gt;&gt;&gt; from tno.quantum.utils import OptimizerConfig</span>
+<span class="sd">            &gt;&gt;&gt;</span>
+<span class="sd">            &gt;&gt;&gt; # List all supported optimizers</span>
+<span class="sd">            &gt;&gt;&gt; list(OptimizerConfig.supported_items())</span>
+<span class="sd">            [&#39;adagrad&#39;, &#39;adam&#39;, &#39;rprop&#39;, &#39;stochastic_gradient_descent&#39;]</span>
+<span class="sd">            &gt;&gt;&gt;</span>
+<span class="sd">            &gt;&gt;&gt; # Instantiate an optimizer</span>
+<span class="sd">            &gt;&gt;&gt; config = OptimizerConfig(name=&quot;adagrad&quot;, options={&quot;lr&quot;: 0.5})</span>
+<span class="sd">            &gt;&gt;&gt; type(config.get_instance(params=[torch.rand(1)]))</span>
+<span class="sd">            &lt;class &#39;torch.optim.adagrad.Adagrad&#39;&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="OptimizerConfig.__init__"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.OptimizerConfig.__init__">[docs]</a>        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Init :py:class:`OptimizerConfig`.</span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                name: Name of the :py:class:`torch.optim.optimizer.Optimizer` class.</span>
+<span class="sd">                options: Keyword arguments to be passed to the optimizer. Must be a</span>
+<span class="sd">                    mapping-like object keys being string objects. Values can be</span>
+<span class="sd">                    anything depending on specific optimizer.</span>
+
+<span class="sd">            Raises:</span>
+<span class="sd">                TypeError: If `name` is not a string or `options` is not a mapping.</span>
+<span class="sd">                KeyError: If `options` has a key that is not a string.</span>
+<span class="sd">                KeyError: If `name` does not match any of the supported optimizers.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OptimizerConfig.supported_items"><a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.OptimizerConfig.supported_items">[docs]</a>        <span class="nd">@staticmethod</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">supported_items</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">[</span><span class="n">Optimizer</span><span class="p">]]:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Obtain supported PyTorch optimizers.</span>
+
+<span class="sd">            If PyTorch is installed then the following optimizers are supported:</span>
+
+<span class="sd">                - Adagrad</span>
+<span class="sd">                    - name: ``&quot;adagrad&quot;``</span>
+<span class="sd">                    - options: see `Adagrad kwargs`__</span>
+
+<span class="sd">                - Adam</span>
+<span class="sd">                    - name: ``&quot;adam&quot;``</span>
+<span class="sd">                    - options: see `Adam kwargs`__</span>
+
+<span class="sd">                - Rprop</span>
+<span class="sd">                    - name: ``&quot;rprop&quot;``</span>
+<span class="sd">                    - options: see `Rprop kwargs`__</span>
+
+<span class="sd">                - SDG:</span>
+<span class="sd">                    - name: ``&quot;stochastic_gradient_descent&quot;``</span>
+<span class="sd">                    - options: see `SDG kwargs`__</span>
+
+
+<span class="sd">            __ https://pytorch.org/docs/stable/generated/torch.optim.Adagrad.html</span>
+<span class="sd">            __ https://pytorch.org/docs/stable/generated/torch.optim.Adam.html</span>
+<span class="sd">            __ https://pytorch.org/docs/stable/generated/torch.optim.Rprop.html</span>
+<span class="sd">            __ https://pytorch.org/docs/stable/generated/torch.optim.SGD.html</span>
+
+<span class="sd">            Raises:</span>
+<span class="sd">                ModuleNotFoundError: If PyTorch can not be detected and no optimizers</span>
+<span class="sd">                    can be found.</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                Dictionary with supported optimizers by their name.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim.adagrad</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adagrad</span>
+                <span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim.adam</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adam</span>
+                <span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim.rprop</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rprop</span>
+                <span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim.sgd</span><span class="w"> </span><span class="kn">import</span> <span class="n">SGD</span>
+
+            <span class="k">except</span> <span class="ne">ModuleNotFoundError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Torch can&#39;t be detected and hence no optimizers can be found.&quot;</span>
+                <span class="k">raise</span> <span class="ne">ModuleNotFoundError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exception</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="s2">&quot;adagrad&quot;</span><span class="p">:</span> <span class="n">Adagrad</span><span class="p">,</span>
+                    <span class="s2">&quot;adam&quot;</span><span class="p">:</span> <span class="n">Adam</span><span class="p">,</span>
+                    <span class="s2">&quot;rprop&quot;</span><span class="p">:</span> <span class="n">Rprop</span><span class="p">,</span>
+                    <span class="s2">&quot;stochastic_gradient_descent&quot;</span><span class="p">:</span> <span class="n">SGD</span><span class="p">,</span>
+                <span class="p">}</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+communication.qkd_key_rate.quantum.bb84
+=======================================
+
+.. automodule:: tno.quantum.communication.qkd_key_rate.quantum.bb84
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

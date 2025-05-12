@@ -1,0 +1,55 @@
+QKD key-rate
+============
+
+This page contains advanced examples for the :py:mod:`tno.quantum.communication.qkd_key_rate` package.
+Examples of basic usage can be found in the module documentation.
+
+The package provides python code to compute optimal protocol parameters for different quantum key distribution (QKD) protocols.
+
+Requirements
+------------
+
+Install the following dependencies to run the examples below:
+
+.. code-block:: bash
+
+    pip install tno.quantum.communication.qkd_key_rate~=2.0
+    pip install matplotlib
+    pip install tqdm
+
+Examples
+--------
+
+*Example 1:* Compute secure key-rate for various BB84 protocols as function of the loss.
+
+.. image:: assets/communication_qkd/example1.png
+    :width: 1200
+    :align: center
+    :alt: Secure key-rate for various BB84 protocols as function of the loss.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/communication_qkd/example1.py
+        :language: python
+        :linenos:
+
+   .. code-block:: bash
+
+    Processing Fully Asymptotic BB84: 100%|███████████████████████████████████████████████████████████████████████████████████| 40/40 [00:01<00:00, 30.07it/s]
+    Processing Asymptotic BB84: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:23<00:00,  1.72it/s]
+    Processing Single photon Asymptotic BB84: 100%|███████████████████████████████████████████████████████████████████████████| 40/40 [00:00<00:00, 42.25it/s]
+    Processing Finite BB84: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [12:27<00:00, 18.68s/it]
+
+*Example 2:* Compute secure key-rate as a function of the number of pulses for the BB84 finite key-rate protocol.
+
+.. image:: assets/communication_qkd/example2.png
+    :width: 1200
+    :align: center
+    :alt: Secure key-rate as function of the number of pulses for BB84 finite key-rate protocol.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/communication_qkd/example2.py
+        :language: python
+        :linenos:
+        

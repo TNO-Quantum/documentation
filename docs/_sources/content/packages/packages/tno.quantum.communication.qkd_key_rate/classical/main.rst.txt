@@ -1,0 +1,15 @@
+communication.qkd_key_rate.classical
+====================================
+
+.. automodule:: tno.quantum.communication.qkd_key_rate.classical
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. toctree::
+   :maxdepth: 1
+
+   cascade
+   privacy_amplification
+   winnow
+

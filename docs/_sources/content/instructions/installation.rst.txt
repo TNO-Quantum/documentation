@@ -1,0 +1,34 @@
+Installation
+============
+
+.. role:: bash(code)
+   :language: bash
+
+Our packages require Python ≥ 3.9 and are available on 
+`PyPi <https://pypi.org/user/TNOQuantum/>`_.
+Each package can be installed by running :bash:`pip install <package-name>`.
+
+For instance, the package :py:mod:`tno.quantum.optimization.qubo` can be installed by running:
+
+.. code-block:: bash
+
+    pip install tno.quantum.optimization.qubo
+
+The source code for these packages can be found on the `TNO-Quantum GitHub page <https://github.com/TNO-Quantum>`_.
+
+
+Optional dependencies
+---------------------
+
+Some packages have optional dependencies. For example, :py:mod:`tno.quantum.optimization.qubo.solvers`
+and :py:mod:`tno.quantum.optimization.qubo` can be installed with optional solvers, by providing the following flags:
+
+.. code-block:: bash
+
+    pip install tno.quantum.optimization.qubo[dwave,qubovert,qaoa]
+
+To install all optional solvers, use the ``all`` flag:
+
+.. code-block:: bash
+
+    pip install tno.quantum.optimization.qubo[all]

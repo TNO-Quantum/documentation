@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>communication.qkd_key_rate &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="communication.qkd_key_rate.quantum" href="quantum/main.html" />
+    <link rel="prev" title="ml.classifiers.vc.models.probability_model" href="../tno.quantum.ml/classifiers.vc/models/probability_model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">communication.qkd_key_rate</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="communication-qkd-key-rate">
+<h1>communication.qkd_key_rate<a class="headerlink" href="#communication-qkd-key-rate" title="Permalink to this heading"></a></h1>
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.0</div><span class="target" id="module-tno.quantum.communication.qkd_key_rate"></span><p>TNO Quantum communication key-rate module.</p>
+<p>The <a class="reference internal" href="#module-tno.quantum.communication.qkd_key_rate" title="tno.quantum.communication.qkd_key_rate"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.communication.qkd_key_rate</span></code></a> package provides python code to
+compute optimal protocol parameters for different quantum key distribution (QKD)
+protocols.</p>
+<p>The codebase is based on the following papers:</p>
+<ul class="simple">
+<li><p>Attema et al. - Optimizing the decoy-state BB84 QKD protocol parameters (2021)(<a class="reference external" href="https://doi.org/10.1007/s11128-021-03078-0">https://doi.org/10.1007/s11128-021-03078-0</a>)</p></li>
+<li><p>Ma et al. - Quantum key distribution with entangled photon sources (2007)(<a class="reference external" href="http://doi.org/10.1103/PhysRevA.76.012307">http://doi.org/10.1103/PhysRevA.76.012307</a>)</p></li>
+</ul>
+<p>The following quantum protocols are supported:</p>
+<ul class="simple">
+<li><p>BB84 protocol (<a class="reference internal" href="quantum/bb84.html#module-tno.quantum.communication.qkd_key_rate.quantum.bb84" title="tno.quantum.communication.qkd_key_rate.quantum.bb84"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bb84</span></code></a>),</p></li>
+<li><p>BB84 protocol using a single photon source (<a class="reference internal" href="quantum/bb84_single_photon.html#module-tno.quantum.communication.qkd_key_rate.quantum.bb84_single_photon" title="tno.quantum.communication.qkd_key_rate.quantum.bb84_single_photon"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bb84_single_photon</span></code></a>),</p></li>
+<li><p>BBM92 protocol (<a class="reference internal" href="quantum/bbm92.html#module-tno.quantum.communication.qkd_key_rate.quantum.bbm92" title="tno.quantum.communication.qkd_key_rate.quantum.bbm92"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bbm92</span></code></a>).</p></li>
+</ul>
+<p>The following classical error-correction protocols are supported:</p>
+<ul class="simple">
+<li><p>Cascade (<a class="reference internal" href="classical/cascade.html#module-tno.quantum.communication.qkd_key_rate.classical.cascade" title="tno.quantum.communication.qkd_key_rate.classical.cascade"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cascade</span></code></a>),</p></li>
+<li><p>Winnow (<a class="reference internal" href="classical/winnow.html#module-tno.quantum.communication.qkd_key_rate.classical.winnow" title="tno.quantum.communication.qkd_key_rate.classical.winnow"><code class="xref py py-mod docutils literal notranslate"><span class="pre">winnow</span></code></a>).</p></li>
+</ul>
+<p>The presented code can be used to</p>
+<ul class="simple">
+<li><p>determine optimal parameter settings needed to obtain the maximum key rate,</p></li>
+<li><p>correct errors in exchanged sifted keys for the different QKD protocols,</p></li>
+<li><p>apply privacy amplification by calculating secure key using hash function.</p></li>
+</ul>
+<p>Usage examples can be found in relevant submodules.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quantum/main.html">communication.qkd_key_rate.quantum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classical/main.html">communication.qkd_key_rate.classical</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tno.quantum.ml/classifiers.vc/models/probability_model.html" class="btn btn-neutral float-left" title="ml.classifiers.vc.models.probability_model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quantum/main.html" class="btn btn-neutral float-right" title="communication.qkd_key_rate.quantum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

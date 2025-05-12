@@ -1,0 +1,14 @@
+ml.classifiers.vc.models
+========================
+
+.. automodule:: tno.quantum.ml.classifiers.vc.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. toctree::
+   :maxdepth: 1
+
+   expected_value_model
+   probability_model
+

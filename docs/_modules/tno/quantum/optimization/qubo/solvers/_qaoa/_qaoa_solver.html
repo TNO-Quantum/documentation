@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.optimization.qubo.solvers._qaoa._qaoa_solver &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../../" id="documentation_options" src="../../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.optimization.qubo.solvers._qaoa._qaoa_solver</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.optimization.qubo.solvers._qaoa._qaoa_solver</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the ``QAOASolver`` class.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapping</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">SupportsInt</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomState</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">trange</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">QUBO</span><span class="p">,</span> <span class="n">Solver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.solvers._qaoa._qaoa_result</span><span class="w"> </span><span class="kn">import</span> <span class="n">QAOAResult</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.solvers._qaoa._qnode_factory</span><span class="w"> </span><span class="kn">import</span> <span class="n">QNodeFactory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">BackendConfig</span><span class="p">,</span> <span class="n">OptimizerConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">check_arraylike</span><span class="p">,</span>
+    <span class="n">check_bool</span><span class="p">,</span>
+    <span class="n">check_int</span><span class="p">,</span>
+    <span class="n">check_random_state</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pennylane</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qml</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.optim.optimizer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optimizer</span>
+
+
+<div class="viewcode-block" id="QAOASolver"><a class="viewcode-back" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.QAOASolver">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">QAOASolver</span><span class="p">(</span><span class="n">Solver</span><span class="p">[</span><span class="n">QAOAResult</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solver implementing a basic Quantum Approximate Optimization Algorithm (QAOA).</span>
+
+<span class="sd">    The Mixer Hamiltonian is a Pauli-X Hamiltonian and the cost Hamiltonian is the</span>
+<span class="sd">    Lenz-Ising Hamiltonian retrieved from the QUBO problem.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; from tno.quantum.optimization.qubo.components import QUBO</span>
+<span class="sd">        &gt;&gt;&gt; from tno.quantum.optimization.qubo.solvers import QAOASolver</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; qubo = QUBO([[1, 2, 3], [4, -50, 6], [7, 8, 9]])</span>
+<span class="sd">        &gt;&gt;&gt; solver = QAOASolver(</span>
+<span class="sd">        ...     num_layers=4,</span>
+<span class="sd">        ...     num_iter=100,</span>
+<span class="sd">        ... )</span>
+<span class="sd">        &gt;&gt;&gt; result = solver.solve(qubo)</span>
+<span class="sd">        &gt;&gt;&gt; result.best_bitvector</span>
+<span class="sd">        BitVector(010)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="QAOASolver.__init__"><a class="viewcode-back" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.QAOASolver.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="n">RandomState</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">num_layers</span><span class="p">:</span> <span class="n">SupportsInt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">num_iter</span><span class="p">:</span> <span class="n">SupportsInt</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">init_beta</span><span class="p">:</span> <span class="n">ArrayLike</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">init_gamma</span><span class="p">:</span> <span class="n">ArrayLike</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">training_backend</span><span class="p">:</span> <span class="n">BackendConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">evaluation_backend</span><span class="p">:</span> <span class="n">BackendConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">optimizer</span><span class="p">:</span> <span class="n">OptimizerConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Init :py:class:`QAOASolver`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            random_state: Random state to seed. The seed is used when creating random</span>
+<span class="sd">                parameters (gamma and beta). Note that this seed *does not* seed the</span>
+<span class="sd">                backends or optimizers. These should be seeded separately.</span>
+<span class="sd">            num_layers: Number of layers to use. Each layer contains one mixer block and</span>
+<span class="sd">                one cost block. Default is 1.</span>
+<span class="sd">            num_iter: Number of optimization iterations to perform. Default is 100.</span>
+<span class="sd">            init_beta: Initial parameters for the mixer layer. Should be an</span>
+<span class="sd">                1-D ArrayLike of length `num_layers` with values in the range</span>
+<span class="sd">                $[0, \pi)$. If ``None`` (default) is provided the random values will be</span>
+<span class="sd">                generated.</span>
+<span class="sd">            init_gamma: Initial parameters for the cost layer. Should be an</span>
+<span class="sd">                1-D ArrayLike of length `num_layers` with values in range $[0, 2\pi)$.</span>
+<span class="sd">                If ``None`` (default) is provided the random values will be generated.</span>
+<span class="sd">            training_backend: Training backend to use. Must be a ``BackendConfig`` or a</span>
+<span class="sd">                mapping with the ``&quot;name&quot;`` and ``&quot;options&quot;`` keys. If ``None``</span>
+<span class="sd">                (default) is provided, ``{&quot;name&quot;: &quot;default.qubit&quot;, &quot;options&quot;: {}}`` is</span>
+<span class="sd">                used.</span>
+<span class="sd">            evaluation_backend: Evaluation backend to use after the circuit has been</span>
+<span class="sd">                optimized. The chosen backend must have the `shots` attribute. Must be</span>
+<span class="sd">                a ``BackendConfig`` or a mapping with the &quot;name&quot; and &quot;options&quot; keys. If</span>
+<span class="sd">                ``None`` (default) is provided,</span>
+<span class="sd">                ``{&quot;name&quot;: &quot;default.qubit&quot;, &quot;options&quot;: {&quot;shots&quot;: 100}}`` is used.</span>
+<span class="sd">            optimizer: Optimizer to use. Must be an ``OptimizerConfig`` or a mapping</span>
+<span class="sd">                with the &quot;name&quot; and &quot;options&quot; keys. If ``None`` (default) is provided,</span>
+<span class="sd">                ``{&quot;name&quot;: &quot;adagrad&quot;, &quot;options&quot;: {}}`` is used.</span>
+<span class="sd">            verbose: If ``True`` print additional information. Default is ``False``.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If `num_layers` or `num_iter` is less than 1, or if `init_beta`</span>
+<span class="sd">                or `init_gamma` is not 1-dimensional of length `num_layers`.</span>
+<span class="sd">            TypeError: If `random_state`, `num_layers`, `num_iter`, `init_beta` or</span>
+<span class="sd">                `init_gamma` has invalid type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_random_state</span> <span class="o">=</span> <span class="n">check_random_state</span><span class="p">(</span><span class="n">random_state</span><span class="p">,</span> <span class="s2">&quot;random_state&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_layers</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">num_layers</span><span class="p">,</span> <span class="s2">&quot;num_layers&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_iter</span> <span class="o">=</span> <span class="n">num_iter</span>  <span class="c1"># type: ignore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_beta</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">init_beta</span>  <span class="c1"># type: ignore</span>
+            <span class="k">if</span> <span class="n">init_beta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_random_state</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">high</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_gamma</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">init_gamma</span>  <span class="c1"># type: ignore</span>
+            <span class="k">if</span> <span class="n">init_gamma</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_random_state</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">high</span><span class="o">=</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">training_backend</span> <span class="o">=</span> <span class="n">training_backend</span>  <span class="c1"># type: ignore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_backend</span> <span class="o">=</span> <span class="n">evaluation_backend</span>  <span class="c1"># type: ignore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>  <span class="c1"># type: ignore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">num_layers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Number of layers to use.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_layers</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">num_iter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Number of optimization iterations to perform.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_iter</span>
+
+    <span class="nd">@num_iter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">num_iter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_iter</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;num_iter&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initial parameters for the mixer layer.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_beta</span>
+
+    <span class="nd">@init_beta</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_beta</span> <span class="o">=</span> <span class="n">check_arraylike</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;init_beta&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_gamma</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initial parameters for the cost layer.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_gamma</span>
+
+    <span class="nd">@init_gamma</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_gamma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_gamma</span> <span class="o">=</span> <span class="n">check_arraylike</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;init_gamma&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">training_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BackendConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Configuration for training backend to use.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_training_backend</span>
+
+    <span class="nd">@training_backend</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">training_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">BackendConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_training_backend</span> <span class="o">=</span> <span class="n">get_default_training_backend_if_none</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BackendConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Configuration for evaluation backend to use.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_evaluation_backend</span>
+
+    <span class="nd">@evaluation_backend</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">BackendConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_evaluation_backend</span> <span class="o">=</span> <span class="n">get_default_evaluation_backend_if_none</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">optimizer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OptimizerConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Configuration for optimizer to use.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span>
+
+    <span class="nd">@optimizer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">optimizer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">OptimizerConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_optimizer</span> <span class="o">=</span> <span class="n">get_default_optimizer_if_none</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">verbose</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Flag to indicate whether to print additional information.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span>
+
+    <span class="nd">@verbose</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">verbose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verbose</span> <span class="o">=</span> <span class="n">check_bool</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;verbose&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_solve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qubo</span><span class="p">:</span> <span class="n">QUBO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QAOAResult</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Solve the given QUBO using the QAOA algorithm.&quot;&quot;&quot;</span>
+        <span class="n">external_fields</span><span class="p">,</span> <span class="n">interactions</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">qubo</span><span class="o">.</span><span class="n">to_ising</span><span class="p">()</span>
+        <span class="n">qnode_factory</span> <span class="o">=</span> <span class="n">QNodeFactory</span><span class="p">(</span><span class="n">external_fields</span><span class="p">,</span> <span class="n">interactions</span><span class="p">)</span>
+        <span class="n">qnode_cost</span> <span class="o">=</span> <span class="n">qnode_factory</span><span class="o">.</span><span class="n">make_qnode</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_backend</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,</span> <span class="s2">&quot;expval&quot;</span>
+        <span class="p">)</span>
+        <span class="n">qnode_counts</span> <span class="o">=</span> <span class="n">qnode_factory</span><span class="o">.</span><span class="n">make_qnode</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_backend</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,</span> <span class="s2">&quot;counts&quot;</span>
+        <span class="p">)</span>
+
+        <span class="n">properties</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;num_iter&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_iter</span><span class="p">,</span>
+            <span class="s2">&quot;init_beta&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_beta</span><span class="p">,</span>
+            <span class="s2">&quot;init_gamma&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_gamma</span><span class="p">,</span>
+            <span class="s2">&quot;training_backend&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_backend</span><span class="p">,</span>
+            <span class="s2">&quot;evaluation_backend&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">evaluation_backend</span><span class="p">,</span>
+            <span class="s2">&quot;optimizer&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="n">properties</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_optimize_parameters</span><span class="p">(</span>
+                <span class="n">qnode_cost</span><span class="o">=</span><span class="n">qnode_cost</span><span class="p">,</span>
+                <span class="n">num_iter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_iter</span><span class="p">,</span>
+                <span class="n">init_beta</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_init_beta</span><span class="p">,</span>
+                <span class="n">init_gamma</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_init_gamma</span><span class="p">,</span>
+                <span class="n">optimizer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="p">,</span>
+                <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">raw_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_optimized_circuit</span><span class="p">(</span><span class="n">qnode_counts</span><span class="p">,</span> <span class="n">properties</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">QAOAResult</span><span class="o">.</span><span class="n">from_result</span><span class="p">(</span><span class="n">qubo</span><span class="p">,</span> <span class="n">raw_result</span><span class="p">,</span> <span class="n">properties</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_optimize_parameters</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
+        <span class="n">qnode_cost</span><span class="p">:</span> <span class="n">qml</span><span class="o">.</span><span class="n">QNode</span><span class="p">,</span>
+        <span class="n">num_iter</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">init_beta</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">],</span>
+        <span class="n">init_gamma</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">],</span>
+        <span class="n">optimizer</span><span class="p">:</span> <span class="n">OptimizerConfig</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Optimize the parameters for the cost circuit.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            qnode_cost: QNode encoding the cost function to optimize.</span>
+<span class="sd">            num_layers: Number of layers to use.</span>
+<span class="sd">            num_iter: Number of optimization iterations to perform.</span>
+<span class="sd">            init_beta: Initial parameters for the mixer layer.</span>
+<span class="sd">            init_gamma: Initial parameters for the cost layer.</span>
+<span class="sd">            optimizer: Configuration for optimizer to use.</span>
+<span class="sd">            verbose: If ``True`` print additional information. Default is ``False``.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary containing three keys: ``&quot;final_gamma&quot;``, ``&quot;final_beta&quot;`` and</span>
+<span class="sd">            ``&quot;expval_history&quot;``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">beta</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">init_beta</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">init_gamma</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">optimizer_instance</span><span class="p">:</span> <span class="n">Optimizer</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">get_instance</span><span class="p">([</span><span class="n">gamma</span><span class="p">,</span> <span class="n">beta</span><span class="p">])</span>
+        <span class="n">expval_history</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">num_iter</span><span class="p">)</span>
+
+        <span class="c1"># Optimize gamma and beta</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">trange</span><span class="p">(</span><span class="n">num_iter</span><span class="p">)</span> <span class="k">if</span> <span class="n">verbose</span> <span class="k">else</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iter</span><span class="p">):</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">qnode_cost</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span>
+            <span class="n">expval_history</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">loss</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+
+            <span class="n">optimizer_instance</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+            <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+            <span class="n">optimizer_instance</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+        <span class="n">final_gamma</span><span class="p">,</span> <span class="n">final_beta</span> <span class="o">=</span> <span class="n">optimizer_instance</span><span class="o">.</span><span class="n">param_groups</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;params&quot;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;final_gamma&quot;</span><span class="p">:</span> <span class="n">final_gamma</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s2">&quot;final_beta&quot;</span><span class="p">:</span> <span class="n">final_beta</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s2">&quot;expval_history&quot;</span><span class="p">:</span> <span class="n">expval_history</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+        <span class="p">}</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_run_optimized_circuit</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">qnode_counts</span><span class="p">:</span> <span class="n">qml</span><span class="o">.</span><span class="n">QNode</span><span class="p">,</span> <span class="n">properties</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Optimize the parameters for the cost circuit.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            qnode_counts: QNode of the QAOA circuit.</span>
+<span class="sd">            properties: Dictionary containing at least the keys ``&quot;final_gamma&quot;`` and</span>
+<span class="sd">                ``&quot;final_beta&quot;``.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A mapping with bitstrings as keys and frequencies as values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">final_gamma</span> <span class="o">=</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;final_gamma&quot;</span><span class="p">]</span>
+        <span class="n">final_beta</span> <span class="o">=</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;final_beta&quot;</span><span class="p">]</span>
+
+        <span class="n">raw_result</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">qnode_counts</span><span class="p">(</span><span class="n">final_gamma</span><span class="p">,</span> <span class="n">final_beta</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">raw_result</span></div>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_default_training_backend_if_none</span><span class="p">(</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="n">BackendConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BackendConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set default training backend if the one provided is ``None``.</span>
+
+<span class="sd">    Default training backend ``{&quot;name&quot;: &quot;default.qubit&quot;, &quot;options&quot;: {}}``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        backend: backend configuration or ``None``.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        KeyError: If `backend` does not contain key ``&quot;name&quot;``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Given backend or the default training backend.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">BackendConfig</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span>
+        <span class="n">backend</span> <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default.qubit&quot;</span><span class="p">}</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_default_evaluation_backend_if_none</span><span class="p">(</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="n">BackendConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BackendConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set default evaluation backend if the one provided is ``None``.</span>
+
+<span class="sd">    Default evaluation backend ``{&quot;name&quot;: &quot;default.qubit&quot;, &quot;options&quot;: {&quot;shots&quot;: 100}}``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        backend: evaluation configuration or ``None``.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        KeyError: If `backend` does not contain key ``&quot;name&quot;``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Given backend or the default evaluation backend.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">BackendConfig</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span>
+        <span class="n">backend</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">else</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default.qubit&quot;</span><span class="p">,</span> <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;shots&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}}</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_default_optimizer_if_none</span><span class="p">(</span>
+    <span class="n">optimizer</span><span class="p">:</span> <span class="n">OptimizerConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OptimizerConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set default optimizer if the one provided is ``None``.</span>
+
+<span class="sd">    Default optimizer ``{&quot;name&quot;: &quot;adagrad&quot;, &quot;options&quot;: {}}``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        optimizer: optimizer configuration or ``None``.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        KeyError: If `optimizer` does not contain key ``&quot;name&quot;``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Given optimizer or the default optimizer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">OptimizerConfig</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span>
+        <span class="n">optimizer</span> <span class="k">if</span> <span class="n">optimizer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;adagrad&quot;</span><span class="p">}</span>
+    <span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

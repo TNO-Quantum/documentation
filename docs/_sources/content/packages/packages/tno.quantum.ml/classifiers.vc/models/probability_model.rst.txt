@@ -1,0 +1,8 @@
+ml.classifiers.vc.models.probability_model
+==========================================
+
+.. automodule:: tno.quantum.ml.classifiers.vc.models.probability_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

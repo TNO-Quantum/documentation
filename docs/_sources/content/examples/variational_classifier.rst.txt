@@ -1,0 +1,50 @@
+Variational classifier
+======================
+
+This page contains advanced examples for the :py:mod:`tno.quantum.ml.classifiers.vc` package.
+Examples of basic usage can be found in the module documentation.
+
+The package provides a :py:class:`~tno.quantum.ml.classifiers.vc.VariationalClassifier` which has been implemented in accordance
+with the scikit-learn estimator API. This means that the classifier can be used as any
+other (binary and multiclass) scikit-learn classifier and combined with transformers through
+Pipelines. In addition, the VariationalClassifier makes use of PyTorch tensors, optimizers,
+and loss functions.
+
+Requirements
+------------
+
+Install the following dependencies to run the examples below:
+
+.. code-block:: bash
+
+    pip install tno.quantum.ml.classifiers.vc~=3.0
+    pip install matplotlib
+
+Examples
+--------
+
+*Example 1:* Demonstrate classifier usage via sklearn pipelines.
+
+.. image:: assets/variational_classifier/example1.png
+    :width: 1200
+    :align: center
+    :alt: Classification example.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/variational_classifier/example1.py
+        :language: python
+        :linenos:
+
+*Example 2:* Demonstrate how to use different post-processing models.
+
+.. image:: assets/variational_classifier/example2.png
+    :width: 1200
+    :align: center
+    :alt: Accuracy of different post-processing models.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/variational_classifier/example2.py
+        :language: python
+        :linenos:

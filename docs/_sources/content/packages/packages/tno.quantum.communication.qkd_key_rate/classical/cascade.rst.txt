@@ -1,0 +1,8 @@
+communication.qkd_key_rate.classical.cascade
+============================================
+
+.. automodule:: tno.quantum.communication.qkd_key_rate.classical.cascade
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

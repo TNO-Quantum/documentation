@@ -1,0 +1,68 @@
+Portfolio optimization
+======================
+
+This page contains advanced examples for the :py:mod:`tno.quantum.problems.portfolio_optimization` package.
+Examples of basic usage can be found in the module documentation.
+
+The package provides code that converts the multi-objective portfolio optimization problem
+into a :py:class:`~tno.quantum.optimization.qubo.components.QUBO` problem. The transformed problem
+can then be solved using quantum annealing techniques.
+
+Requirements
+------------
+
+Install the following dependencies to run the examples below:
+
+.. code-block:: bash
+
+    pip install tno.quantum.problems.portfolio_optimization~=2.0
+    pip install matplotlib
+
+
+Examples
+--------
+
+*Example 1:* Demonstrates how to use different QUBO solvers for the portfolio optimization problem.
+
+.. image:: assets/portfolio_optimization/example1a.png
+    :width: 1200
+    :align: center
+    :alt: Portfolio optimization with different solvers
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/portfolio_optimization/example1.py
+        :language: python
+        :linenos:
+
+    Additionally we can make a boxplot of emission values.
+
+    .. code-block:: python
+
+        # Create boxplot of emission values
+        data = [z for (_, _, z) in experiment_data]
+        labels = solver_configurations.keys()
+        plt.boxplot(data, tick_labels=labels)
+        plt.ylabel("Emission Values")
+        plt.title("Emission Box plot")
+        plt.tight_layout()
+        plt.show()
+    
+    .. image:: assets/portfolio_optimization/example1b.png
+        :width: 1200
+        :align: center
+        :alt: Emission box plot multiple solvers
+
+*Example 2:* Demonstrates how to use emission constraint in portfolio optimization.
+
+.. image:: assets/portfolio_optimization/example2.png
+    :width: 1200
+    :align: center
+    :alt: Emission constraint
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/portfolio_optimization/example2.py
+        :language: python
+        :linenos:
+

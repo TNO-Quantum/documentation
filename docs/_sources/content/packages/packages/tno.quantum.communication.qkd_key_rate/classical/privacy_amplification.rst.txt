@@ -1,0 +1,8 @@
+communication.qkd_key_rate.classical.privacy_amplification
+==========================================================
+
+.. automodule:: tno.quantum.communication.qkd_key_rate.classical.privacy_amplification
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

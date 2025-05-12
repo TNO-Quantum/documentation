@@ -1,0 +1,8 @@
+ml.classifiers.vc.models.expected_value_model
+=============================================
+
+.. automodule:: tno.quantum.ml.classifiers.vc.models.expected_value_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
