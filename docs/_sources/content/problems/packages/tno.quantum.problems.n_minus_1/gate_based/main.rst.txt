@@ -1,0 +1,8 @@
+problems.n_minus_1.gate_based
+=============================
+
+.. automodule:: tno.quantum.problems.n_minus_1.gate_based
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

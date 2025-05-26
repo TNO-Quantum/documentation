@@ -56,10 +56,10 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
@@ -98,6 +98,15 @@
 <p class="caption" role="heading"><span class="caption-text">Problems</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
@@ -187,6 +196,8 @@
 </li>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.PreprocessResult.__eq__">(tno.quantum.optimization.qubo.solvers.PreprocessResult method)</a>
 </li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__eq__">(tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult method)</a>
+</li>
         <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BitVector.__eq__">(tno.quantum.utils.BitVector method)</a>
 </li>
       </ul></li>
@@ -200,8 +211,12 @@
         <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BitVector.__getitem__">(tno.quantum.utils.BitVector method)</a>
 </li>
       </ul></li>
-      <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BitVector.__hash__">__hash__() (tno.quantum.utils.BitVector method)</a>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__hash__">__hash__() (tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult method)</a>
+
+      <ul>
+        <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BitVector.__hash__">(tno.quantum.utils.BitVector method)</a>
 </li>
+      </ul></li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html#tno.quantum.communication.qkd_key_rate.classical.cascade.CascadeCorrector.__init__">__init__() (tno.quantum.communication.qkd_key_rate.classical.cascade.CascadeCorrector method)</a>
 
       <ul>
@@ -323,6 +338,22 @@
 </li>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.TreeDecompositionSolver.__init__">(tno.quantum.optimization.qubo.solvers.TreeDecompositionSolver method)</a>
 </li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html#tno.quantum.problems.n_minus_1.gate_based.GateBasedNMinusOneSolver.__init__">(tno.quantum.problems.n_minus_1.gate_based.GateBasedNMinusOneSolver method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#tno.quantum.problems.n_minus_1.GateBasedNMinusOneSolver.__init__">(tno.quantum.problems.n_minus_1.GateBasedNMinusOneSolver method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver.__init__">(tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__init__">(tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.__init__">(tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver.__init__">(tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.__init__">(tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__init__">(tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview method)</a>
+</li>
         <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioData.__init__">(tno.quantum.problems.portfolio_optimization.PortfolioData method)</a>
 </li>
         <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioOptimizer.__init__">(tno.quantum.problems.portfolio_optimization.PortfolioOptimizer method)</a>
@@ -345,6 +376,8 @@
       <ul>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.Freq.__iter__">(tno.quantum.optimization.qubo.components.Freq method)</a>
 </li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__iter__">(tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview method)</a>
+</li>
         <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseArguments.__iter__">(tno.quantum.utils.BaseArguments method)</a>
 </li>
         <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BitVector.__iter__">(tno.quantum.utils.BitVector method)</a>
@@ -358,6 +391,8 @@
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.QUBO.__len__">(tno.quantum.optimization.qubo.components.QUBO method)</a>
 </li>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.QUBO.__len__">(tno.quantum.optimization.qubo.QUBO method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__len__">(tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview method)</a>
 </li>
         <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioData.__len__">(tno.quantum.problems.portfolio_optimization.PortfolioData method)</a>
 </li>
@@ -378,6 +413,10 @@
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.QUBO.__repr__">(tno.quantum.optimization.qubo.components.QUBO method)</a>
 </li>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.QUBO.__repr__">(tno.quantum.optimization.qubo.QUBO method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__repr__">(tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__repr__">(tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview method)</a>
 </li>
         <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioData.__repr__">(tno.quantum.problems.portfolio_optimization.PortfolioData method)</a>
 </li>
@@ -431,6 +470,8 @@
       <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioOptimizer.add_maximize_roc">add_maximize_roc() (tno.quantum.problems.portfolio_optimization.PortfolioOptimizer method)</a>
 </li>
       <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioOptimizer.add_minimize_hhi">add_minimize_hhi() (tno.quantum.problems.portfolio_optimization.PortfolioOptimizer method)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.add_result">add_result() (tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -650,6 +691,14 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult">DecodedResult (class in tno.quantum.problems.n_minus_1.quantum_annealing)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.default">default() (tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments class method)</a>
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.default">(tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments class method)</a>
+</li>
+      </ul></li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html#tno.quantum.communication.qkd_key_rate.quantum.bb84.delta">delta() (in module tno.quantum.communication.qkd_key_rate.quantum.bb84)</a>
 
       <ul>
@@ -670,10 +719,10 @@
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.QUBO.delta_x2">(tno.quantum.optimization.qubo.QUBO method)</a>
 </li>
       </ul></li>
-      <li><a href="content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.deserialize">deserialize() (tno.quantum.utils.serialization.Serializable static method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.deserialize">deserialize() (tno.quantum.utils.serialization.Serializable static method)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html#tno.quantum.communication.qkd_key_rate.quantum.Detector">Detector (class in tno.quantum.communication.qkd_key_rate.quantum)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.DimodSampleSetResult">DimodSampleSetResult (class in tno.quantum.optimization.qubo.solvers)</a>
@@ -687,6 +736,8 @@
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html#tno.quantum.communication.qkd_key_rate.classical.cascade.CascadeReceiver.do_cascade">do_cascade() (tno.quantum.communication.qkd_key_rate.classical.cascade.CascadeReceiver method)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html#tno.quantum.communication.qkd_key_rate.classical.privacy_amplification.PrivacyAmplification.do_hash">do_hash() (tno.quantum.communication.qkd_key_rate.classical.privacy_amplification.PrivacyAmplification method)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.draw">draw() (tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult method)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.DWaveCliqueSamplerSolver">DWaveCliqueSamplerSolver (class in tno.quantum.optimization.qubo.solvers)</a>
 </li>
@@ -742,6 +793,8 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments">FactoryArguments (class in tno.quantum.problems.n_minus_1.quantum_annealing)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender.first_pass">first_pass() (tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender method)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.ml/classifiers.vc/main.html#tno.quantum.ml.classifiers.vc.VariationalClassifier.fit">fit() (tno.quantum.ml.classifiers.vc.VariationalClassifier method)</a>
@@ -802,6 +855,12 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#tno.quantum.problems.n_minus_1.GateBasedNMinusOneSolver">GateBasedNMinusOneSolver (class in tno.quantum.problems.n_minus_1)</a>
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html#tno.quantum.problems.n_minus_1.gate_based.GateBasedNMinusOneSolver">(class in tno.quantum.problems.n_minus_1.gate_based)</a>
+</li>
+      </ul></li>
       <li><a href="content/packages/packages/tno.quantum.ml/datasets/main.html#tno.quantum.ml.datasets.get_anomalous_spiky_time_series_dataset">get_anomalous_spiky_time_series_dataset() (in module tno.quantum.ml.datasets)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.ml/datasets/main.html#tno.quantum.ml.datasets.get_blobs_clustering_dataset">get_blobs_clustering_dataset() (in module tno.quantum.ml.datasets)</a>
@@ -836,11 +895,13 @@
       </ul></li>
       <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.get_installed_subclasses">get_installed_subclasses() (in module tno.quantum.utils)</a>
 </li>
-      <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.get_instance">get_instance() (tno.quantum.utils.BaseConfig method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.get_instance">get_instance() (tno.quantum.utils.BaseConfig method)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.ml/datasets/main.html#tno.quantum.ml.datasets.get_iris_dataset">get_iris_dataset() (in module tno.quantum.ml.datasets)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.get_k">get_k() (tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult method)</a>
 </li>
       <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioData.get_l_bound">get_l_bound() (tno.quantum.problems.portfolio_optimization.PortfolioData method)</a>
 </li>
@@ -906,6 +967,8 @@
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.K">K (tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments attribute)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.KerberosSamplerSolver">KerberosSamplerSolver (class in tno.quantum.optimization.qubo.solvers)</a>
 </li>
   </ul></td>
@@ -920,12 +983,22 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.L">L (tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments attribute)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.LeapHybridSolver">LeapHybridSolver (class in tno.quantum.optimization.qubo.solvers)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html#tno.quantum.communication.qkd_key_rate.classical.Message.length">length (tno.quantum.communication.qkd_key_rate.classical.Message property)</a>
 </li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.datasets.load_dataset">load_dataset() (in module tno.quantum.problems.n_minus_1.quantum_annealing.datasets)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html#tno.quantum.problems.n_minus_1.io.load_gml">load_gml() (in module tno.quantum.problems.n_minus_1.io)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.datasets.load_medium_dataset">load_medium_dataset() (in module tno.quantum.problems.n_minus_1.quantum_annealing.datasets)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.datasets.load_small_dataset">load_small_dataset() (in module tno.quantum.problems.n_minus_1.quantum_annealing.datasets)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.QUBO.lower_bound">lower_bound (tno.quantum.optimization.qubo.components.QUBO property)</a>
 
       <ul>
@@ -940,6 +1013,8 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.M">M (tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments attribute)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.QUBO.matrix">matrix (tno.quantum.optimization.qubo.components.QUBO property)</a>
 
       <ul>
@@ -1002,6 +1077,16 @@
 </li>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#module-tno.quantum.optimization.qubo.solvers">tno.quantum.optimization.qubo.solvers</a>
 </li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#module-tno.quantum.problems.n_minus_1">tno.quantum.problems.n_minus_1</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html#module-tno.quantum.problems.n_minus_1.gate_based">tno.quantum.problems.n_minus_1.gate_based</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html#module-tno.quantum.problems.n_minus_1.io">tno.quantum.problems.n_minus_1.io</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#module-tno.quantum.problems.n_minus_1.quantum_annealing">tno.quantum.problems.n_minus_1.quantum_annealing</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html#module-tno.quantum.problems.n_minus_1.quantum_annealing.datasets">tno.quantum.problems.n_minus_1.quantum_annealing.datasets</a>
+</li>
         <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#module-tno.quantum.problems.portfolio_optimization">tno.quantum.problems.portfolio_optimization</a>
 </li>
         <li><a href="content/packages/packages/tno.quantum.utils/main.html#module-tno.quantum.utils">tno.quantum.utils</a>
@@ -1033,6 +1118,8 @@
 
       <ul>
         <li><a href="content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html#tno.quantum.ml.classifiers.vc.models.probability_model.ProbabilityModel.n_layers">(tno.quantum.ml.classifiers.vc.models.probability_model.ProbabilityModel attribute)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.n_layers">(tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments attribute)</a>
 </li>
       </ul></li>
       <li><a href="content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html#tno.quantum.ml.classifiers.vc.models.expected_value_model.ExpectedValueModel.n_trainable_sublayers">n_trainable_sublayers (tno.quantum.ml.classifiers.vc.models.expected_value_model.ExpectedValueModel attribute)</a>
@@ -1157,6 +1244,8 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.p_extra">p_extra (tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments attribute)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html#tno.quantum.ml.classifiers.vc.models.probability_model.ParityModel">ParityModel (class in tno.quantum.ml.classifiers.vc.models.probability_model)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html#tno.quantum.communication.qkd_key_rate.classical.ParityStrategy">ParityStrategy (class in tno.quantum.communication.qkd_key_rate.classical)</a>
@@ -1164,6 +1253,14 @@
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.PreprocessResult.partial_solution">partial_solution (tno.quantum.optimization.qubo.solvers.PreprocessResult property)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.PartialSolution">PartialSolution (class in tno.quantum.optimization.qubo.components)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_auxvar">penalty_auxvar (tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments attribute)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_connectivity">penalty_connectivity (tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments attribute)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_depth">penalty_depth (tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments attribute)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_loadflow">penalty_loadflow (tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments attribute)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html#tno.quantum.communication.qkd_key_rate.classical.Permutations">Permutations (class in tno.quantum.communication.qkd_key_rate.classical)</a>
 </li>
@@ -1187,12 +1284,12 @@
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html#tno.quantum.communication.qkd_key_rate.classical.Message.pop">pop() (tno.quantum.communication.qkd_key_rate.classical.Message method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioData">PortfolioData (class in tno.quantum.problems.portfolio_optimization)</a>
 </li>
       <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioOptimizer">PortfolioOptimizer (class in tno.quantum.problems.portfolio_optimization)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.Postprocessor.postprocess">postprocess() (tno.quantum.optimization.qubo.components.Postprocessor method)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.Postprocessor">Postprocessor (class in tno.quantum.optimization.qubo.components)</a>
@@ -1241,6 +1338,12 @@
 <h2 id="Q">Q</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver">QABasedNMinusOneSolver (class in tno.quantum.problems.n_minus_1)</a>
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver">(class in tno.quantum.problems.n_minus_1.quantum_annealing)</a>
+</li>
+      </ul></li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.QAOAResult">QAOAResult (class in tno.quantum.optimization.qubo.solvers)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.QAOASolver">QAOASolver (class in tno.quantum.optimization.qubo.solvers)</a>
@@ -1257,6 +1360,8 @@
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.QUBO">(class in tno.quantum.optimization.qubo.components)</a>
 </li>
       </ul></li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments">QUBOArguments (class in tno.quantum.problems.n_minus_1.quantum_annealing)</a>
+</li>
       <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.QuboFactory">QuboFactory (class in tno.quantum.problems.portfolio_optimization)</a>
 </li>
   </ul></td>
@@ -1277,20 +1382,32 @@
 </li>
       <li><a href="content/packages/packages/tno.quantum.utils/serialization.html#tno.quantum.utils.serialization.Serializable.register">register() (tno.quantum.utils.serialization.Serializable static method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="content/packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseConfig.register_custom_item">register_custom_item() (tno.quantum.utils.BaseConfig class method)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html#tno.quantum.communication.qkd_key_rate.classical.Schedule.remaining_passes">remaining_passes (tno.quantum.communication.qkd_key_rate.classical.Schedule property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html#tno.quantum.communication.qkd_key_rate.quantum.Detector.required_fields">required_fields (tno.quantum.communication.qkd_key_rate.quantum.Detector attribute)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/components/main.html#tno.quantum.optimization.qubo.components.ResultInterface">ResultInterface (class in tno.quantum.optimization.qubo.components)</a>
 </li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview">ResultsOverview (class in tno.quantum.problems.n_minus_1.quantum_annealing)</a>
+</li>
       <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.RSSolver">RSSolver (class in tno.quantum.optimization.qubo.solvers)</a>
 </li>
-      <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioOptimizer.run">run() (tno.quantum.problems.portfolio_optimization.PortfolioOptimizer method)</a>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html#tno.quantum.problems.n_minus_1.gate_based.GateBasedNMinusOneSolver.run">run() (tno.quantum.problems.n_minus_1.gate_based.GateBasedNMinusOneSolver method)</a>
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#tno.quantum.problems.n_minus_1.GateBasedNMinusOneSolver.run">(tno.quantum.problems.n_minus_1.GateBasedNMinusOneSolver method)</a>
 </li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver.run">(tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver.run">(tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver method)</a>
+</li>
+        <li><a href="content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html#tno.quantum.problems.portfolio_optimization.PortfolioOptimizer.run">(tno.quantum.problems.portfolio_optimization.PortfolioOptimizer method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1513,8 +1630,6 @@
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/main.html#module-tno.quantum.optimization.qubo">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     tno.quantum.optimization.qubo.components
 
@@ -1536,11 +1651,48 @@
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html#module-tno.quantum.optimization.qubo.preprocessors">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     tno.quantum.optimization.qubo.solvers
 
       <ul>
         <li><a href="content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#module-tno.quantum.optimization.qubo.solvers">module</a>
+</li>
+      </ul></li>
+      <li>
+    tno.quantum.problems.n_minus_1
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/main.html#module-tno.quantum.problems.n_minus_1">module</a>
+</li>
+      </ul></li>
+      <li>
+    tno.quantum.problems.n_minus_1.gate_based
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html#module-tno.quantum.problems.n_minus_1.gate_based">module</a>
+</li>
+      </ul></li>
+      <li>
+    tno.quantum.problems.n_minus_1.io
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html#module-tno.quantum.problems.n_minus_1.io">module</a>
+</li>
+      </ul></li>
+      <li>
+    tno.quantum.problems.n_minus_1.quantum_annealing
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#module-tno.quantum.problems.n_minus_1.quantum_annealing">module</a>
+</li>
+      </ul></li>
+      <li>
+    tno.quantum.problems.n_minus_1.quantum_annealing.datasets
+
+      <ul>
+        <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html#module-tno.quantum.problems.n_minus_1.quantum_annealing.datasets">module</a>
 </li>
       </ul></li>
       <li>
@@ -1660,6 +1812,8 @@
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowReceiver">WinnowReceiver (class in tno.quantum.communication.qkd_key_rate.classical.winnow)</a>
 </li>
       <li><a href="content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html#tno.quantum.communication.qkd_key_rate.classical.winnow.WinnowSender">WinnowSender (class in tno.quantum.communication.qkd_key_rate.classical.winnow)</a>
+</li>
+      <li><a href="content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html#tno.quantum.problems.n_minus_1.io.write_gml">write_gml() (in module tno.quantum.problems.n_minus_1.io)</a>
 </li>
   </ul></td>
 </tr></table>

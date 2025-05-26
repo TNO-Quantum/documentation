@@ -1,0 +1,13 @@
+problems.n_minus_1.quantum_annealing
+====================================
+
+.. automodule:: tno.quantum.problems.n_minus_1.quantum_annealing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. toctree::
+   :maxdepth: 1
+
+   datasets/main
+

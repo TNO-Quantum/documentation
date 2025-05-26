@@ -21,6 +21,7 @@
    :caption: Problems
 
    content/problems/packages/tno.quantum.problems.portfolio_optimization/main
+   content/problems/packages/tno.quantum.problems.n_minus_1/main
 
 .. toctree::
    :hidden:

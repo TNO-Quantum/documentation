@@ -1,0 +1,8 @@
+problems.n_minus_1.quantum_annealing.datasets
+=============================================
+
+.. automodule:: tno.quantum.problems.n_minus_1.quantum_annealing.datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

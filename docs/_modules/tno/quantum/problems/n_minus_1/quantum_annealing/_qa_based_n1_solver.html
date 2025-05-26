@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.problems.n_minus_1.quantum_annealing._qa_based_n1_solver &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.problems.n_minus_1.quantum_annealing._qa_based_n1_solver</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.problems.n_minus_1.quantum_annealing._qa_based_n1_solver</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the ``QABasedNMinusOneSolver``.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">copy</span><span class="w"> </span><span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">QUBO</span><span class="p">,</span> <span class="n">SolverConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.n_minus_1.quantum_annealing._bqm_factories</span><span class="w"> </span><span class="kn">import</span> <span class="n">NMOFactory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseArguments</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_instance</span><span class="p">,</span> <span class="n">check_int</span><span class="p">,</span> <span class="n">check_real</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hashable</span><span class="p">,</span> <span class="n">Mapping</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Self</span><span class="p">,</span> <span class="n">SupportsFloat</span><span class="p">,</span> <span class="n">SupportsInt</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResultInterface</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.n_minus_1.quantum_annealing._containers</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+        <span class="n">ResultsOverview</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="FactoryArguments"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.FactoryArguments">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FactoryArguments</span><span class="p">(</span><span class="n">BaseArguments</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for the N-Minus-1 QUBO factory.&quot;&quot;&quot;</span>
+
+    <span class="n">n_layers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Number of layers to use for the tree formulation.&quot;&quot;&quot;</span>
+
+    <span class="n">K</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Number of auxiliary variables to use for encoding real part of the potential.&quot;&quot;&quot;</span>
+
+    <span class="n">L</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Number of auxiliary variables to use for encoding imaginary part of the</span>
+<span class="sd">    potential.&quot;&quot;&quot;</span>
+
+    <span class="n">M</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Number of auxiliary variables to use for encoding the current.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FactoryArguments.__init__"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.FactoryArguments.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">n_layers</span><span class="p">:</span> <span class="n">SupportsInt</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">K</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+        <span class="n">L</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+        <span class="n">M</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init of the ``NMOFactory``.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            n_layers: Number of layers to use for the tree formulation.</span>
+<span class="sd">            K: Number of auxiliary variables to use or encoding the real part of the</span>
+<span class="sd">                potential.</span>
+<span class="sd">            L: Number of auxiliary variables to use or encoding the imaginary part of</span>
+<span class="sd">                the potential.</span>
+<span class="sd">            M: Number of auxiliary variables to use for encoding the current.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_layers</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">n_layers</span> <span class="k">if</span> <span class="n">n_layers</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">check_int</span><span class="p">(</span><span class="n">n_layers</span><span class="p">,</span> <span class="s2">&quot;n_layers&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">M</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FactoryArguments.default"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.FactoryArguments.default">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">default</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a default instance of the factory arguments.</span>
+
+<span class="sd">        The defaults sets the following values:</span>
+
+<span class="sd">        - Number of layers: ``n_layers = None``,</span>
+<span class="sd">        - Number of auxiliary variables real part potential: ``K = 6``,</span>
+<span class="sd">        - Number of auxiliary variables imag part potential: ``L = 5``,</span>
+<span class="sd">        - Number of auxiliary variables current: ``M = 5``,</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">n_layers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">M</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="QUBOArguments"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.QUBOArguments">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">QUBOArguments</span><span class="p">(</span><span class="n">BaseArguments</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Arguments for the N-1 QUBO.&quot;&quot;&quot;</span>
+
+    <span class="n">penalty_depth</span><span class="p">:</span> <span class="nb">float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Absolute penalty scaling to use for the depth penalty.&quot;&quot;&quot;</span>
+
+    <span class="n">penalty_connectivity</span><span class="p">:</span> <span class="nb">float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Absolute penalty scaling to use for the connectivity penalty.&quot;&quot;&quot;</span>
+
+    <span class="n">penalty_loadflow</span><span class="p">:</span> <span class="nb">float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Absolute penalty scaling to use for the loadflow penalty.&quot;&quot;&quot;</span>
+
+    <span class="n">penalty_auxvar</span><span class="p">:</span> <span class="nb">float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Absolute penalty scaling to use for the penalty governing the behaviour of the</span>
+<span class="sd">    auxiliary variables.&quot;&quot;&quot;</span>
+
+    <span class="n">p_extra</span><span class="p">:</span> <span class="nb">float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extra power to add to each node for numerical stability.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="QUBOArguments.__init__"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.QUBOArguments.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">penalty_depth</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">,</span>
+        <span class="n">penalty_connectivity</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">,</span>
+        <span class="n">penalty_loadflow</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">,</span>
+        <span class="n">penalty_auxvar</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">,</span>
+        <span class="n">p_extra</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Arguments to configure the QUBO formulation for the N-1 problem.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            penalty_depth: Absolute penalty scaling to use for the depth penalty.</span>
+<span class="sd">            penalty_connectivity: Absolute penalty scaling to use for the connectivity</span>
+<span class="sd">                penalty.</span>
+<span class="sd">            penalty_loadflow: Absolute penalty scaling to use for the loadflow penalty.</span>
+<span class="sd">            penalty_auxvar: Absolute penalty scaling to use for the penalty governing</span>
+<span class="sd">                the behavior of the auxiliary variables.</span>
+<span class="sd">            p_extra: Extra power to add to each node for numerical stability.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">penalty_depth</span> <span class="o">=</span> <span class="n">check_real</span><span class="p">(</span><span class="n">penalty_depth</span><span class="p">,</span> <span class="s2">&quot;penalty_depth&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">penalty_connectivity</span> <span class="o">=</span> <span class="n">check_real</span><span class="p">(</span>
+            <span class="n">penalty_connectivity</span><span class="p">,</span> <span class="s2">&quot;penalty_connectivity&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">penalty_loadflow</span> <span class="o">=</span> <span class="n">check_real</span><span class="p">(</span>
+            <span class="n">penalty_loadflow</span><span class="p">,</span> <span class="s2">&quot;penalty_loadflow&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">penalty_auxvar</span> <span class="o">=</span> <span class="n">check_real</span><span class="p">(</span><span class="n">penalty_auxvar</span><span class="p">,</span> <span class="s2">&quot;penalty_auxvar&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">p_extra</span> <span class="o">=</span> <span class="n">check_real</span><span class="p">(</span><span class="n">p_extra</span><span class="p">,</span> <span class="s2">&quot;p_extra&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QUBOArguments.default"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.QUBOArguments.default">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">default</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a default instance of the QUBO arguments.</span>
+
+<span class="sd">        The defaults sets the following absolute penalty scaling values:</span>
+
+<span class="sd">        - Depth penalty: ``penalty_depth = 400``,</span>
+<span class="sd">        - Connectivity: ``penalty_connectivity = 100``,</span>
+<span class="sd">        - Loadflow: ``penalty_loadflow = 2``,</span>
+<span class="sd">        - Auxiliary variables: ``penalty_auxvar = 1``,</span>
+<span class="sd">        - Numerical stability power: ``p_extra = 1``,</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">penalty_depth</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+            <span class="n">penalty_connectivity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+            <span class="n">penalty_loadflow</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">penalty_auxvar</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">p_extra</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+        <span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="QABasedNMinusOneSolver"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">QABasedNMinusOneSolver</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum Annealing Based N-1 Solver.</span>
+
+<span class="sd">    The Quantum Annealing solver performs the following steps:</span>
+
+<span class="sd">        1. Transform the problem to a Binary Quadratic Model, also known as a Quadratic</span>
+<span class="sd">           Unconstrained Optimization (QUBO).</span>
+<span class="sd">        2. Approximate a solution to this problem with the given QUBO solver. This</span>
+<span class="sd">           solver can be a quantum solver.</span>
+<span class="sd">        3. Decode the bitstrings returned by the solver.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="QABasedNMinusOneSolver.__init__"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">graph</span><span class="p">:</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">,</span>
+        <span class="n">failing_edge</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">Hashable</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init of the :py:class:`~QABasedNMinusOneSolver`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            graph: Network represented as a graph. Each node should have the following</span>
+<span class="sd">                attributes: type, U_ref, P_low, P_high, U_min and U_max. Each edge</span>
+<span class="sd">                should have the following attributes: active, edge_idx, Z and I_max.</span>
+<span class="sd">            failing_edge: The edge that will fail in the scenario.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">check_instance</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="s2">&quot;graph&quot;</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">remove_edge</span><span class="p">(</span><span class="o">*</span><span class="n">failing_edge</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="QABasedNMinusOneSolver.run"><a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver.run">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">factory_arguments</span><span class="p">:</span> <span class="n">FactoryArguments</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">qubo_arguments</span><span class="p">:</span> <span class="n">QUBOArguments</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">solver_config</span><span class="p">:</span> <span class="n">SolverConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResultsOverview</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Run the algorithm.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            factory_arguments: Keyword arguments for the Binary Quadratic Model factory.</span>
+<span class="sd">                See the init of the :py:class:`~tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments`</span>
+<span class="sd">                for a more detailed description. If ``None`` is given (default), the</span>
+<span class="sd">                :py:func:`~tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.default`</span>
+<span class="sd">                arguments are used.</span>
+<span class="sd">            qubo_arguments: Keyword arguments for building the QUBO. See</span>
+<span class="sd">                :py:class:`~tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments`</span>
+<span class="sd">                for a more detailed description. If ``None`` is given (default), the</span>
+<span class="sd">                :py:func:`~tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.default`</span>
+<span class="sd">                arguments are used.</span>
+<span class="sd">            solver_config: Configuration for the qubo solver to use. Must be a</span>
+<span class="sd">                :py:class:`~tno.quantum.optimization.qubo.SolverConfig` or a mapping</span>
+<span class="sd">                with ``&quot;name&quot;`` and ``&quot;options&quot;`` keys. If ``None`` (default) is</span>
+<span class="sd">                provided, the :py:class:`~tno.quantum.optimization.qubo.solvers.SimulatedAnnealingSolver</span>
+<span class="sd">                will be used, i.e. ``{&quot;name&quot;: &quot;simulated_annealing_solver&quot;, &quot;options&quot;: {}}``.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Result overview object containing the results.</span>
+<span class="sd">        &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+        <span class="c1"># Parse user input</span>
+        <span class="n">factory_arguments</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">FactoryArguments</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">factory_arguments</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="n">FactoryArguments</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="n">factory_arguments</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">qubo_arguments</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">QUBOArguments</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">qubo_arguments</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="n">QUBOArguments</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="n">qubo_arguments</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">solver_config</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">SolverConfig</span><span class="p">(</span><span class="s2">&quot;simulated_annealing_solver&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">solver_config</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="n">SolverConfig</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="n">solver_config</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">bqm_factory</span> <span class="o">=</span> <span class="n">NMOFactory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">,</span> <span class="o">**</span><span class="n">factory_arguments</span><span class="p">)</span>
+        <span class="n">solver</span> <span class="o">=</span> <span class="n">solver_config</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span>
+
+        <span class="c1"># Run the algorithm</span>
+        <span class="n">bqm</span> <span class="o">=</span> <span class="n">bqm_factory</span><span class="o">.</span><span class="n">build_bqm</span><span class="p">(</span><span class="o">**</span><span class="n">qubo_arguments</span><span class="p">)</span>
+        <span class="n">labels</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Hashable</span><span class="p">]</span>
+        <span class="n">qubo</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">QUBO</span><span class="o">.</span><span class="n">from_bqm</span><span class="p">(</span><span class="n">bqm</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">:</span> <span class="n">ResultInterface</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">qubo</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">bqm_factory</span><span class="o">.</span><span class="n">decode_result</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

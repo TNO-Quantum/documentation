@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>problems.n_minus_1.quantum_annealing &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="problems.n_minus_1.quantum_annealing.datasets" href="datasets/main.html" />
+    <link rel="prev" title="problems.n_minus_1.io" href="../io/main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../packages/packages/tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../packages/packages/tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../main.html">problems.n_minus_1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/communication_qkd.html">QKD key-rate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../main.html">problems.n_minus_1</a></li>
+      <li class="breadcrumb-item active">problems.n_minus_1.quantum_annealing</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-tno.quantum.problems.n_minus_1.quantum_annealing">
+<span id="problems-n-minus-1-quantum-annealing"></span><h1>problems.n_minus_1.quantum_annealing<a class="headerlink" href="#module-tno.quantum.problems.n_minus_1.quantum_annealing" title="Permalink to this heading"></a></h1>
+<p>Quantum Annealing based solution to the N-1 problem.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.n_minus_1.quantum_annealing.</span></span><span class="sig-name descname"><span class="pre">DecodedResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a> class.</p>
+<p><a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a> stores results decoded from a sample of a sampleset.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__eq__">
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult.__eq__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__eq__" title="Permalink to this definition"></a></dt>
+<dd><p>Simple equals function.</p>
+<p>Two <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a>s are equal if if the underlying graph after
+performing the switches are equal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__hash__">
+<span class="sig-name descname"><span class="pre">__hash__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult.__hash__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__hash__" title="Permalink to this definition"></a></dt>
+<dd><p>Simple hash function.</p>
+<p>Creates a hash of the graph using the Return Weisfeiler Lehman (WL) graph hash
+together with simple hashes of the turned on/off edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of the <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>graph</strong> (<a class="reference external" href="https://networkx.org/documentation/stable/reference/classes/graph.html#networkx.Graph" title="(in NetworkX v3.4.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a>) – Graph of a power network. If the <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a> is used
+store decoded results containing loadflow constraints, then <cite>graph</cite>
+should have nodes and edges as described in
+<a class="reference internal" href="../main.html#tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver" title="tno.quantum.problems.n_minus_1.QABasedNMinusOneSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">QABasedNMinusOneSolver</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult.__repr__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>String representation of the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>String representation of the class, using the class name, number of nodes,
+turned on edges and turned off edges.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;DecodedResult[n_nodes=4,</span> <span class="pre">turned_on=[(3,4)],</span> <span class="pre">turned_off=[(2,3)]]&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_loadflow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.draw" title="Permalink to this definition"></a></dt>
+<dd><p>Create image of the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>check_loadflow</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Wether to check if the graph is loadflow complient. Default
+is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>ax</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Axes</span></code></a>]) – Axes to plot on. If <code class="docutils literal notranslate"><span class="pre">None</span></code> create a new figure with a new ax.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.get_k">
+<span class="sig-name descname"><span class="pre">get_k</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/decoded_result.html#DecodedResult.get_k"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult.get_k" title="Permalink to this definition"></a></dt>
+<dd><p>Get <cite>k</cite>, which is the number of switches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Integer value representing the number of switched used in this solution.
+In this case, the failing edge is not interpreted as a switch.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.n_minus_1.quantum_annealing.</span></span><span class="sig-name descname"><span class="pre">FactoryArguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#FactoryArguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../../packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseArguments" title="tno.quantum.utils._base_arguments.BaseArguments"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseArguments</span></code></a></p>
+<p>Arguments for the N-Minus-1 QUBO factory.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.K">
+<span class="sig-name descname"><span class="pre">K</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.K" title="Permalink to this definition"></a></dt>
+<dd><p>Number of auxiliary variables to use for encoding real part of the potential.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.L">
+<span class="sig-name descname"><span class="pre">L</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.L" title="Permalink to this definition"></a></dt>
+<dd><p>Number of auxiliary variables to use for encoding imaginary part of the
+potential.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.M">
+<span class="sig-name descname"><span class="pre">M</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.M" title="Permalink to this definition"></a></dt>
+<dd><p>Number of auxiliary variables to use for encoding the current.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#FactoryArguments.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of the <code class="docutils literal notranslate"><span class="pre">NMOFactory</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_layers</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>]) – Number of layers to use for the tree formulation.</p></li>
+<li><p><strong>K</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – Number of auxiliary variables to use or encoding the real part of the
+potential.</p></li>
+<li><p><strong>L</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – Number of auxiliary variables to use or encoding the imaginary part of
+the potential.</p></li>
+<li><p><strong>M</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – Number of auxiliary variables to use for encoding the current.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.default">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#FactoryArguments.default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.default" title="Permalink to this definition"></a></dt>
+<dd><p>Create a default instance of the factory arguments.</p>
+<p>The defaults sets the following values:</p>
+<ul class="simple">
+<li><p>Number of layers: <code class="docutils literal notranslate"><span class="pre">n_layers</span> <span class="pre">=</span> <span class="pre">None</span></code>,</p></li>
+<li><p>Number of auxiliary variables real part potential: <code class="docutils literal notranslate"><span class="pre">K</span> <span class="pre">=</span> <span class="pre">6</span></code>,</p></li>
+<li><p>Number of auxiliary variables imag part potential: <code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">5</span></code>,</p></li>
+<li><p>Number of auxiliary variables current: <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">5</span></code>,</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Self</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.n_layers">
+<span class="sig-name descname"><span class="pre">n_layers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.n_layers" title="Permalink to this definition"></a></dt>
+<dd><p>Number of layers to use for the tree formulation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.n_minus_1.quantum_annealing.</span></span><span class="sig-name descname"><span class="pre">QABasedNMinusOneSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">failing_edge</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#QABasedNMinusOneSolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Quantum Annealing Based N-1 Solver.</p>
+<p>The Quantum Annealing solver performs the following steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Transform the problem to a Binary Quadratic Model, also known as a Quadratic
+Unconstrained Optimization (QUBO).</p></li>
+<li><p>Approximate a solution to this problem with the given QUBO solver. This
+solver can be a quantum solver.</p></li>
+<li><p>Decode the bitstrings returned by the solver.</p></li>
+</ol>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">failing_edge</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#QABasedNMinusOneSolver.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of the <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver" title="tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">QABasedNMinusOneSolver</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graph</strong> (<a class="reference external" href="https://networkx.org/documentation/stable/reference/classes/graph.html#networkx.Graph" title="(in NetworkX v3.4.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></a>) – Network represented as a graph. Each node should have the following
+attributes: type, U_ref, P_low, P_high, U_min and U_max. Each edge
+should have the following attributes: active, edge_idx, Z and I_max.</p></li>
+<li><p><strong>failing_edge</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hashable</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hashable</span></code></a>]) – The edge that will fail in the scenario.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">factory_arguments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubo_arguments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#QABasedNMinusOneSolver.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QABasedNMinusOneSolver.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>factory_arguments</strong> (<a class="reference external" href="https://docs.python.org/3/library/types.html#types.UnionType" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnionType</span></code></a>[<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments" title="tno.quantum.problems.n_minus_1.quantum_annealing._qa_based_n1_solver.FactoryArguments"><code class="xref py py-class docutils literal notranslate"><span class="pre">FactoryArguments</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]) – Keyword arguments for the Binary Quadratic Model factory.
+See the init of the <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments" title="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments"><code class="xref py py-class docutils literal notranslate"><span class="pre">FactoryArguments</span></code></a>
+for a more detailed description. If <code class="docutils literal notranslate"><span class="pre">None</span></code> is given (default), the
+<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.default" title="tno.quantum.problems.n_minus_1.quantum_annealing.FactoryArguments.default"><code class="xref py py-func docutils literal notranslate"><span class="pre">default()</span></code></a>
+arguments are used.</p></li>
+<li><p><strong>qubo_arguments</strong> (<a class="reference external" href="https://docs.python.org/3/library/types.html#types.UnionType" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnionType</span></code></a>[<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments" title="tno.quantum.problems.n_minus_1.quantum_annealing._qa_based_n1_solver.QUBOArguments"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBOArguments</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]) – Keyword arguments for building the QUBO. See
+<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments" title="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBOArguments</span></code></a>
+for a more detailed description. If <code class="docutils literal notranslate"><span class="pre">None</span></code> is given (default), the
+<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.default" title="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.default"><code class="xref py py-func docutils literal notranslate"><span class="pre">default()</span></code></a>
+arguments are used.</p></li>
+<li><p><strong>solver_config</strong> (<a class="reference external" href="https://docs.python.org/3/library/types.html#types.UnionType" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnionType</span></code></a>[<a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.SolverConfig" title="tno.quantum.optimization.qubo.components._solvers._solver_config.SolverConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverConfig</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]) – Configuration for the qubo solver to use. Must be a
+<a class="reference internal" href="../../../../packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.SolverConfig" title="tno.quantum.optimization.qubo.SolverConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverConfig</span></code></a> or a mapping
+with <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;options&quot;</span></code> keys. If <code class="docutils literal notranslate"><span class="pre">None</span></code> (default) is
+provided, the <code class="xref py py-class docutils literal notranslate"> <span class="pre">``{&quot;name&quot;:</span> <span class="pre">&quot;simulated_annealing_solver&quot;,</span> <span class="pre">&quot;options&quot;:</span> <span class="pre">{}}`</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview" title="tno.quantum.problems.n_minus_1.quantum_annealing._containers.results_overview.ResultsOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultsOverview</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Result overview object containing the results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.n_minus_1.quantum_annealing.</span></span><span class="sig-name descname"><span class="pre">QUBOArguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">penalty_depth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_connectivity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_loadflow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_auxvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_extra</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#QUBOArguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../../packages/packages/tno.quantum.utils/main.html#tno.quantum.utils.BaseArguments" title="tno.quantum.utils._base_arguments.BaseArguments"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseArguments</span></code></a></p>
+<p>Arguments for the N-1 QUBO.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">penalty_depth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_connectivity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_loadflow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_auxvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_extra</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#QUBOArguments.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Arguments to configure the QUBO formulation for the N-1 problem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>penalty_depth</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>) – Absolute penalty scaling to use for the depth penalty.</p></li>
+<li><p><strong>penalty_connectivity</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>) – Absolute penalty scaling to use for the connectivity
+penalty.</p></li>
+<li><p><strong>penalty_loadflow</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>) – Absolute penalty scaling to use for the loadflow penalty.</p></li>
+<li><p><strong>penalty_auxvar</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>) – Absolute penalty scaling to use for the penalty governing
+the behavior of the auxiliary variables.</p></li>
+<li><p><strong>p_extra</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>) – Extra power to add to each node for numerical stability.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.default">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_qa_based_n1_solver.html#QUBOArguments.default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.default" title="Permalink to this definition"></a></dt>
+<dd><p>Create a default instance of the QUBO arguments.</p>
+<p>The defaults sets the following absolute penalty scaling values:</p>
+<ul class="simple">
+<li><p>Depth penalty: <code class="docutils literal notranslate"><span class="pre">penalty_depth</span> <span class="pre">=</span> <span class="pre">400</span></code>,</p></li>
+<li><p>Connectivity: <code class="docutils literal notranslate"><span class="pre">penalty_connectivity</span> <span class="pre">=</span> <span class="pre">100</span></code>,</p></li>
+<li><p>Loadflow: <code class="docutils literal notranslate"><span class="pre">penalty_loadflow</span> <span class="pre">=</span> <span class="pre">2</span></code>,</p></li>
+<li><p>Auxiliary variables: <code class="docutils literal notranslate"><span class="pre">penalty_auxvar</span> <span class="pre">=</span> <span class="pre">1</span></code>,</p></li>
+<li><p>Numerical stability power: <code class="docutils literal notranslate"><span class="pre">p_extra</span> <span class="pre">=</span> <span class="pre">1</span></code>,</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Self</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.p_extra">
+<span class="sig-name descname"><span class="pre">p_extra</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.p_extra" title="Permalink to this definition"></a></dt>
+<dd><p>Extra power to add to each node for numerical stability.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_auxvar">
+<span class="sig-name descname"><span class="pre">penalty_auxvar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_auxvar" title="Permalink to this definition"></a></dt>
+<dd><p>Absolute penalty scaling to use for the penalty governing the behaviour of the
+auxiliary variables.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_connectivity">
+<span class="sig-name descname"><span class="pre">penalty_connectivity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_connectivity" title="Permalink to this definition"></a></dt>
+<dd><p>Absolute penalty scaling to use for the connectivity penalty.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_depth">
+<span class="sig-name descname"><span class="pre">penalty_depth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_depth" title="Permalink to this definition"></a></dt>
+<dd><p>Absolute penalty scaling to use for the depth penalty.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_loadflow">
+<span class="sig-name descname"><span class="pre">penalty_loadflow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.QUBOArguments.penalty_loadflow" title="Permalink to this definition"></a></dt>
+<dd><p>Absolute penalty scaling to use for the loadflow penalty.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.n_minus_1.quantum_annealing.</span></span><span class="sig-name descname"><span class="pre">ResultsOverview</span></span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/results_overview.html#ResultsOverview"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ResultsOverview.</p>
+<p>The <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview" title="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultsOverview</span></code></a> class is a collection of
+<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/results_overview.html#ResultsOverview.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Init of the <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview" title="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultsOverview</span></code></a> class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/results_overview.html#ResultsOverview.__iter__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Iterate over the results and counts, starting with the smallest k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing._containers.decoded_result.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/results_overview.html#ResultsOverview.__len__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__len__" title="Permalink to this definition"></a></dt>
+<dd><p>Number of unique results in the overview.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/results_overview.html#ResultsOverview.__repr__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>Make a string representation of the <a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview" title="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultsOverview</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.add_result">
+<span class="sig-name descname"><span class="pre">add_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/problems/n_minus_1/quantum_annealing/_containers/results_overview.html#ResultsOverview.add_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.n_minus_1.quantum_annealing.ResultsOverview.add_result" title="Permalink to this definition"></a></dt>
+<dd><p>Add a result to the overview.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<a class="reference internal" href="#tno.quantum.problems.n_minus_1.quantum_annealing.DecodedResult" title="tno.quantum.problems.n_minus_1.quantum_annealing._containers.decoded_result.DecodedResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DecodedResult</span></code></a>) – Result to add to the overview.</p></li>
+<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Number of times the result was seen. Default is 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Self</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Self.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../io/main.html" class="btn btn-neutral float-left" title="problems.n_minus_1.io" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="datasets/main.html" class="btn btn-neutral float-right" title="problems.n_minus_1.quantum_annealing.datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

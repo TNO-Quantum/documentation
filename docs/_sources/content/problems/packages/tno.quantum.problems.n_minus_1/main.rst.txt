@@ -1,0 +1,19 @@
+problems.n_minus_1
+==================
+
+.. raw:: html
+
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div>
+
+.. automodule:: tno.quantum.problems.n_minus_1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. toctree::
+   :maxdepth: 1
+
+   gate_based/main
+   io/main
+   quantum_annealing/main
+

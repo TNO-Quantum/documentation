@@ -3,7 +3,7 @@ optimization.qubo.solvers
 
 .. raw:: html
 
-   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div>
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.1</div>
 
 .. automodule:: tno.quantum.optimization.qubo.solvers
    :members:
