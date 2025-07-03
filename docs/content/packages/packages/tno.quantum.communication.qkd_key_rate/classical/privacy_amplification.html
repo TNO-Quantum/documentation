@@ -59,14 +59,13 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.ml/main.html">ml</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
@@ -75,19 +74,20 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../main.html">communication.qkd_key_rate</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
-</ul>
-</li>
 <li class="toctree-l2 current"><a class="reference internal" href="main.html">communication.qkd_key_rate.classical</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">communication.qkd_key_rate.classical.privacy_amplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
 </ul>
 </li>
 </ul>
@@ -102,12 +102,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
 </ul>
 </li>
 </ul>
@@ -150,15 +150,16 @@
 class can be used to compute the hash of an error corrected string. The length of the
 hashed string equals the remaining entropy.</p>
 <p>Typical usage example:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.classical.privacy_amplification</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-<span class="gp">... </span>   <span class="n">PrivacyAmplification</span><span class="p">,</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.classical</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.communication.qkd_key_rate.classical.privacy_amplification</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="gp">... </span>    <span class="n">PrivacyAmplification</span><span class="p">,</span>
 <span class="gp">... </span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="o">.</span><span class="n">random_message</span><span class="p">(</span><span class="n">message_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">privacy</span> <span class="o">=</span> <span class="n">PrivacyAmplification</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">error_rate_basis_x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">entropy</span> <span class="o">=</span> <span class="n">privacy</span><span class="o">.</span><span class="n">get_entropy_estimate</span><span class="p">(</span><span class="n">error_correction_loss</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">privacy</span><span class="o">.</span><span class="n">do_hash</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">entropy</span><span class="p">)</span>  
-<span class="go">b&#39;\x11\x8f\xba\xc8\xc2\x97\xce\xd7\xf0\xf4F\xd1\xfew\xf7\xd0\xd2Y&gt;\x08J\x1e\x1a\xb9\x1d.\x8d8\xc5\x01\xa7(u\xc0\xcd\x1bc\xfck\xbc_!.\xea\xf5v\xd9\x90\xd4a\x89,\xdaZ\xf6tq\xdf\xe77\x16\x07\x15\xdc\x8d\x86`\x80Wy\x7fHU\xc8\xe3\xe7\xcf \xe6V\x8f\x19\x1c!sv\xad\x9b\xc4\x1c&#39;</span>
+<span class="go">&#39;110101100010101010011011111111101010000111101010111001011111010000000110101001000001111110&#39;</span>
 </pre></div>
 </div>
 <dl class="py class">
@@ -185,11 +186,20 @@ hashed string equals the remaining entropy.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="tno.quantum.communication.qkd_key_rate.classical.privacy_amplification.PrivacyAmplification.do_hash">
 <span class="sig-name descname"><span class="pre">do_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/communication/qkd_key_rate/classical/privacy_amplification.html#PrivacyAmplification.do_hash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.communication.qkd_key_rate.classical.privacy_amplification.PrivacyAmplification.do_hash" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the hash given a message of bits.</p>
-<p>The length of the hash equals the secure entropy we have.</p>
+<dd><p>Computes the hash of a given bit message, returned as a bit string.</p>
+<p>The length of the hash equals the number of bits of entropy.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a></p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<a class="reference internal" href="main.html#tno.quantum.communication.qkd_key_rate.classical.Message" title="tno.quantum.communication.qkd_key_rate.classical._message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>) – The message to hash.</p></li>
+<li><p><strong>entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) – The amount of entropy in bits, used to determines size of the hash.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The hashed digest of the given message (as a string of bits).</p>
 </dd>
 </dl>
 </dd></dl>
@@ -210,7 +220,7 @@ error-correction.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The amount of entropy</p>
+<dd class="field-odd"><p>The amount of entropy in bits.</p>
 </dd>
 </dl>
 </dd></dl>

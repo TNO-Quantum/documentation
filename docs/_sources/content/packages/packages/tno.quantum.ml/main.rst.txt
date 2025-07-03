@@ -13,6 +13,6 @@ ml
 .. toctree::
    :maxdepth: 1
 
-   datasets/main
    classifiers.vc/main
+   datasets/main
 

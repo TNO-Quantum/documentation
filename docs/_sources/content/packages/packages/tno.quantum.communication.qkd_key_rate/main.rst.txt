@@ -3,7 +3,7 @@ communication.qkd_key_rate
 
 .. raw:: html
 
-   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.0</div>
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.2</div>
 
 .. automodule:: tno.quantum.communication.qkd_key_rate
    :members:
@@ -13,6 +13,6 @@ communication.qkd_key_rate
 .. toctree::
    :maxdepth: 1
 
-   quantum/main
    classical/main
+   quantum/main
 
