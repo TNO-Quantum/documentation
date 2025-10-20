@@ -1,0 +1,8 @@
+ml.classifiers.svm.kernels
+==========================
+
+.. automodule:: tno.quantum.ml.classifiers.svm.kernels
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

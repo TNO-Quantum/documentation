@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ml &mdash; TNO Quantum</title>
@@ -14,22 +14,21 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script>let toggleHintShow = 'Click to show';</script>
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../../_static/togglebutton.js"></script>
+        <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="ml.classifiers.vc" href="classifiers.vc/main.html" />
-    <link rel="prev" title="optimization.qubo.postprocessors" href="../tno.quantum.optimization.qubo/postprocessors/main.html" /> 
+    <link rel="next" title="ml.classifiers" href="classifiers/main.html" />
+    <link rel="prev" title="optimization.qubo.solvers" href="../tno.quantum.optimization.qubo/solvers/main.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,21 +58,31 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ml</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classifiers.vc/main.html">ml.classifiers.vc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/main.html">ml.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
@@ -93,6 +102,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.utils/noise.html">utils.noise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.utils/serialization.html">utils.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.utils/validation.html">utils.validation</a></li>
 </ul>
@@ -116,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/variational_classifier.html">Variational classifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/linear_regression.html">Linear regression</a></li>
 </ul>
 
         </div>
@@ -142,13 +153,16 @@
            <div itemprop="articleBody">
              
   <section id="ml">
-<h1>ml<a class="headerlink" href="#ml" title="Permalink to this heading"></a></h1>
-<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div><span class="target" id="module-tno.quantum.ml"></span><p>This package encompasses all machine learning packages developed by TNO Quantum.</p>
+<h1>ml<a class="headerlink" href="#ml" title="Link to this heading"></a></h1>
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.1.0</div><p id="module-tno.quantum.ml">This package encompasses all machine learning packages developed by TNO Quantum.</p>
 <p>It includes functionalities for classification, clustering, regression, and benchmark
 datasets, among others.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="classifiers.vc/main.html">ml.classifiers.vc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classifiers/main.html">ml.classifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clustering/main.html">ml.clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="components/main.html">ml.components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasets/main.html">ml.datasets</a></li>
 </ul>
 </div>
@@ -158,8 +172,8 @@ datasets, among others.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../tno.quantum.optimization.qubo/postprocessors/main.html" class="btn btn-neutral float-left" title="optimization.qubo.postprocessors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classifiers.vc/main.html" class="btn btn-neutral float-right" title="ml.classifiers.vc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../tno.quantum.optimization.qubo/solvers/main.html" class="btn btn-neutral float-left" title="optimization.qubo.solvers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classifiers/main.html" class="btn btn-neutral float-right" title="ml.classifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

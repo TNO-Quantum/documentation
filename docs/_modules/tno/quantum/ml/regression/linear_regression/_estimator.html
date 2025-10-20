@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.ml.regression.linear_regression._estimator &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/linear_regression.html">Linear regression</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.ml.regression.linear_regression._estimator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.ml.regression.linear_regression._estimator</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module with definitions of quantum-inspired estimators.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">SupportsFloat</span><span class="p">,</span> <span class="n">SupportsInt</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">SerializableEstimator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.regression.linear_regression._quantum_inspired</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">compute_ls_probs</span><span class="p">,</span>
+    <span class="n">estimate_lambdas</span><span class="p">,</span>
+    <span class="n">sample_from_b</span><span class="p">,</span>
+    <span class="n">sample_from_x</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.regression.linear_regression._sketching</span><span class="w"> </span><span class="kn">import</span> <span class="n">FKV</span><span class="p">,</span> <span class="n">Halko</span><span class="p">,</span> <span class="n">Sketcher</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">Serializable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">check_arraylike</span><span class="p">,</span>
+    <span class="n">check_int</span><span class="p">,</span>
+    <span class="n">check_random_state</span><span class="p">,</span>
+    <span class="n">check_real</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_serialize_sketcher</span><span class="p">(</span><span class="n">sketcher</span><span class="p">:</span> <span class="n">Sketcher</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="n">dict_</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sketcher</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">dict_</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dict_</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_sketcher</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">sketcher_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;fkv&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FKV</span> <span class="o">|</span> <span class="n">Halko</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">Serializable</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+    <span class="n">sketcher_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">FKV</span> <span class="o">|</span> <span class="n">Halko</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">sketcher_name</span> <span class="o">==</span> <span class="s2">&quot;fkv&quot;</span><span class="p">:</span>
+        <span class="n">sketcher_class</span> <span class="o">=</span> <span class="n">FKV</span>
+    <span class="k">elif</span> <span class="n">sketcher_name</span> <span class="o">==</span> <span class="s2">&quot;halko&quot;</span><span class="p">:</span>
+        <span class="n">sketcher_class</span> <span class="o">=</span> <span class="n">Halko</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;`sketcher_name` should be either &quot;fkv&quot; or &quot;halko&quot;&#39;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">sketcher</span> <span class="o">=</span> <span class="n">sketcher_class</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">sketcher_class</span><span class="p">)</span>
+    <span class="n">sketcher</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sketcher</span>
+
+
+<span class="n">Serializable</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+    <span class="n">FKV</span><span class="p">,</span> <span class="n">_serialize_sketcher</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">_deserialize_sketcher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sketcher_name</span><span class="o">=</span><span class="s2">&quot;fkv&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">Serializable</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+    <span class="n">Halko</span><span class="p">,</span>
+    <span class="n">_serialize_sketcher</span><span class="p">,</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">_deserialize_sketcher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sketcher_name</span><span class="o">=</span><span class="s2">&quot;halko&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">EstimatorError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Module exception.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init :py:class:`EstimatorError`.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="QILinearEstimator">
+<a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html#tno.quantum.ml.regression.linear_regression.QILinearEstimator">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">QILinearEstimator</span><span class="p">(</span><span class="n">SerializableEstimator</span><span class="p">):</span>  <span class="c1"># noqa: PLW1641</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum-inspired linear estimator.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="QILinearEstimator.__init__">
+<a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html#tno.quantum.ml.regression.linear_regression.QILinearEstimator.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">r</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+        <span class="n">c</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+        <span class="n">rank</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+        <span class="n">n_samples</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="p">:</span> <span class="n">SupportsInt</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sigma_threshold</span><span class="p">:</span> <span class="n">SupportsFloat</span> <span class="o">=</span> <span class="mf">1e-15</span><span class="p">,</span>
+        <span class="n">sketcher_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;fkv&quot;</span><span class="p">,</span>
+        <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">SupportsFloat</span><span class="p">],</span> <span class="n">SupportsFloat</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init :py:class:`QILinearEstimator`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            r: number of rows to sample from `A`.</span>
+<span class="sd">            c: number of columns to sample from `A`.</span>
+<span class="sd">            rank: rank used to approximate matrix `A`.</span>
+<span class="sd">            n_samples: number of samples to estimate inner products.</span>
+<span class="sd">                       Note: the sampling is  performed from entries of `A`,</span>
+<span class="sd">                       so there are ``A.shape[0] * A.shape[1]`` possible entries.</span>
+<span class="sd">            random_state: random seed.</span>
+<span class="sd">            sigma_threshold: the argument `rank` is recomputed in case it is higher</span>
+<span class="sd">                             the number of singular values below this threhold.</span>
+<span class="sd">            sketcher_name: name of sketching method: ``&quot;fkv&quot;`` or ``&quot;halko&quot;``.</span>
+<span class="sd">            func: function to transform singular values when estimating lambda</span>
+<span class="sd">                  coefficients. This can be used for Tikhonov regularization purposes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rank</span> <span class="o">=</span> <span class="n">rank</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_samples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_threshold</span> <span class="o">=</span> <span class="n">sigma_threshold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_name</span> <span class="o">=</span> <span class="n">sketcher_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span></div>
+
+
+<div class="viewcode-block" id="QILinearEstimator.fit">
+<a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html#tno.quantum.ml.regression.linear_regression.QILinearEstimator.fit">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fit</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">A</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">b</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QILinearEstimator</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fit data using quantum-inspired algorithm.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            A: coefficient matrix `A`.</span>
+<span class="sd">            b: vector `b`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Validate input</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">check_arraylike</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">check_arraylike</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rank</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">,</span> <span class="s2">&quot;n_samples &quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_threshold</span> <span class="o">=</span> <span class="n">check_real</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sigma_threshold</span><span class="p">,</span> <span class="s2">&quot;sigma_threshold&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Get random state</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">check_random_state</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_state</span><span class="p">,</span> <span class="s2">&quot;random_state&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 1. Generate length-square probability distributions to sample from matrix `A`</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;1. Generate length-square probability distributions to sample &quot;</span>
+            <span class="s2">&quot;from matrix `A`&quot;</span>
+        <span class="p">)</span>
+        <span class="p">(</span>
+            <span class="n">A_ls_prob_rows</span><span class="p">,</span>
+            <span class="n">A_ls_prob_columns_2d</span><span class="p">,</span>
+            <span class="n">A_ls_prob_columns</span><span class="p">,</span>
+            <span class="n">_</span><span class="p">,</span>
+            <span class="n">A_frobenius</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="n">compute_ls_probs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+        <span class="c1"># 2. Build matrix `C`</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;2. Build matrix `C`&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span><span class="p">:</span> <span class="n">Sketcher</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_name</span> <span class="o">==</span> <span class="s2">&quot;fkv&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span> <span class="o">=</span> <span class="n">FKV</span><span class="p">(</span>
+                <span class="n">A</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">,</span>
+                <span class="n">A_ls_prob_rows</span><span class="p">,</span>
+                <span class="n">A_ls_prob_columns_2d</span><span class="p">,</span>
+                <span class="n">A_frobenius</span><span class="p">,</span>
+                <span class="n">rng</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_name</span> <span class="o">==</span> <span class="s2">&quot;halko&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span> <span class="o">=</span> <span class="n">Halko</span><span class="p">(</span>
+                <span class="n">A</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">,</span>
+                <span class="n">A_ls_prob_columns</span><span class="p">,</span>
+                <span class="n">rng</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;`sketcher_name` should be either &quot;fkv&quot; or &quot;halko&quot;&#39;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+        <span class="n">C</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span><span class="o">.</span><span class="n">right_project</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span><span class="o">.</span><span class="n">left_project</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+
+        <span class="c1"># 3. Compute the SVD of `C`</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;3. Compute the SVD of `C`&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w_left_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">w_right_T_</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">full_matrices</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Recompute rank</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rank_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span>
+        <span class="n">rank_recomputed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma_</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma_threshold</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">rank_recomputed</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Desired rank: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="si">}</span><span class="s2">; recomputed: </span><span class="si">{</span><span class="n">rank_recomputed</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="ne">RuntimeWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rank_</span> <span class="o">=</span> <span class="n">rank_recomputed</span>
+
+        <span class="c1"># 4. Estimate lambda coefficients</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;4. Estimate lambda coefficients&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">SupportsFloat</span><span class="p">],</span> <span class="n">SupportsFloat</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">func_</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SupportsFloat</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">arg</span>
+
+            <span class="n">func</span> <span class="o">=</span> <span class="n">func_</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lambdas_</span> <span class="o">=</span> <span class="n">estimate_lambdas</span><span class="p">(</span>
+            <span class="n">A</span><span class="p">,</span>
+            <span class="n">b</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rank_</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">w_left_</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sigma_</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span><span class="p">,</span>
+            <span class="n">A_ls_prob_rows</span><span class="p">,</span>
+            <span class="n">A_ls_prob_columns_2d</span><span class="p">,</span>
+            <span class="n">A_frobenius</span><span class="p">,</span>
+            <span class="n">rng</span><span class="p">,</span>
+            <span class="n">func</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if the `fit` method has been called.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">attribute_name</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="s2">&quot;sketcher_&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;w_left_&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sigma_&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;w_right_T_&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rank_&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lambdas_&quot;</span><span class="p">,</span>
+        <span class="p">]:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_name</span><span class="p">):</span>
+                <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Please call `fit` before making predictions&quot;</span>
+                <span class="k">raise</span> <span class="n">EstimatorError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<div class="viewcode-block" id="QILinearEstimator.sample_prediction_x">
+<a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html#tno.quantum.ml.regression.linear_regression.QILinearEstimator.sample_prediction_x">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sample_prediction_x</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">A</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">n_entries_x</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Samples predictions of `x` using quantum-inspired model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            A: coefficient matrix `A`.</span>
+<span class="sd">            n_entries_x: number of entries to be sampled from the solution vector `x`.</span>
+<span class="sd">                         Set this to 0 to skip this sampling step.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Samples of predicted values and corresponding indices.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_is_fitted</span><span class="p">()</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">check_random_state</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_state</span><span class="p">,</span> <span class="s2">&quot;random_state&quot;</span><span class="p">)</span>
+
+        <span class="n">A</span> <span class="o">=</span> <span class="n">check_arraylike</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">n_entries_x</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">n_entries_x</span><span class="p">,</span> <span class="s2">&quot;n_entries_x&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Sample predicted `x`&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Compute `omega`</span>
+        <span class="n">omega</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">w_left_</span><span class="p">[:,</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank_</span><span class="p">]</span> <span class="o">@</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lambdas_</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma_</span><span class="p">[:</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank_</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">omega_norm</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">omega</span><span class="p">))</span>
+
+        <span class="c1"># Sample entries of solution vector `x`</span>
+        <span class="n">sampled_indices_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_entries_x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+        <span class="n">sampled_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_entries_x</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_entries_x</span><span class="p">):</span>
+            <span class="n">sampled_indices_x</span><span class="p">[</span><span class="n">t</span><span class="p">],</span> <span class="n">sampled_x</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_from_x</span><span class="p">(</span>
+                <span class="n">A</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span><span class="p">,</span>
+                <span class="n">omega</span><span class="p">,</span>
+                <span class="n">omega_norm</span><span class="p">,</span>
+                <span class="n">rng</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;---</span><span class="si">%s</span><span class="s2"> entries sampled out of </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_entries_x</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sampled_indices_x</span><span class="p">,</span> <span class="n">sampled_x</span></div>
+
+
+<div class="viewcode-block" id="QILinearEstimator.sample_prediction_b">
+<a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html#tno.quantum.ml.regression.linear_regression.QILinearEstimator.sample_prediction_b">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sample_prediction_b</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">A</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">n_entries_b</span><span class="p">:</span> <span class="n">SupportsInt</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sample predictions of `b` using quantum-inspired model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            A: coefficient matrix `A`.</span>
+<span class="sd">            n_entries_b: number of entries to be sampled from the predicted `b`.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Samples of predicted values and corresponding indices.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_is_fitted</span><span class="p">()</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">check_random_state</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_state</span><span class="p">,</span> <span class="s2">&quot;random_state&quot;</span><span class="p">)</span>
+
+        <span class="n">A</span> <span class="o">=</span> <span class="n">check_arraylike</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">n_entries_b</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">n_entries_b</span><span class="p">,</span> <span class="s2">&quot;n_entries_b&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">l_inclusive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Sample predicted `b`&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Compute `phi`</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">w_right_T_</span><span class="o">.</span><span class="n">T</span><span class="p">[:,</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank_</span><span class="p">]</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">lambdas_</span>
+        <span class="n">phi_norm</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+
+        <span class="c1"># Sample entries of `b`</span>
+        <span class="n">sampled_indices_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_entries_b</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+        <span class="n">sampled_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_entries_b</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_entries_b</span><span class="p">):</span>
+            <span class="n">sampled_indices_b</span><span class="p">[</span><span class="n">t</span><span class="p">],</span> <span class="n">sampled_b</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">sample_from_b</span><span class="p">(</span>
+                <span class="n">A</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sketcher_</span><span class="p">,</span>
+                <span class="n">phi</span><span class="p">,</span>
+                <span class="n">phi_norm</span><span class="p">,</span>
+                <span class="n">rng</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;---</span><span class="si">%s</span><span class="s2"> entries sampled out of </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_entries_b</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sampled_indices_b</span><span class="p">,</span> <span class="n">sampled_b</span></div>
+
+
+<div class="viewcode-block" id="QILinearEstimator.__eq__">
+<a class="viewcode-back" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html#tno.quantum.ml.regression.linear_regression.QILinearEstimator.__eq__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for equality for serialization purposes.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">QILinearEstimator</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">NotImplemented</span>
+
+        <span class="c1"># Get the dictionaries of attributes</span>
+        <span class="n">self_attrs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
+        <span class="n">other_attrs</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+        <span class="c1"># Check the keys</span>
+        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">self_attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">!=</span> <span class="nb">set</span><span class="p">(</span><span class="n">other_attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># Iterate and compare values</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">self_value</span> <span class="ow">in</span> <span class="n">self_attrs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">other_value</span> <span class="o">=</span> <span class="n">other_attrs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+            <span class="c1"># Check if they are numpy arrays and compare accordingly</span>
+            <span class="n">is_self_np</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">self_value</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
+            <span class="n">is_other_np</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other_value</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">is_self_np</span> <span class="ow">and</span> <span class="n">is_other_np</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">self_value</span><span class="p">,</span> <span class="n">other_value</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">elif</span> <span class="n">is_self_np</span> <span class="o">!=</span> <span class="n">is_other_np</span> <span class="ow">or</span> <span class="n">self_value</span> <span class="o">!=</span> <span class="n">other_value</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

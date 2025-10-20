@@ -4,7 +4,7 @@ Installation
 .. role:: bash(code)
    :language: bash
 
-Our packages require Python ≥ 3.9 and are available on 
+Our packages require Python ≥ 3.10 and are available on 
 `PyPi <https://pypi.org/user/TNOQuantum/>`_.
 Each package can be installed by running :bash:`pip install <package-name>`.
 
@@ -31,4 +31,4 @@ To install all optional solvers, use the ``all`` flag:
 
 .. code-block:: bash
 
-    pip install tno.quantum.optimization.qubo[all]
+    pip install tno.quantum.optimization.qubo'[all]'

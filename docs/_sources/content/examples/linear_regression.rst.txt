@@ -1,0 +1,49 @@
+Linear regression
+=================
+
+This page contains advanced examples for the :py:mod:`tno.quantum.ml.regression.linear_regression` package.
+Examples of basic usage can be found in the module's documentation.
+
+Requirements
+------------
+
+Install the following dependencies to run the examples below:
+
+.. code-block:: bash
+
+    pip install tno.quantum.ml.regression.linear_regression
+    pip install seaborn
+
+Examples
+--------
+
+*Example 1:* Assume a linear system of the form `$Ax=b$` where:
+
+- `$A$` is the training data.
+- `$x$` is a vector of unknown coefficients.
+- `$b$` is a vector of target values.
+
+The following fits the model based on `$A$` and `$b$`, and shows the following relationships:
+
+- The sampled values (predictions) for `$b$` versus their actual values.
+- The sampled values (predictions) for `$b$` versus their sampling count (i.e., the number of times the corresponding index has been sampled).
+
+Note that larger values are sampled more often as expected.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/linear_regression/example1.py
+        :language: python
+        :linenos:
+
+.. image:: assets/linear_regression/example1-actual_value_vs_sampled_value.png
+    :width: 500
+    :align: center
+    :alt: Actual values vs sampled values (predictions).
+
+.. image:: assets/linear_regression/example1-actual_value_vs_count.png
+    :width: 500
+    :align: center
+    :alt: Actual values vs the number of times the corresponding index has been sampled.
+
+

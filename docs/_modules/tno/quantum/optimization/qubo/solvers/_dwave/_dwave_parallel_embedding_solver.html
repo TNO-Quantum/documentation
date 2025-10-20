@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.optimization.qubo.solvers._dwave._dwave_parallel_embedding_solver &mdash; TNO Quantum</title>
+      <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../../../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../content/examples/linear_regression.html">Linear regression</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.optimization.qubo.solvers._dwave._dwave_parallel_embedding_solver</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.optimization.qubo.solvers._dwave._dwave_parallel_embedding_solver</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the ``DWaveParallelEmbeddingSolver`` class.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">SupportsInt</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">dimod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dimod</span><span class="w"> </span><span class="kn">import</span> <span class="n">child_structure_dfs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dwave.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpinReversalTransformComposite</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dwave.system</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AutoEmbeddingComposite</span><span class="p">,</span>
+    <span class="n">DWaveSampler</span><span class="p">,</span>
+    <span class="n">ParallelEmbeddingComposite</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">minorminer</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_embedding</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">QUBO</span><span class="p">,</span> <span class="n">Solver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">check_bool</span><span class="p">,</span>
+    <span class="n">check_int</span><span class="p">,</span>
+    <span class="n">check_string</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.solvers._dwave._dimod_sample_set_result</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">DimodSampleSetResult</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.solvers._dwave._utils</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">get_singleton</span><span class="p">,</span>
+    <span class="n">retry_on_network_errors</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="DWaveParallelEmbeddingSolver">
+<a class="viewcode-back" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.DWaveParallelEmbeddingSolver">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DWaveParallelEmbeddingSolver</span><span class="p">(</span><span class="n">Solver</span><span class="p">[</span><span class="n">DimodSampleSetResult</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;D-Wave parallel embedding composite solver.</span>
+
+<span class="sd">    The :py:class:`DWaveParallelEmbeddingSolver` class solves QUBOs using the</span>
+<span class="sd">    :py:class:`~dwave.system.composites.ParallelEmbeddingComposite`. This class enables</span>
+<span class="sd">    parallel sampling on a structured sampler by use of multiple disjoint embeddings.</span>
+
+<span class="sd">    Enables parallel sampling on a target sampler by use of multiple disjoint embeddings.</span>
+<span class="sd">    If a list of embeddings is not provided, the function `find_multiple_embeddings()` is</span>
+<span class="sd">    called by default to attempt a maximum number of embeddings. Parallelization of job</span>
+<span class="sd">    submissions can mitigate for network latency, programming time and readout time in</span>
+<span class="sd">    the case of QPU samplers, subject to additional complexity in the embedding process.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; from tno.quantum.optimization.qubo.components import QUBO</span>
+<span class="sd">        &gt;&gt;&gt; from tno.quantum.optimization.qubo.solvers import DWaveParallelEmbeddingSolver</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; qubo = QUBO([[1, 2, 3], [4, -50, 6], [7, 8, 9]])</span>
+<span class="sd">        &gt;&gt;&gt; solver = DWaveParallelEmbeddingSolver(num_reads = 100, max_num_emb = 5)</span>
+<span class="sd">        &gt;&gt;&gt; result = solver.solve(qubo)  # doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt; result.best_bitvector # doctest: +SKIP</span>
+<span class="sd">        BitVector(010)</span>
+<span class="sd">    &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+
+    <span class="n">non_deterministic</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="DWaveParallelEmbeddingSolver.__init__">
+<a class="viewcode-back" href="../../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.DWaveParallelEmbeddingSolver.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">num_attempts</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">num_reads</span><span class="p">:</span> <span class="n">SupportsInt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">backend_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">embeddings</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">embedder</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">embedder_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">one_to_iterable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">max_num_emb</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">child_structure_search</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">reuse_embedding</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">num_spin_reversal_transforms</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">sample_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Init :py:class:`DWaveParallelEmbeddingSolver`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            num_attempts: Number of solve attempts whenever a</span>
+<span class="sd">                :py:exc:`~http.client.RemoteDisconnected`, or</span>
+<span class="sd">                :py:exc:`~urllib3.exceptions.ProtocolError` or</span>
+<span class="sd">                :py:exc:`~requests.ConnectionError` errors has occurred. Waits 15</span>
+<span class="sd">                seconds in between attempts.</span>
+<span class="sd">            num_reads: Number reads to sample. Default is 1.</span>
+<span class="sd">            backend_id: Id of the sampler to use (e.g. ``&#39;Advantage_system4.1&#39;``). If</span>
+<span class="sd">                ``None`` is given, the D-Wave default sampler is used. Default is</span>
+<span class="sd">                ``None``.</span>
+<span class="sd">            embeddings: A list of embeddings. Each embedding is assumed to be a</span>
+<span class="sd">                dictionary with source-graph nodes as keys and iterables on target-graph</span>
+<span class="sd">                nodes as values. The embeddings can include keys not required by the</span>
+<span class="sd">                source graph. Note that one_to_iterable is ignored (assumed True). Here</span>
+<span class="sd">                the source graph is the graph corresponding to the qubo.</span>
+<span class="sd">            embedder: The outer embedder function that finds multiple disjoint</span>
+<span class="sd">                embeddings for parallel sampling. This function should return a list of</span>
+<span class="sd">                embeddings, where each embedding maps the source graph to a different</span>
+<span class="sd">                region of the target hardware graph. If ``None`` (default), uses</span>
+<span class="sd">                :py:func:`~minorminer.utils.parallel_embeddings.find_multiple_embeddings`.</span>
+<span class="sd">                This outer embedder internally uses an &quot;inner embedder&quot; (specified via</span>
+<span class="sd">                ``embedder_kwargs[&quot;embedder&quot;]``) to find individual embeddings. The</span>
+<span class="sd">                inner embedder defaults to :py:func:`~minorminer.find_embedding` in this</span>
+<span class="sd">                solver (which allows chains), rather than D-Wave&#39;s default</span>
+<span class="sd">                :py:func:`~minorminer.find_subgraph` (which requires exact subgraph</span>
+<span class="sd">                matches and often fails for dense graphs).</span>
+<span class="sd">            embedder_kwargs: Keyword arguments for the embedder function. The default</span>
+<span class="sd">                is an empty dictionary.</span>
+<span class="sd">            one_to_iterable: This parameter should be fixed to match the value type</span>
+<span class="sd">                returned by embedder. If ``False`` the values in every dictionary are</span>
+<span class="sd">                target nodes (defining a subgraph embedding), these are transformed to</span>
+<span class="sd">                tuples for compatibility with :py:func:`~dwave.embedding.embed_bqm` and</span>
+<span class="sd">                :py:func:`~dwave.embedding.unembed_sampleset`. If ``True``, the</span>
+<span class="sd">                values are iterables over target nodes and no transformation is</span>
+<span class="sd">                required. When no custom embedder is provided, this is automatically</span>
+<span class="sd">                set to ``True`` to work with :py:func:`~minorminer.find_embedding`.</span>
+<span class="sd">                Default is ``True``.</span>
+<span class="sd">            max_num_emb: Maximum number of embeddings to find for parallel sampling.</span>
+<span class="sd">                This parameter is to be used within the `embedder_kwargs`. If it is</span>
+<span class="sd">                provided as ``None`` (the default), the embedder will try to find</span>
+<span class="sd">                as many embeddings as possible. If this value is also specified</span>
+<span class="sd">                insde the `embedder_kwargs`, the solver will give priority to the</span>
+<span class="sd">                value set in the `embedder_kwargs`.</span>
+<span class="sd">            child_structure_search: A function that accepts a sampler and returns the</span>
+<span class="sd">                structure attribute. Defaults to</span>
+<span class="sd">                :py:func:`~dimod.utilities.child_structure_dfs`.</span>
+<span class="sd">            reuse_embedding: If ``True``, the embedding is reused in subsequent calls to</span>
+<span class="sd">                the solver. If ``False``, a new embedding is created for each call to</span>
+<span class="sd">                the solver. Default is ``False``. Note that this option locks the solver</span>
+<span class="sd">                to solve just one QUBO &#39;shape&#39;.</span>
+<span class="sd">            num_spin_reversal_transforms: Number of spin reversal transform runs. A</span>
+<span class="sd">                value of ``0`` will not transform the problem. If you specify a</span>
+<span class="sd">                nonzero value, each spin reversal transform will result in an</span>
+<span class="sd">                independent run of the child sampler, with all results aggregated</span>
+<span class="sd">                into a single sample set containing</span>
+<span class="sd">                ``num_emb*num_reads*num_spin_reversal_transforms`` samples, where</span>
+<span class="sd">                ``num_emb &lt;= max_num_emb`` is the number of times the problem could be</span>
+<span class="sd">                embedded in parallel. Default is ``0``.</span>
+<span class="sd">            sample_kwargs: Additional keyword arguments that can be used for the</span>
+<span class="sd">                sampler. See the D-Wave documentation of</span>
+<span class="sd">                :py:attr:`~dwave.system.samplers.DWaveSampler.parameters` for possible</span>
+<span class="sd">                additional keyword definitions.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: For invalid values in `num_reads`. If the child_sampler is not</span>
+<span class="sd">                structured, and the structure cannot be inferred from</span>
+<span class="sd">                child_structure_search. If the embeddings provided are an empty list,</span>
+<span class="sd">                or no embeddings are found. If embeddings and source graph nodes are</span>
+<span class="sd">                inconsistent. If embeddings and target graph nodes are inconsistent.</span>
+<span class="sd">            TypeError: For incorrect types in `num_reads`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_attempts</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">num_attempts</span><span class="p">,</span> <span class="s2">&quot;num_attempts&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_reads</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span><span class="n">num_reads</span><span class="p">,</span> <span class="s2">&quot;num_reads&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backend_id</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">check_string</span><span class="p">(</span><span class="n">backend_id</span><span class="p">,</span> <span class="s2">&quot;backend_id&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">backend_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span> <span class="o">=</span> <span class="n">embeddings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedder</span> <span class="o">=</span> <span class="n">embedder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span> <span class="o">=</span> <span class="n">embedder_kwargs</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">one_to_iterable</span> <span class="o">=</span> <span class="n">one_to_iterable</span>
+        <span class="k">if</span> <span class="n">embedder</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span><span class="p">[</span><span class="s2">&quot;embedder&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_embedding</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span><span class="p">[</span><span class="s2">&quot;one_to_iterable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">one_to_iterable</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;`one_to_iterable` was provided as `False` and `embedder` as `None`&quot;</span>
+                    <span class="s2">&quot; Therefore it will be set to `True` instead.&quot;</span><span class="p">,</span>
+                    <span class="ne">UserWarning</span><span class="p">,</span>
+                    <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">one_to_iterable</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">one_to_iterable</span> <span class="o">=</span> <span class="n">one_to_iterable</span>
+        <span class="k">if</span> <span class="s2">&quot;max_num_emb&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span><span class="p">[</span><span class="s2">&quot;max_num_emb&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_num_emb</span>
+        <span class="k">elif</span> <span class="n">max_num_emb</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="s2">&quot;max_num_emb&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span><span class="p">:</span>
+            <span class="n">warn_msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;Multiple declarations of parameter &#39;max_num_emb&#39;: &quot;</span>
+                <span class="s2">&quot;provided both as function argument and inside &#39;embedder_kwargs&#39;. &quot;</span>
+                <span class="s2">&quot;Priority will be given to the value set inside &#39;embedder_kwargs&#39;.&quot;</span>
+            <span class="p">)</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">warn_msg</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">child_structure_search</span> <span class="o">=</span> <span class="n">child_structure_search</span> <span class="ow">or</span> <span class="n">child_structure_dfs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reuse_embedding</span> <span class="o">=</span> <span class="n">check_bool</span><span class="p">(</span><span class="n">reuse_embedding</span><span class="p">,</span> <span class="s2">&quot;reuse_embedding&quot;</span><span class="p">,</span> <span class="n">safe</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_spin_reversal_transforms</span> <span class="o">=</span> <span class="n">check_int</span><span class="p">(</span>
+            <span class="n">num_spin_reversal_transforms</span><span class="p">,</span> <span class="s2">&quot;num_spin_reversal_transforms&quot;</span><span class="p">,</span> <span class="n">l_bound</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_kwargs</span> <span class="o">=</span> <span class="n">sample_kwargs</span></div>
+
+
+    <span class="nd">@retry_on_network_errors</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_solve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qubo</span><span class="p">:</span> <span class="n">QUBO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DimodSampleSetResult</span><span class="p">:</span>
+        <span class="n">sampler</span> <span class="o">=</span> <span class="n">get_singleton</span><span class="p">(</span><span class="n">DWaveSampler</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">backend_id</span><span class="p">)</span>
+        <span class="n">sampler</span> <span class="o">=</span> <span class="n">SpinReversalTransformComposite</span><span class="p">(</span><span class="n">sampler</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">qubo</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;QUBO size (</span><span class="si">{</span><span class="n">qubo</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2">) is too small for this solver.&quot;</span>
+                <span class="s2">&quot; Consider using another solver.&quot;</span>
+                <span class="s2">&quot; Defaulting to AutoEmbeddingComposite instead.&quot;</span><span class="p">,</span>
+                <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">sampler</span> <span class="o">=</span> <span class="n">AutoEmbeddingComposite</span><span class="p">(</span><span class="n">sampler</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">sampler</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+                <span class="n">qubo</span><span class="o">.</span><span class="n">to_bqm</span><span class="p">(),</span>
+                <span class="n">num_reads</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_reads</span><span class="p">,</span>
+                <span class="n">num_spin_reversal_transforms</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_spin_reversal_transforms</span><span class="p">,</span>
+                <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_kwargs</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">DimodSampleSetResult</span><span class="o">.</span><span class="n">from_result</span><span class="p">(</span><span class="n">qubo</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">source</span> <span class="o">=</span> <span class="n">dimod</span><span class="o">.</span><span class="n">to_networkx_graph</span><span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">to_bqm</span><span class="p">())</span>  <span class="c1"># type: ignore[no-untyped-call]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">source</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">parallel_sampler</span> <span class="o">=</span> <span class="n">ParallelEmbeddingComposite</span><span class="p">(</span>
+            <span class="n">sampler</span><span class="p">,</span>
+            <span class="n">embeddings</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span><span class="p">,</span>
+            <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span>
+            <span class="n">embedder</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embedder</span><span class="p">,</span>
+            <span class="n">embedder_kwargs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embedder_kwargs</span><span class="p">,</span>
+            <span class="n">one_to_iterable</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">one_to_iterable</span><span class="p">,</span>
+            <span class="n">child_structure_search</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">child_structure_search</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">parallel_sampler</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+            <span class="n">qubo</span><span class="o">.</span><span class="n">to_bqm</span><span class="p">(),</span>
+            <span class="n">num_reads</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_reads</span><span class="p">,</span>
+            <span class="n">num_spin_reversal_transforms</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_spin_reversal_transforms</span><span class="p">,</span>
+            <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reuse_embedding</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span> <span class="o">=</span> <span class="n">parallel_sampler</span><span class="o">.</span><span class="n">embeddings</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;embedding_context&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;embedding&quot;</span><span class="p">:</span> <span class="n">parallel_sampler</span><span class="o">.</span><span class="n">embeddings</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">DimodSampleSetResult</span><span class="o">.</span><span class="n">from_result</span><span class="p">(</span><span class="n">qubo</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

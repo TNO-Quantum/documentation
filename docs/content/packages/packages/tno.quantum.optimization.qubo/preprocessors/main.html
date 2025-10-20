@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>optimization.qubo.preprocessors &mdash; TNO Quantum</title>
@@ -14,16 +14,15 @@
     <script src="../../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
-        <script src="../../../../../_static/jquery.js"></script>
-        <script src="../../../../../_static/underscore.js"></script>
-        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../../../_static/doctools.js"></script>
-        <script src="../../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script>let toggleHintShow = 'Click to show';</script>
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../../../_static/togglebutton.js"></script>
+        <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
@@ -59,21 +58,31 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../main.html">optimization.qubo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">optimization.qubo.preprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solvers/main.html">optimization.qubo.solvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.ml/main.html">ml</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/main.html">ml.classifiers.vc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/main.html">ml.classifiers.vc.models</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/expected_value_model.html">ml.classifiers.vc.models.expected_value_model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers.vc/models/probability_model.html">ml.classifiers.vc.models.probability_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/components/main.html">ml.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
@@ -93,6 +102,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.utils/noise.html">utils.noise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.utils/serialization.html">utils.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.utils/validation.html">utils.validation</a></li>
 </ul>
@@ -116,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/variational_classifier.html">Variational classifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/linear_regression.html">Linear regression</a></li>
 </ul>
 
         </div>
@@ -143,10 +154,10 @@
            <div itemprop="articleBody">
              
   <section id="optimization-qubo-preprocessors">
-<h1>optimization.qubo.preprocessors<a class="headerlink" href="#optimization-qubo-preprocessors" title="Permalink to this heading"></a></h1>
-<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div><span class="target" id="module-tno.quantum.optimization.qubo.preprocessors"></span><p>This package contains implementations of QUBO <a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.Preprocessor" title="tno.quantum.optimization.qubo.components.Preprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Preprocessor</span></code></a> s.</p>
+<h1>optimization.qubo.preprocessors<a class="headerlink" href="#optimization-qubo-preprocessors" title="Link to this heading"></a></h1>
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div><p id="module-tno.quantum.optimization.qubo.preprocessors">This package contains implementations of QUBO <a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.Preprocessor" title="tno.quantum.optimization.qubo.components.Preprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Preprocessor</span></code></a> s.</p>
 <section id="example">
-<h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<h2>Example:<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <p>The following example shows how to list the available preprocessors and how to instantiate them.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">PreprocessorConfig</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">PreprocessorConfig</span><span class="o">.</span><span class="n">supported_items</span><span class="p">())</span>
@@ -190,7 +201,7 @@
 </section>
 <dl class="py class">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.optimization.qubo.preprocessors.</span></span><span class="sig-name descname"><span class="pre">QProPlusPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html#QProPlusPreprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.optimization.qubo.preprocessors.</span></span><span class="sig-name descname"><span class="pre">QProPlusPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html#QProPlusPreprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.Preprocessor" title="tno.quantum.optimization.qubo.components._preprocessing._preprocessor.Preprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Preprocessor</span></code></a></p>
 <p>Preprocessor class that partially solves QUBOs using the QPro+ algorithm.</p>
 <p>The <a class="reference internal" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor" title="tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">QProPlusPreprocessor</span></code></a> is a preprocessor that applies the <cite>QPro+
@@ -235,21 +246,21 @@ the QUBO objective.</p>
 </div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.is_converged">
-<span class="sig-name descname"><span class="pre">is_converged</span></span><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.is_converged" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">is_converged</span></span><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.is_converged" title="Link to this definition"></a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, indicates that no more rules can be applied.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html#QProPlusPreprocessor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html#QProPlusPreprocessor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.__init__" title="Link to this definition"></a></dt>
 <dd><p>Init <a class="reference internal" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor" title="tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">QProPlusPreprocessor</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>max_iter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – Maximum number of iterations of applying the rules.
+<li><p><strong>max_iter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – Maximum number of iterations of applying the rules.
 One iteration reduces the size of the QUBO by at most one. If not
 provided, it will be set to the size of the QUBO.</p></li>
-<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – verbose: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the rules which are being applied are printed.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – verbose: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the rules which are being applied are printed.</p></li>
 </ul>
 </dd>
 </dl>
@@ -257,14 +268,14 @@ provided, it will be set to the size of the QUBO.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.preprocess">
-<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html#QProPlusPreprocessor.preprocess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.preprocess" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../_modules/tno/quantum/optimization/qubo/preprocessors/_qpro_plus.html#QProPlusPreprocessor.preprocess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.preprocessors.QProPlusPreprocessor.preprocess" title="Link to this definition"></a></dt>
 <dd><p>Performs the reduction algorithm for a maximum number of iterations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>qubo</strong> (<a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>) – QUBO to be preprocessed.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.PartialSolution" title="tno.quantum.optimization.qubo.components._preprocessing._partial_solution.PartialSolution"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartialSolution</span></code></a>, <a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.PartialSolution" title="tno.quantum.optimization.qubo.components._preprocessing._partial_solution.PartialSolution"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartialSolution</span></code></a>, <a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>]</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Partial solution and corresponding preprocessed QUBO.</p>

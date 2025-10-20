@@ -3,7 +3,7 @@ ml
 
 .. raw:: html
 
-   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.0</div>
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.1.0</div>
 
 .. automodule:: tno.quantum.ml
    :members:
@@ -13,6 +13,9 @@ ml
 .. toctree::
    :maxdepth: 1
 
-   classifiers.vc/main
+   classifiers/main
+   clustering/main
+   regression.linear_regression/main
+   components/main
    datasets/main
 

@@ -31,4 +31,5 @@
    content/examples/variational_classifier.rst
    content/examples/portfolio_optimization.rst
    content/examples/communication_qkd.rst
+   content/examples/linear_regression.rst
 
