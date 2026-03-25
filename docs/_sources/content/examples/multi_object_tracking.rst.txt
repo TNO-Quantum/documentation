@@ -1,0 +1,61 @@
+Multi object tracking
+=================
+
+This page contains advanced examples for the :py:mod:`tno.quantum.problems.mot` package.
+
+Requirements
+------------
+
+Install the following dependencies to run the examples below:
+
+.. code-block:: bash
+
+    pip install tno.quantum.problems.mot
+    pip install ultralytics
+
+
+Example: getting detections with ultralytics
+--------
+
+Starting from a video file, first generate a detection file compatible with ultralytics. This can be done,
+for example, with a pre-trained YOLO model, as shown below
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/multi_object_tracking/example_ultralytics.py
+        :language: python
+        :linenos:
+
+
+Example: re-id module
+--------
+
+The following example shows how to run the tracking algorithm of ultralytics and
+the re-id module on top to fix an ID switch.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/multi_object_tracking/example1.py
+        :language: python
+        :linenos:
+    
+This results in the following video snippets.
+
+.. image:: assets/multi_object_tracking/before.gif
+    :width: 500
+    :align: center
+    :alt: Tracking before re-id.
+
+.. image:: assets/multi_object_tracking/after.gif
+    :width: 500
+    :align: center
+    :alt: Tracking after re-id.
+
+Instead of selecting a frame sequence manually, use the `pick_sequences` method
+to find frame sequences where an ID loss or ID switch is suspected.
+
+.. toggle:: Click to show/hide
+
+    .. literalinclude:: assets/multi_object_tracking/example2.py
+        :language: python
+        :linenos:

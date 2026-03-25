@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.problems.mot._utils &mdash; TNO Quantum</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=6fa74e4f" />
+
+  
+    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/multi_object_tracking.html">Multi object tracking</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.problems.mot._utils</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.problems.mot._utils</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Utility functions.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequence</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bounds</span><span class="p">,</span> <span class="n">LinearConstraint</span><span class="p">,</span> <span class="n">milp</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DetectionSequence</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">capacity_constraints</span><span class="p">(</span>
+    <span class="n">nd</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates capacity constraints \sum x_ijt &lt;= 1.</span>
+
+<span class="sd">    Returns a constraint matrix A, left-hand-side b_l and right-hand-side b_u</span>
+<span class="sd">    such that b_l &lt;= A &lt;= b_u</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        nd: the list of number of detections per frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple (A, b_l, b_u)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span>  <span class="c1"># noqa: N806</span>
+    <span class="n">num_vars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="n">nd</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)])</span>
+
+    <span class="c1"># capacity constraints intermediate nodes</span>
+    <span class="n">ptr</span> <span class="o">=</span> <span class="n">nd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nd</span><span class="p">[</span><span class="n">t</span><span class="p">]):</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">num_vars</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">row</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="n">ptr</span> <span class="o">+=</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="n">b_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>  <span class="c1"># \leq 1</span>
+    <span class="n">b_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">b_u</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span> <span class="o">-</span><span class="mi">999999</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b_l</span><span class="p">,</span> <span class="n">b_u</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">flow_constraints</span><span class="p">(</span>
+    <span class="n">nd</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates flow constraints \sum x_ijt = 0.</span>
+
+<span class="sd">    Returns a constraint matrix A, left-hand-side b_l and right-hand-side b_u</span>
+<span class="sd">    such that b_l &lt;= A &lt;= b_u</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        nd: the list of number of detections per frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple (A, b_l, b_u)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span>  <span class="c1"># noqa: N806</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">pad_left</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="n">nd</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">pad_right</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="n">nd</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">T</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]):</span>
+            <span class="n">mat1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nd</span><span class="p">[</span><span class="n">t</span><span class="p">],</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
+            <span class="n">mat1</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="n">mat2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]))</span>
+            <span class="n">mat2</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">pad_left</span><span class="p">,</span> <span class="n">mat1</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">mat2</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">pad_right</span><span class="p">))</span>
+            <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="n">b_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>  <span class="c1"># = 0</span>
+    <span class="n">b_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b_u</span><span class="p">,</span> <span class="n">b_l</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">boundary_constraints</span><span class="p">(</span>
+    <span class="n">nd</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates boundary constraints for t=0 and t=T-1.</span>
+
+<span class="sd">    Returns a constraint matrix A, left-hand-side b_l and right-hand-side b_u</span>
+<span class="sd">    such that b_l &lt;= A &lt;= b_u</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        nd: the list of number of detections per frame</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple (A, b_l, b_u)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span>  <span class="c1"># noqa: N806</span>
+    <span class="n">num_vars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="n">nd</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)])</span>
+
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nd</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">num_vars</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">nd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">row</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="n">b_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nd</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>  <span class="c1"># = 1</span>
+    <span class="n">b_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">nd</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b_u</span><span class="p">,</span> <span class="n">b_l</span>
+
+
+<div class="viewcode-block" id="calculate_cost">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/main.html#tno.quantum.problems.mot.calculate_cost">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_cost</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates the cost array of a detection sequence.</span>
+
+<span class="sd">    The cost array is computed based on the Intersection over Union (IoU) between</span>
+<span class="sd">    bounding boxes in consecutive frames of a detection sequence.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        det_sequence: A sequence of detections (FrameDets) for each frame,</span>
+<span class="sd">                      where each FrameDets contains bounding boxes in the format xyxy.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The cost values computed between all pairs of bounding boxes in consecutive</span>
+<span class="sd">        frames, flattened into a 1D array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cost_array</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+                <span class="n">box1</span> <span class="o">=</span> <span class="n">det_sequence</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">xyxy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">box2</span> <span class="o">=</span> <span class="n">det_sequence</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xyxy</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">cost_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">compute_iou</span><span class="p">(</span><span class="n">box1</span><span class="p">,</span> <span class="n">box2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cost_array</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="compute_iou">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/main.html#tno.quantum.problems.mot.compute_iou">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_iou</span><span class="p">(</span><span class="n">box1</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">box2</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes the Intersection over Union (IoU) between two bounding boxes.</span>
+
+<span class="sd">    The bounding boxes are represented in the format [x, y, x, y], with the first x, y</span>
+<span class="sd">    being the bottom-left corner coordinates and the second pair being the top-right</span>
+<span class="sd">    corner coordinates. The IoU value is a number between 0 and 1, where 0 means no</span>
+<span class="sd">    overlap and 1 means complete overlap.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        box1 (Sequence[float]): The first bounding box in the format [x, y, x, y].</span>
+<span class="sd">        box2 (Sequence[float]): The second bounding box in the format [x, y, x, y].</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The IoU value between the two bounding boxes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">box1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">box1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">or</span> <span class="n">box2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">box2</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Wrong box coordinate format. Must be bottom-left/top-right.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># Compute intersection coordinates</span>
+    <span class="n">inter_x1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">box2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">inter_y1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">box2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">inter_x2</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">box2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">inter_y2</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">box2</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="n">inter_width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inter_x2</span> <span class="o">-</span> <span class="n">inter_x1</span><span class="p">)</span>
+    <span class="n">inter_height</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inter_y2</span> <span class="o">-</span> <span class="n">inter_y1</span><span class="p">)</span>
+    <span class="n">inter_area</span> <span class="o">=</span> <span class="n">inter_width</span> <span class="o">*</span> <span class="n">inter_height</span>
+
+    <span class="n">area1</span> <span class="o">=</span> <span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">box1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">box1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">area2</span> <span class="o">=</span> <span class="p">(</span><span class="n">box2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">box2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">box2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">box2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">union_area</span> <span class="o">=</span> <span class="n">area1</span> <span class="o">+</span> <span class="n">area2</span> <span class="o">-</span> <span class="n">inter_area</span>
+
+    <span class="k">return</span> <span class="n">inter_area</span> <span class="o">/</span> <span class="n">union_area</span> <span class="k">if</span> <span class="n">union_area</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.0</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">solve_binary_program</span><span class="p">(</span>
+    <span class="n">A</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>  <span class="c1"># noqa: N803</span>
+    <span class="n">b_l</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+    <span class="n">b_u</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+    <span class="n">c</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">]:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Solves a binary linear programming problem using scipy&#39;s milp solver.</span>
+
+<span class="sd">    Solves binary problem of the form</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">       &amp;\textrm{minimize } c\cdot x,</span>
+
+<span class="sd">       &amp;\textrm{subject to } b_l \leq Ax \leq b_u,</span>
+
+<span class="sd">       &amp;\textrm{with } x \textrm{ binary}.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        A:  constraint matrix</span>
+<span class="sd">        b_l: left hand side of constraints</span>
+<span class="sd">        b_u: right hand side of constraints</span>
+<span class="sd">        c: cost function</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Solution vector of x of the binary linear program.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="n">LinearConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b_l</span><span class="p">,</span> <span class="n">b_u</span><span class="p">)</span>
+    <span class="n">integrality</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">bounds</span> <span class="o">=</span> <span class="n">Bounds</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">milp</span><span class="p">(</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+        <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">,</span>
+        <span class="n">integrality</span><span class="o">=</span><span class="n">integrality</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="o">.</span><span class="n">success</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;MILP not solved to optimality. </span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

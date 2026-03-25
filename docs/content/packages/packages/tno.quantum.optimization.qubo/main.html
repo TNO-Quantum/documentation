@@ -1,35 +1,35 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>optimization.qubo &mdash; TNO Quantum</title>
-      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/togglebutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
-    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6fa74e4f" />
+
   
-        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-        <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="optimization.qubo.postprocessors" href="postprocessors/main.html" />
+    <link rel="next" title="optimization.qubo.preprocessors" href="preprocessors/main.html" />
     <link rel="prev" title="Installation" href="../../../instructions/installation.html" /> 
 </head>
 
@@ -60,13 +60,14 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solvers/main.html">optimization.qubo.solvers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
@@ -78,27 +79,26 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/components/main.html">ml.components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
 </ul>
 </li>
 </ul>
@@ -122,6 +122,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
@@ -129,6 +134,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/communication_qkd.html">QKD key-rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/multi_object_tracking.html">Multi object tracking</a></li>
 </ul>
 
         </div>
@@ -156,7 +162,7 @@
              
   <section id="optimization-qubo">
 <h1>optimization.qubo<a class="headerlink" href="#optimization-qubo" title="Link to this heading"></a></h1>
-<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.1</div><p id="module-tno.quantum.optimization.qubo">This package provides a comprehensive suite of tools for creating QUBO objects,
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.2</div><p id="module-tno.quantum.optimization.qubo">This package provides a comprehensive suite of tools for creating QUBO objects,
 defining QUBO solvers, and using them to solve QUBO problems.
 It also includes features for pre- and post-processing, as well as the ability to create
 pipelines that integrate all these components seamlessly.</p>
@@ -189,6 +195,7 @@ and instantiate available solvers to solve this QUBO, as shown in the following 
 <span class="go">[&#39;bf_solver&#39;,</span>
 <span class="go">&#39;custom_solver&#39;,</span>
 <span class="go">&#39;daqo_solver&#39;,</span>
+<span class="go">&#39;dcqo_solver&#39;,</span>
 <span class="go">&#39;d_wave_clique_embedded_simulated_annealing_solver&#39;,</span>
 <span class="go">&#39;d_wave_clique_sampler_solver&#39;,</span>
 <span class="go">&#39;d_wave_embedded_simulated_annealing_solver&#39;,</span>
@@ -196,6 +203,7 @@ and instantiate available solvers to solve this QUBO, as shown in the following 
 <span class="go">&#39;d_wave_sampler_solver&#39;,</span>
 <span class="go">&#39;d_wave_tiling_solver&#39;,</span>
 <span class="go">&#39;digital_adiabatic_quantum_optimization_solver&#39;,</span>
+<span class="go">&#39;digital_counterdiabatic_quantum_optimization_solver&#39;,</span>
 <span class="go">&#39;exact_sampler_solver&#39;,</span>
 <span class="go">&#39;kerberos_sampler_solver&#39;,</span>
 <span class="go">&#39;leap_hybrid_solver&#39;,</span>
@@ -242,8 +250,8 @@ instantiate available preprocessors and postprocessors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Name of the postprocessor class.</p></li>
-<li><p><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]) – Keyword arguments to be passed to the postprocessor. Must be a
+<li><p><strong>name</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Name of the postprocessor class.</p></li>
+<li><p><strong>options</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Keyword arguments to be passed to the postprocessor. Must be a
 mapping-like object whose keys are strings, and whose values can be
 anything depending on specific postprocessor.</p></li>
 </ul>
@@ -267,7 +275,7 @@ anything depending on specific postprocessor.</p></li>
 submodules of <a class="reference internal" href="#module-tno.quantum.optimization.qubo" title="tno.quantum.optimization.qubo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.optimization.qubo</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="components/main.html#tno.quantum.optimization.qubo.components.Postprocessor" title="tno.quantum.optimization.qubo.components._postprocessing._postprocessor.Postprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Postprocessor</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="components/main.html#tno.quantum.optimization.qubo.components.Postprocessor" title="tno.quantum.optimization.qubo.components._postprocessing._postprocessor.Postprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Postprocessor</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]]</span></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dictionary with postprocessors by their name in snake-case.</p>
@@ -299,8 +307,8 @@ submodules of <a class="reference internal" href="#module-tno.quantum.optimizati
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Name of the preprocessor class.</p></li>
-<li><p><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]) – Keyword arguments to be passed to the preprocessor. Must be a
+<li><p><strong>name</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Name of the preprocessor class.</p></li>
+<li><p><strong>options</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Keyword arguments to be passed to the preprocessor. Must be a
 mapping-like object whose keys are strings, and whose values can be
 anything depending on specific preprocessor.</p></li>
 </ul>
@@ -324,7 +332,7 @@ anything depending on specific preprocessor.</p></li>
 submodules of <a class="reference internal" href="#module-tno.quantum.optimization.qubo" title="tno.quantum.optimization.qubo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.optimization.qubo</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="components/main.html#tno.quantum.optimization.qubo.components.Preprocessor" title="tno.quantum.optimization.qubo.components._preprocessing._preprocessor.Preprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Preprocessor</span></code></a>]]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="components/main.html#tno.quantum.optimization.qubo.components.Preprocessor" title="tno.quantum.optimization.qubo.components._preprocessing._preprocessor.Preprocessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Preprocessor</span></code></a>]]</span></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dictionary with preprocessors by their name in snake-case .</p>
@@ -355,7 +363,7 @@ submodules of <a class="reference internal" href="#module-tno.quantum.optimizati
 <dd><p>Add two QUBOs element-wise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -368,7 +376,7 @@ submodules of <a class="reference internal" href="#module-tno.quantum.optimizati
 <code class="docutils literal notranslate"><span class="pre">offset</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -380,9 +388,9 @@ submodules of <a class="reference internal" href="#module-tno.quantum.optimizati
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buffer</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]], <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>], <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>]) – Valid QUBO matrix, or mapping containing matrix coefficients,
+<li><p><strong>data</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_Buffer</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]], <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>], <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>]</span>) – Valid QUBO matrix, or mapping containing matrix coefficients,
 or BQM.</p></li>
-<li><p><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) – The offset of the QUBO (constant value).</p></li>
+<li><p><strong>offset</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>) – The offset of the QUBO (constant value).</p></li>
 </ul>
 </dd>
 </dl>
@@ -394,7 +402,7 @@ or BQM.</p></li>
 <dd><p>Size of the QUBO, that is, its number of variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -405,7 +413,7 @@ or BQM.</p></li>
 <dd><p>Multiply the QUBO and offset by a scalar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -416,7 +424,7 @@ or BQM.</p></li>
 <dd><p>String representation of the QUBO.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -427,7 +435,7 @@ or BQM.</p></li>
 <dd><p>Multiply the QUBO and offset by a scalar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -438,7 +446,7 @@ or BQM.</p></li>
 <dd><p>Subtract two QUBOs element-wise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -449,7 +457,7 @@ or BQM.</p></li>
 <dd><p>Division of the QUBO and offset by a scalar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -467,7 +475,7 @@ or BQM.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -483,10 +491,10 @@ via TNC algorithm. The solution gives a lower bound. An upper bound is
 obtained by rounding the solution to the relaxation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>) – Optional keyword arguments to pass to TNC algorithm.</p>
+<dd class="field-odd"><p><strong>kwargs</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a></span>) – Optional keyword arguments to pass to TNC algorithm.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Solution to the convex relaxation of the QUBO.</p>
@@ -504,10 +512,10 @@ obtained by rounding the solution to the relaxation.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code>) – Input bit vector.</p>
+<dd class="field-odd"><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code></span>) – Input bit vector.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Change in QUBO objective value for all single-bit flips of the input vector.</p>
@@ -529,10 +537,10 @@ obtained by rounding the solution to the relaxation.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code>) – Input bit vector.</p>
+<dd class="field-odd"><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code></span>) – Input bit vector.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Changes in QUBO objective value for double-bit flips of the input vector.
@@ -559,7 +567,7 @@ the QUBO matrix is in symmetric form or upper triangular form.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">complex128</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">complex128</span></code>]]]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">complex128</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">complex128</span></code>]]]</span></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Eigenvalues and right eigenvectors.</p>
@@ -577,10 +585,10 @@ the QUBO matrix is in symmetric form or upper triangular form.</p>
 <dd><p>Evaluate the QUBO on a bitvector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code>) – Bitvector to evaluate the QUBO on.</p>
+<dd class="field-odd"><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code></span>) – Bitvector to evaluate the QUBO on.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Evaluation of the QUBO on <cite>x</cite>.</p>
@@ -594,10 +602,10 @@ the QUBO matrix is in symmetric form or upper triangular form.</p>
 <dd><p>Evaluate the QUBO on a mapping of bitvectors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]) – Bitvector-weight pairs.</p>
+<dd class="field-odd"><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<code class="xref py py-const docutils literal notranslate"><span class="pre">BitVectorLike</span></code>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>) – Bitvector-weight pairs.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Weighted sum of evaluations of the QUBO on multiple bitvectors.</p>
@@ -608,35 +616,35 @@ the QUBO matrix is in symmetric form or upper triangular form.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.QUBO.from_bqm">
 <em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bqm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bqm</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/optimization/qubo/components/_qubo.html#QUBO.from_bqm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.from_bqm" title="Link to this definition"></a></dt>
-<dd><p>Construct a <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> instance from <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>.</p>
-<p>This method converts a given <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> into
+<dd><p>Construct a <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> instance from <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>.</p>
+<p>This method converts a given <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> into
 a <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> representation. If the
-<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> variable type is <cite>SPIN</cite>, it will
+<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> variable type is <cite>SPIN</cite>, it will
 be automatically converted to <cite>BINARY</cite> with a warning. The resulting QUBO matrix
 is constructed using the linear and quadratic coefficients from the
-<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>, and returned along with the list
+<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>, and returned along with the list
 of variable labels used in the conversion. Optionally, the labels can be sorted
 as well.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bqm</strong> (<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>) – The binary quadratic model to convert.</p></li>
-<li><p><strong>sort_labels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, variable labels will be sorted before constructing
+<li><p><strong>bqm</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a></span>) – The binary quadratic model to convert.</p></li>
+<li><p><strong>sort_labels</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, variable labels will be sorted before constructing
 the QUBO matrix. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Self</span></code>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Self</span></code>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Tuple containing a <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> instance representing the input
-<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> and a (optionally sorted)
+<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> and a (optionally sorted)
 list of variable labels corresponding to the order used in the QUBO matrix.</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
 <p>The example below shows how to generate a <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> object from a
-<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>.</p>
+<a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">dimod</span><span class="w"> </span><span class="kn">import</span> <span class="n">BinaryQuadraticModel</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bqm</span> <span class="o">=</span> <span class="n">BinaryQuadraticModel</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="p">{(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">):</span> <span class="mi">4</span><span class="p">},</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;BINARY&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">qubo</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">QUBO</span><span class="o">.</span><span class="n">from_bqm</span><span class="p">(</span><span class="n">bqm</span><span class="p">)</span>
@@ -656,22 +664,12 @@ list of variable labels corresponding to the order used in the QUBO matrix.</p>
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.QUBO.lower_bound">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lower_bound</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.lower_bound" title="Link to this definition"></a></dt>
 <dd><p>Lower bound of QUBO.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.QUBO.matrix">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">matrix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.matrix" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">matrix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.matrix" title="Link to this definition"></a></dt>
 <dd><p>QUBO matrix.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -680,11 +678,11 @@ list of variable labels corresponding to the order used in the QUBO matrix.</p>
 <dd><p>Negate QUBO so that ‘maximization’ and ‘minimization’ are interchanged.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>copy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If true, the changes are applied to a copy of the QUBO, and this copy
+<dd class="field-odd"><p><strong>copy</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – If true, the changes are applied to a copy of the QUBO, and this copy
 is returned.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The negated QUBO, or a copy of it.</p>
@@ -696,11 +694,6 @@ is returned.</p>
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.QUBO.offset">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.offset" title="Link to this definition"></a></dt>
 <dd><p>Offset of the QUBO problem.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py property">
@@ -708,11 +701,8 @@ is returned.</p>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.size" title="Link to this definition"></a></dt>
 <dd><p>Size of the QUBO, that is, its number of variables.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Size of the QUBO.</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Size of the QUBO.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -744,14 +734,14 @@ between the two lowest energy eigenvalues.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]) – List of values of <cite><span class="math notranslate nohighlight">\(A\)</span></cite> for the annealing process.</p></li>
-<li><p><strong>B</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]) – List of values of <cite><span class="math notranslate nohighlight">\(B\)</span></cite> for the annealing process.</p></li>
-<li><p><strong>plot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Boolean value, if True (default) we plot here. If False we do not plot
+<li><p><strong>A</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>) – List of values of <cite><span class="math notranslate nohighlight">\(A\)</span></cite> for the annealing process.</p></li>
+<li><p><strong>B</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>) – List of values of <cite><span class="math notranslate nohighlight">\(B\)</span></cite> for the annealing process.</p></li>
+<li><p><strong>plot</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – Boolean value, if True (default) we plot here. If False we do not plot
 here.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="(in Matplotlib v3.10.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Figure</span></code></a>]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="(in Matplotlib v3.10.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Figure</span></code></a>]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The minimum spectral gap and a matplotlib figure containing the spectral gap
@@ -766,17 +756,17 @@ figure.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.QUBO.to_bqm">
 <span class="sig-name descname"><span class="pre">to_bqm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/optimization/qubo/components/_qubo.html#QUBO.to_bqm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.to_bqm" title="Link to this definition"></a></dt>
-<dd><p>Convert the <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> into a <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>.</p>
+<dd><p>Convert the <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a> into a <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>variables</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]) – list of variable labels. If <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), integer labels
+<dd class="field-odd"><p><strong>variables</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – list of variable labels. If <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), integer labels
 will be used.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in Python v9.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> of the <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>
+<dd class="field-odd"><p>The <a class="reference external" href="https://docs.dwavequantum.com/en/latest/ocean/api_ref_dimod/models.html#dimod.binary.BinaryQuadraticModel" title="(in D-Wave Quantum Computing Products v9.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryQuadraticModel</span></code></a> of the <a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>
 with the variable labels described by <cite>variables</cite>.</p>
 </dd>
 </dl>
@@ -790,7 +780,7 @@ with the variable labels described by <cite>variables</cite>.</p>
 following change of variables: <span class="math notranslate nohighlight">\(x_i \to (1 - s_i) / 2\)</span>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Tuple of a 1D Array, 2D Array and float representing the external fields,
@@ -805,11 +795,11 @@ interactions and offset of the corresponding Lenz-Ising model respectively.</p>
 <dd><p>Format the values in the QUBO matrix as a string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>) – Optional keyword arguments to pass to <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array2string.html#numpy.array2string" title="(in NumPy v2.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.array2string()</span></code></a>
+<dd class="field-odd"><p><strong>kwargs</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a></span>) – Optional keyword arguments to pass to <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array2string.html#numpy.array2string" title="(in NumPy v2.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.array2string()</span></code></a>
 formatting.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Formatted string representation of the QUBO matrix.</p>
@@ -823,11 +813,11 @@ formatting.</p>
 <dd><p>Rewrite QUBO into symmetric form.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>copy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If true, the changes are applied to a copy of the QUBO, and this copy
+<dd class="field-odd"><p><strong>copy</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – If true, the changes are applied to a copy of the QUBO, and this copy
 is returned.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The rewritten QUBO, or a copy of it.</p>
@@ -841,11 +831,11 @@ is returned.</p>
 <dd><p>Rewrite QUBO into upper triangular form.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>copy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If true, the changes are applied to a copy of the QUBO, and this copy
+<dd class="field-odd"><p><strong>copy</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – If true, the changes are applied to a copy of the QUBO, and this copy
 is returned.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The rewritten QUBO, or a copy of it.</p>
@@ -857,11 +847,6 @@ is returned.</p>
 <dt class="sig sig-object py" id="tno.quantum.optimization.qubo.QUBO.upper_bound">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upper_bound</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#tno.quantum.optimization.qubo.QUBO.upper_bound" title="Link to this definition"></a></dt>
 <dd><p>Upper bound of QUBO.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -904,8 +889,8 @@ is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Name of the solver class.</p></li>
-<li><p><strong>options</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]) – Keyword arguments to be passed to the solver. Must be a
+<li><p><strong>name</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Name of the solver class.</p></li>
+<li><p><strong>options</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Keyword arguments to be passed to the solver. Must be a
 mapping-like object whose keys are strings, and whose values can be
 anything depending on specific solver.</p></li>
 </ul>
@@ -929,7 +914,7 @@ anything depending on specific solver.</p></li>
 submodules of <a class="reference internal" href="#module-tno.quantum.optimization.qubo" title="tno.quantum.optimization.qubo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.optimization.qubo</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="components/main.html#tno.quantum.optimization.qubo.components.Solver" title="tno.quantum.optimization.qubo.components._solvers._solver.Solver"><code class="xref py py-class docutils literal notranslate"><span class="pre">Solver</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="components/main.html#tno.quantum.optimization.qubo.components.Solver" title="tno.quantum.optimization.qubo.components._solvers._solver.Solver"><code class="xref py py-class docutils literal notranslate"><span class="pre">Solver</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]]</span></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dictionary with solvers by their name in snake-case .</p>
@@ -941,9 +926,9 @@ submodules of <a class="reference internal" href="#module-tno.quantum.optimizati
 
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solvers/main.html">optimization.qubo.solvers</a></li>
 </ul>
 </div>
@@ -954,13 +939,13 @@ submodules of <a class="reference internal" href="#module-tno.quantum.optimizati
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../../../instructions/installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="postprocessors/main.html" class="btn btn-neutral float-right" title="optimization.qubo.postprocessors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="preprocessors/main.html" class="btn btn-neutral float-right" title="optimization.qubo.preprocessors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

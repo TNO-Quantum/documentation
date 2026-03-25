@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi object tracking &mdash; TNO Quantum</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6fa74e4f" />
+
+  
+    <link rel="shortcut icon" href="../../_static/TNO_blue.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Linear regression" href="linear_regression.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multi object tracking</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Multi object tracking</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multi-object-tracking">
+<h1>Multi object tracking<a class="headerlink" href="#multi-object-tracking" title="Link to this heading"></a></h1>
+<p>This page contains advanced examples for the <a class="reference internal" href="../problems/packages/tno.quantum.problems.mot/main.html#module-tno.quantum.problems.mot" title="tno.quantum.problems.mot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.problems.mot</span></code></a> package.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<p>Install the following dependencies to run the examples below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>tno.quantum.problems.mot
+pip<span class="w"> </span>install<span class="w"> </span>ultralytics
+</pre></div>
+</div>
+</section>
+<section id="example-getting-detections-with-ultralytics">
+<h2>Example: getting detections with ultralytics<a class="headerlink" href="#example-getting-detections-with-ultralytics" title="Link to this heading"></a></h2>
+<p>Starting from a video file, first generate a detection file compatible with ultralytics. This can be done,
+for example, with a pre-trained YOLO model, as shown below</p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">ultralytics</span><span class="w"> </span><span class="kn">import</span> <span class="n">YOLO</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">model</span> <span class="o">=</span> <span class="n">YOLO</span><span class="p">(</span><span class="s2">&quot;path/to/model&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="n">video_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/video&quot;</span>
+<span class="linenos"> 6</span><span class="n">detections_csv_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/output.csv&quot;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Run inference frame-by-frame</span>
+<span class="linenos"> 9</span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span>
+<span class="linenos">10</span>    <span class="n">video_path</span><span class="p">,</span>
+<span class="linenos">11</span>    <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># important for video</span>
+<span class="linenos">12</span>    <span class="n">conf</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+<span class="linenos">13</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">detections_csv_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="linenos">16</span>    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="linenos">17</span>    <span class="k">for</span> <span class="n">frame_idx</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+<span class="linenos">18</span>        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">boxes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">19</span>            <span class="k">continue</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>        <span class="k">for</span> <span class="n">box</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">boxes</span><span class="p">:</span>
+<span class="linenos">22</span>            <span class="n">cls_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">box</span><span class="o">.</span><span class="n">cls</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">23</span>            <span class="n">conf</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">box</span><span class="o">.</span><span class="n">conf</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">24</span>            <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">xywhn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span>
+<span class="linenos">27</span>                <span class="p">[</span>
+<span class="linenos">28</span>                    <span class="n">frame_idx</span><span class="p">,</span>
+<span class="linenos">29</span>                    <span class="n">cls_id</span><span class="p">,</span>
+<span class="linenos">30</span>                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="linenos">31</span>                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">w</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="linenos">33</span>                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">h</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="linenos">34</span>                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">conf</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="linenos">35</span>                <span class="p">]</span>
+<span class="linenos">36</span>            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="example-re-id-module">
+<h2>Example: re-id module<a class="headerlink" href="#example-re-id-module" title="Link to this heading"></a></h2>
+<p>The following example shows how to run the tracking algorithm of ultralytics and
+the re-id module on top to fix an ID switch.</p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">importlib.resources</span>
+<span class="linenos"> 2</span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">ultralytics.trackers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BOTSORT</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">ultralytics.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">YAML</span><span class="p">,</span> <span class="n">IterableSimpleNamespace</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 8</span>    <span class="n">DetectionSequence</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="n">ultralytics_track</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="n">FlowReID</span><span class="p">,</span>
+<span class="linenos">11</span><span class="p">)</span>
+<span class="linenos">12</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">13</span>    <span class="n">make_gif_with_detections</span><span class="p">,</span>
+<span class="linenos">14</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Load detections from CSV file</span>
+<span class="linenos">17</span><span class="n">detections_csv_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/detections.csv&quot;</span>
+<span class="linenos">18</span><span class="n">detections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">detections_csv_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">19</span><span class="n">detections</span> <span class="o">=</span> <span class="n">DetectionSequence</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="c1"># Run ultralytics tracking algorithm</span>
+<span class="linenos">22</span><span class="n">tracker_path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+<span class="linenos">23</span>    <span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">files</span><span class="p">(</span><span class="s2">&quot;ultralytics.cfg&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;trackers&quot;</span> <span class="o">/</span> <span class="s2">&quot;botsort.yaml&quot;</span>
+<span class="linenos">24</span><span class="p">)</span>
+<span class="linenos">25</span><span class="n">cfg</span> <span class="o">=</span> <span class="n">IterableSimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">YAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">tracker_path</span><span class="p">))</span>
+<span class="linenos">26</span><span class="n">tracker</span> <span class="o">=</span> <span class="n">BOTSORT</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">frame_rate</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="linenos">27</span><span class="n">detections</span> <span class="o">=</span> <span class="n">ultralytics_track</span><span class="p">(</span><span class="n">detections</span><span class="p">,</span> <span class="n">tracker</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="c1"># Select a snippet that contains an ID loss</span>
+<span class="linenos">30</span><span class="n">first_frame</span> <span class="o">=</span> <span class="mi">253</span>  <span class="c1"># some frame</span>
+<span class="linenos">31</span><span class="n">last_frame</span> <span class="o">=</span> <span class="n">first_frame</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="linenos">32</span><span class="n">detections_snippet</span> <span class="o">=</span> <span class="n">detections</span><span class="p">[</span><span class="n">first_frame</span><span class="p">:</span><span class="n">last_frame</span><span class="p">]</span>
+<span class="linenos">33</span><span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
+<span class="linenos">34</span><span class="n">reid_detections_snippet</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_classic</span><span class="p">(</span><span class="n">detections_snippet</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="c1"># Create visualization</span>
+<span class="linenos">37</span><span class="n">video_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/video&quot;</span>
+<span class="linenos">38</span><span class="n">make_gif_with_detections</span><span class="p">(</span>
+<span class="linenos">39</span>    <span class="n">detections_snippet</span><span class="p">,</span>
+<span class="linenos">40</span>    <span class="n">input_filename</span><span class="o">=</span><span class="n">video_path</span><span class="p">,</span>
+<span class="linenos">41</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">&quot;before.gif&quot;</span><span class="p">,</span>
+<span class="linenos">42</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="linenos">43</span>    <span class="n">first_frame</span><span class="o">=</span><span class="n">first_frame</span><span class="p">,</span>
+<span class="linenos">44</span><span class="p">)</span>
+<span class="linenos">45</span><span class="n">make_gif_with_detections</span><span class="p">(</span>
+<span class="linenos">46</span>    <span class="n">reid_detections_snippet</span><span class="p">,</span>
+<span class="linenos">47</span>    <span class="n">input_filename</span><span class="o">=</span><span class="n">video_path</span><span class="p">,</span>
+<span class="linenos">48</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">&quot;after.gif&quot;</span><span class="p">,</span>
+<span class="linenos">49</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="linenos">50</span>    <span class="n">first_frame</span><span class="o">=</span><span class="n">first_frame</span><span class="p">,</span>
+<span class="linenos">51</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>This results in the following video snippets.</p>
+<a class="reference internal image-reference" href="../../_images/before.gif"><img alt="Tracking before re-id." class="align-center" src="../../_images/before.gif" style="width: 500px;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/after.gif"><img alt="Tracking after re-id." class="align-center" src="../../_images/after.gif" style="width: 500px;" />
+</a>
+<p>Instead of selecting a frame sequence manually, use the <cite>pick_sequences</cite> method
+to find frame sequences where an ID loss or ID switch is suspected.</p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 3</span>    <span class="n">DetectionSequence</span><span class="p">,</span>
+<span class="linenos"> 4</span>    <span class="n">FlowReID</span><span class="p">,</span>
+<span class="linenos"> 5</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 7</span>    <span class="n">make_video_with_detections</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># Load detections from CSV file</span>
+<span class="linenos">11</span><span class="n">detections_csv_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/detections.csv&quot;</span>
+<span class="linenos">12</span><span class="n">detections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">detections_csv_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">13</span><span class="n">detections</span> <span class="o">=</span> <span class="n">DetectionSequence</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Pick sequences</span>
+<span class="linenos">16</span><span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
+<span class="linenos">17</span><span class="n">sequences</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">pick_sequences</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
+<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span>
+<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span><span class="si">}</span><span class="s2"> frame sequences for re-id.&quot;</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="c1"># To run re-id continuously on each of the detected sequences, use</span>
+<span class="linenos">22</span><span class="c1"># run_continuous_reid.</span>
+<span class="linenos">23</span><span class="n">reid_detections</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_continuous_reid</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1"># Save the video after re-id</span>
+<span class="linenos">26</span><span class="n">make_video_with_detections</span><span class="p">(</span>
+<span class="linenos">27</span>    <span class="n">reid_detections</span><span class="p">,</span>
+<span class="linenos">28</span>    <span class="n">input_filename</span><span class="o">=</span><span class="s2">&quot;example_video.avi&quot;</span><span class="p">,</span>
+<span class="linenos">29</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">&quot;after.avi&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+<span class="linenos">31</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="linear_regression.html" class="btn btn-neutral float-left" title="Linear regression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

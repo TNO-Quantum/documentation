@@ -13,9 +13,9 @@ ml
 .. toctree::
    :maxdepth: 1
 
-   classifiers/main
-   clustering/main
    regression.linear_regression/main
+   classifiers/main
    components/main
    datasets/main
+   clustering/main
 

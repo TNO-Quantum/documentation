@@ -22,6 +22,7 @@
 
    content/problems/packages/tno.quantum.problems.portfolio_optimization/main
    content/problems/packages/tno.quantum.problems.n_minus_1/main
+   content/problems/packages/tno.quantum.problems.mot/main
 
 .. toctree::
    :hidden:
@@ -32,4 +33,5 @@
    content/examples/portfolio_optimization.rst
    content/examples/communication_qkd.rst
    content/examples/linear_regression.rst
+   content/examples/multi_object_tracking.rst
 

@@ -1,0 +1,540 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.problems.mot.re_id &mdash; TNO Quantum</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=6fa74e4f" />
+
+  
+    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../content/problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/examples/multi_object_tracking.html">Multi object tracking</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.problems.mot.re_id</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.problems.mot.re_id</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module implements a re-id feature for tracking in ultralytics 8.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">perf_counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">NDArray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.optimization.qubo.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">SolverConfig</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DetectionSequence</span><span class="p">,</span> <span class="n">calculate_cost</span><span class="p">,</span> <span class="n">compute_iou</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot._bqm</span><span class="w"> </span><span class="kn">import</span> <span class="n">BQMResult</span><span class="p">,</span> <span class="n">BQMSolver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot._utils</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">boundary_constraints</span><span class="p">,</span>
+    <span class="n">capacity_constraints</span><span class="p">,</span>
+    <span class="n">flow_constraints</span><span class="p">,</span>
+    <span class="n">solve_binary_program</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="FlowReID">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html#tno.quantum.problems.mot.FlowReID">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">FlowReID</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class to initialize the flow re-identification object.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FlowReID.__init__">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html#tno.quantum.problems.mot.FlowReID.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize FlowReID object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="n">BQMResult</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_solve_network_flow_reid_milp</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructs and solves network flow optimization for re-id.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            det_sequence: the sequence of detections (FrameDets) for each frame.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The solution to the optimization problem.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start_algorithm</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+        <span class="n">T</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span>  <span class="c1"># noqa: N806</span>
+        <span class="n">nd</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">size</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">det_sequence</span><span class="p">]</span>
+
+        <span class="c1"># Assumption: T&gt;2, i.e., there are intermediate nodes</span>
+        <span class="k">if</span> <span class="n">T</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The length of the detection sequence is </span><span class="si">{</span><span class="n">T</span><span class="si">}</span><span class="s2"> but must be &gt;2.&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="c1"># compute cost function</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">calculate_cost</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span>
+
+        <span class="c1"># capacity constraints intermediate nodes</span>
+        <span class="n">a1</span><span class="p">,</span> <span class="n">b_l1</span><span class="p">,</span> <span class="n">b_u1</span> <span class="o">=</span> <span class="n">capacity_constraints</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span>
+
+        <span class="c1"># force flow on t=0 and t=T-1</span>
+        <span class="n">a2</span><span class="p">,</span> <span class="n">b_l2</span><span class="p">,</span> <span class="n">b_u2</span> <span class="o">=</span> <span class="n">boundary_constraints</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span>
+
+        <span class="c1"># flow constraints</span>
+        <span class="n">a3</span><span class="p">,</span> <span class="n">b_l3</span><span class="p">,</span> <span class="n">b_u3</span> <span class="o">=</span> <span class="n">flow_constraints</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span>
+
+        <span class="c1"># milp</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">a3</span><span class="p">))</span>  <span class="c1"># noqa: N806</span>
+        <span class="n">b_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">b_l1</span><span class="p">,</span> <span class="n">b_l2</span><span class="p">,</span> <span class="n">b_l3</span><span class="p">))</span>
+        <span class="n">b_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">b_u1</span><span class="p">,</span> <span class="n">b_u2</span><span class="p">,</span> <span class="n">b_u3</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">solve_binary_program</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b_l</span><span class="p">,</span> <span class="n">b_u</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+        <span class="c1"># post-process solution</span>
+        <span class="n">x_tensor</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">pt</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">sub_x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">pt</span> <span class="p">:</span> <span class="n">pt</span> <span class="o">+</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
+            <span class="n">sub_x</span> <span class="o">=</span> <span class="n">sub_x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">nd</span><span class="p">[</span><span class="n">t</span><span class="p">],</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
+            <span class="n">x_tensor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sub_x</span><span class="p">)</span>
+            <span class="n">pt</span> <span class="o">+=</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">*</span> <span class="n">nd</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">exec_time</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_algorithm</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">BQMResult</span><span class="p">(</span>
+            <span class="n">exec_time</span><span class="o">=</span><span class="n">exec_time</span><span class="p">,</span>
+            <span class="n">cost</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="p">)),</span>
+            <span class="n">solution</span><span class="o">=</span><span class="n">x_tensor</span><span class="p">,</span>
+            <span class="n">converged</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">x_tensor</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_solve_network_flow_reid_qubo</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">,</span>
+        <span class="n">solver_config</span><span class="p">:</span> <span class="n">SolverConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]]:</span>
+        <span class="n">bqm</span> <span class="o">=</span> <span class="n">BQMSolver</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">bqm</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">solver_config</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">solution</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;No BQM supplied&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">solution</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_transform_tensor_to_det_sequence</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">x_tensor</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]],</span> <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DetectionSequence</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Transforms output of the network flow optimization into a DetectionSequence.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x_tensor: The solution tensor from the network flow optimization.</span>
+<span class="sd">            det_sequence: The sequence of detections (FrameDets) used in the</span>
+<span class="sd">                optimization.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The updated sequence of detections.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If x_tensor or det_sequence is empty.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;x_tensor and det_sequence must not be empty.&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="c1"># assume the first frameDet is correct</span>
+        <span class="n">updated_det_sequence</span> <span class="o">=</span> <span class="n">DetectionSequence</span><span class="p">([</span><span class="n">det_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+
+        <span class="c1"># iterate through the frames to update ids using the transition matrices</span>
+        <span class="k">for</span> <span class="n">frame</span><span class="p">,</span> <span class="n">transition_matrix</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">):</span>
+            <span class="n">updated_det_sequence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">[</span><span class="n">frame</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
+            <span class="n">updated_det_sequence</span><span class="p">[</span><span class="n">frame</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span>
+                <span class="n">transition_matrix</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">updated_det_sequence</span><span class="p">[</span><span class="n">frame</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">updated_det_sequence</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sequence_checker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nd</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if a detection sequence is suitable for re-id.</span>
+
+<span class="sd">        Based on the number of detections, the checks are:</span>
+<span class="sd">            1. The length of the sequence is between 1 and 200.</span>
+<span class="sd">            2. The number of detections changes at some point.</span>
+<span class="sd">            3. The number of detections does not go below the initial one.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            nd: list of number of detections per frame</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            True if the sequence is suitable. False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check 1</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">nd</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># Check 2</span>
+        <span class="n">unique</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">nd</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># Check 3</span>
+        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">unique</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">nd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<div class="viewcode-block" id="FlowReID.pick_sequences">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html#tno.quantum.problems.mot.FlowReID.pick_sequences">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pick_sequences</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">,</span> <span class="n">min_len</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">max_len</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Picks frame sequences to run re-id on.</span>
+
+<span class="sd">        Sequences containing new id&#39;s are selected for the re-id module. The sequences</span>
+<span class="sd">        are checked for compatibility with the re-id module.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            det_sequence: detection sequence</span>
+<span class="sd">            min_len: minimum length of picked sequences</span>
+<span class="sd">            max_len: maximum length of picked sequences</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List with start and end frames for the selected sequences.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sequences</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">interesting_frames</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">known_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+
+        <span class="c1"># find frames where new ids appear and they intersect another detection</span>
+        <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">_id</span><span class="p">,</span> <span class="n">box1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">ids</span><span class="p">,</span> <span class="n">frame</span><span class="o">.</span><span class="n">xyxy</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">known_ids</span><span class="p">:</span>
+                    <span class="n">iou</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                        <span class="p">[</span>
+                            <span class="n">compute_iou</span><span class="p">(</span>
+                                <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;Sequence[float]&quot;</span><span class="p">,</span> <span class="n">box1</span><span class="p">),</span>
+                                <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;Sequence[float]&quot;</span><span class="p">,</span> <span class="n">box2</span><span class="p">),</span>
+                            <span class="p">)</span>
+                            <span class="k">for</span> <span class="n">box2</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">xyxy</span>
+                        <span class="p">]</span>
+                    <span class="p">)</span>
+                    <span class="n">matches</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">iou</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">interesting_frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+                    <span class="n">known_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_id</span><span class="p">)</span>
+
+        <span class="c1"># find sequences around interesting frames</span>
+        <span class="n">nd</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">size</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">det_sequence</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">interesting_frames</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">min_len</span><span class="p">,</span> <span class="n">max_len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+                <span class="n">trial_sequence</span> <span class="o">=</span> <span class="n">nd</span><span class="p">[</span><span class="n">f</span> <span class="o">-</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">f</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="p">]</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sequence_checker</span><span class="p">(</span><span class="n">trial_sequence</span><span class="p">):</span>
+                    <span class="n">sequences</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">f</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">f</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">m</span><span class="p">))</span>
+                    <span class="k">break</span>
+
+        <span class="k">return</span> <span class="n">sequences</span></div>
+
+
+<div class="viewcode-block" id="FlowReID.run_classic">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html#tno.quantum.problems.mot.FlowReID.run_classic">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run_classic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DetectionSequence</span><span class="p">:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Runs re-id using a classic MILP solver from SciPy.</span>
+
+<span class="sd">        The classic approach solves the following *network flow model*:</span>
+
+<span class="sd">        - *Capacity constraint*: At most one unit of flow per edge.</span>
+<span class="sd">        - *Flow conservation*: Incoming flow equals outgoing flow for intermediate nodes.</span>
+<span class="sd">        - *Boundary condition*: One unit of flow originates from each initial node.</span>
+
+<span class="sd">        This approach uses SciPy&#39;s MILP solver :func:`~scipy.optimize.milp`.</span>
+
+<span class="sd">        The decision variables are:</span>
+
+<span class="sd">        1. :math:`x_{ijt} \in \{0, 1\}` representing whether detection :math:`i` in</span>
+<span class="sd">        frame :math:`t` is associated with detection :math:`j` in frame :math:`t+1`.</span>
+
+<span class="sd">        - :math:`x_{ijt} = 1` Detection :math:`i` at time :math:`t` and detection :math:`j` at time :math:`t+1` belong to the same object.</span>
+<span class="sd">        - :math:`x_{ijt} = 0` No association.</span>
+
+<span class="sd">        2. :math:`y_{ij} \in \{0, 1\}` representing additional edges introduced when the</span>
+<span class="sd">        number of detections in intermediate frames drops below the initial frame count.</span>
+
+<span class="sd">        - :math:`y_{ij} = 1` Detection :math:`i` in frame :math:`f_1` is linked to detection :math:`j` in frame :math:`f_2` to maintain feasibility.</span>
+<span class="sd">        - :math:`y_{ij} = 0` No link between these detections.</span>
+
+<span class="sd">        When the number of detections drops below the initial layer, additional edges</span>
+<span class="sd">        are introduced between frames :math:`f_1` and :math:`f_2` to maintain feasibility:</span>
+
+<span class="sd">        .. math::</span>
+
+<span class="sd">            \begin{split}</span>
+<span class="sd">                &amp; \sum_{j=1}^{nd_{f_1+1}} x_{ijf_1} + \sum_{j=1}^{nd_{f_2}} y_{ij} \leq 1, \quad i = 1, \dots, nd_{f_1} \\</span>
+<span class="sd">                &amp; \sum_{j=1}^{nd_{f_1-1}} x_{jif_1-1} = \sum_{j=1}^{nd_{f_1+1}} x_{ijf_1} + \sum_{j=1}^{nd_{f_2}} y_{ij}, \quad i = 1, \dots, nd_{f_1} \\</span>
+<span class="sd">                &amp; \sum_{j=1}^{nd_{f_2-1}} x_{jif_2-1} + \sum_{j=1}^{nd_{f_1}} y_{ji} = \sum_{j=1}^{nd_{f_2+1}} x_{ijf_2}, \quad i = 1, \dots, nd_{f_2}.</span>
+<span class="sd">            \end{split}</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            det_sequence: detection sequence to re-id.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The detection sequence after re-id.</span>
+<span class="sd">        &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
+        <span class="n">x_tensor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solve_network_flow_reid_milp</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x_tensor</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform_tensor_to_det_sequence</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">det_sequence</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">det_sequence</span></div>
+
+
+<div class="viewcode-block" id="FlowReID.run_qubo">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html#tno.quantum.problems.mot.FlowReID.run_qubo">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run_qubo</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">,</span>
+        <span class="n">solver_config</span><span class="p">:</span> <span class="n">SolverConfig</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DetectionSequence</span><span class="p">:</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Runs re-id using a qubo model.</span>
+
+<span class="sd">        Instead of handling constraints explicitly, we add **penalty terms** to the \</span>
+<span class="sd">        objective function:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            \\\mathbf{c}^T \mathbf{x} + \lambda H(\mathbf{x})</span>
+
+<span class="sd">        - :math:`\mathbf{c}^T \mathbf{x}`: Original cost function.</span>
+<span class="sd">        - :math:`H(\mathbf{x})`: Penalty function encoding constraints.</span>
+<span class="sd">        - :math:`\lambda`: Penalty weight ensuring feasibility.</span>
+
+<span class="sd">        By tuning :math:`\lambda`, minimizing this unconstrained quadratic objective \</span>
+<span class="sd">        yields feasible solutions.</span>
+
+<span class="sd">        For a constraint of the form :math:`\mathbf{a}^T \mathbf{x} = b`:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            \\H_1(\mathbf{x}) = (\mathbf{a}^T \mathbf{x} - b)^2</span>
+
+<span class="sd">        This penalty is zero when the constraint is satisfied and positive otherwise.</span>
+
+<span class="sd">        For a constraint of the form :math:`\sum{x_i} \leq 1`:</span>
+
+<span class="sd">        .. math::</span>
+<span class="sd">            \\H_2( \mathbf{x} ) = \sum_{i&lt;j}{x_i x_j}</span>
+
+<span class="sd">        This ensures that at most one variable in the set can take the value 1.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            det_sequence: detection sequence to re-id.</span>
+<span class="sd">            solver_config: Configuration for the qubo solver to use. Must be a</span>
+<span class="sd">                ``SolverConfig`` or a mapping with ``&quot;name&quot;`` and ``&quot;options&quot;`` keys. If</span>
+<span class="sd">                ``None`` (default) is provided, the</span>
+<span class="sd">                :class:`SimulatedAnnealingSolver</span>
+<span class="sd">                &lt;tno.quantum.optimization.qubo.solvers.SimulatedAnnealingSolver&gt;`</span>
+<span class="sd">                will be used, i.e. ``{&quot;name&quot;: &quot;simulated_annealing_solver&quot;,</span>
+<span class="sd">                &quot;options&quot;: {}}``.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The detection sequence after re-id. If the solver did not converge to a</span>
+<span class="sd">            feasible solution, returns the input detection sequence.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x_tensor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solve_network_flow_reid_qubo</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">,</span> <span class="n">solver_config</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x_tensor</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform_tensor_to_det_sequence</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">det_sequence</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">det_sequence</span></div>
+
+
+<div class="viewcode-block" id="FlowReID.run_continuous_reid">
+<a class="viewcode-back" href="../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html#tno.quantum.problems.mot.FlowReID.run_continuous_reid">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run_continuous_reid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">det_sequence</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DetectionSequence</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Runs re-id continuously.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            det_sequence: detection sequence</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The detection sequence after re-id on several frame sequences.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sequences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pick_sequences</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+            <span class="n">snippet</span> <span class="o">=</span> <span class="n">DetectionSequence</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">])</span>
+            <span class="n">new_snippet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_classic</span><span class="p">(</span><span class="n">snippet</span><span class="p">)</span>
+            <span class="n">det_sequence</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_snippet</span>
+
+            <span class="c1"># if an id switch was found, fix it in the rest of the frames</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">snippet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span><span class="p">,</span> <span class="n">new_snippet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span><span class="p">):</span>
+                <span class="n">diff_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">snippet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span> <span class="o">!=</span> <span class="n">new_snippet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">diff_indices</span><span class="p">:</span>
+                    <span class="n">old_id</span> <span class="o">=</span> <span class="n">snippet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+                    <span class="n">new_id</span> <span class="o">=</span> <span class="n">new_snippet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+                    <span class="k">for</span> <span class="n">frame_det</span> <span class="ow">in</span> <span class="n">det_sequence</span><span class="p">[</span><span class="n">end</span><span class="p">:]:</span>
+                        <span class="n">frame_det</span><span class="o">.</span><span class="n">ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">new_id</span> <span class="k">if</span> <span class="n">_id</span> <span class="o">==</span> <span class="n">old_id</span> <span class="k">else</span> <span class="n">_id</span> <span class="k">for</span> <span class="n">_id</span> <span class="ow">in</span> <span class="n">frame_det</span><span class="o">.</span><span class="n">ids</span><span class="p">]</span>
+                        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">det_sequence</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

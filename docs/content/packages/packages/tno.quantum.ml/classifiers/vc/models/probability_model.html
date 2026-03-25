@@ -1,35 +1,35 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../../../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ml.classifiers.vc.models.probability_model &mdash; TNO Quantum</title>
-      <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../../../_static/togglebutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../../../_static/custom.css" type="text/css" />
-    <link rel="shortcut icon" href="../../../../../../../_static/TNO_blue.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../../_static/custom.css?v=6fa74e4f" />
+
   
-        <script src="../../../../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../../../../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-        <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../../search.html" />
-    <link rel="next" title="ml.clustering" href="../../../clustering/main.html" />
+    <link rel="next" title="ml.components" href="../../../components/main.html" />
     <link rel="prev" title="ml.classifiers.vc.models.expected_value_model" href="expected_value_model.html" /> 
 </head>
 
@@ -60,13 +60,14 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../main.html">ml</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../main.html">ml.classifiers</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../svm/kernels.html">ml.classifiers.svm.kernels</a></li>
@@ -78,27 +79,26 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../datasets/main.html">ml.datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../clustering/main.html">ml.clustering</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../components/main.html">ml.components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
 </ul>
 </li>
 </ul>
@@ -122,6 +122,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
@@ -129,6 +134,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../examples/communication_qkd.html">QKD key-rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../examples/multi_object_tracking.html">Multi object tracking</a></li>
 </ul>
 
         </div>
@@ -324,13 +330,13 @@ converted to output features.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>backend</strong> (<a class="reference internal" href="../../../../tno.quantum.utils/main.html#tno.quantum.utils.BackendConfig" title="tno.quantum.utils._backend_config.BackendConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BackendConfig</span></code></a>) – A backend configuration, which specifies the quantum backend to be
+<li><p><strong>backend</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../../../../tno.quantum.utils/main.html#tno.quantum.utils.BackendConfig" title="tno.quantum.utils._backend_config.BackendConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BackendConfig</span></code></a></span>) – A backend configuration, which specifies the quantum backend to be
 used for computations. This includes the name of a PennyLane device
 and optional configuration settings.</p></li>
-<li><p><strong>n_classes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The number of target classes for classification.</p></li>
-<li><p><strong>n_layers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – number of layers in <span class="math notranslate nohighlight">\(U(x)\)</span> (equal to <span class="math notranslate nohighlight">\(L\)</span>).</p></li>
-<li><p><strong>n_trainable_sublayers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – number of layers for each <span class="math notranslate nohighlight">\(W\)</span>.</p></li>
-<li><p><strong>scaling</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) – scaling to apply to the data, before applying angle embedding.</p></li>
+<li><p><strong>n_classes</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The number of target classes for classification.</p></li>
+<li><p><strong>n_layers</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – number of layers in <span class="math notranslate nohighlight">\(U(x)\)</span> (equal to <span class="math notranslate nohighlight">\(L\)</span>).</p></li>
+<li><p><strong>n_trainable_sublayers</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – number of layers for each <span class="math notranslate nohighlight">\(W\)</span>.</p></li>
+<li><p><strong>scaling</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>) – scaling to apply to the data, before applying angle embedding.</p></li>
 </ul>
 </dd>
 </dl>
@@ -342,7 +348,7 @@ and optional configuration settings.</p></li>
 <dd><p>Get init weights between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -353,7 +359,7 @@ and optional configuration settings.</p></li>
 <dd><p>Generate and return a quantum function for the quantum circuit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callable</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">TensorType</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TensorType</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TensorType</span></code>]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">TensorType</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TensorType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">TensorType</span></code>]</span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -365,12 +371,12 @@ and optional configuration settings.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>X</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – input data with shape (<cite>n_samples</cite>, <cite>n_features</cite>).</p></li>
-<li><p><strong>min_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]) – For each feature, the minimum and maximum value in its range.</p></li>
+<li><p><strong>X</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code></span>) – input data with shape (<cite>n_samples</cite>, <cite>n_features</cite>).</p></li>
+<li><p><strong>min_max</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]</span>) – For each feature, the minimum and maximum value in its range.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -384,13 +390,13 @@ and optional configuration settings.</p></li>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="expected_value_model.html" class="btn btn-neutral float-left" title="ml.classifiers.vc.models.expected_value_model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../../clustering/main.html" class="btn btn-neutral float-right" title="ml.clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../../components/main.html" class="btn btn-neutral float-right" title="ml.components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,36 +1,36 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ml.regression.linear_regression &mdash; TNO Quantum</title>
-      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../_static/togglebutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
-    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=6fa74e4f" />
+
   
-        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-        <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="ml.components" href="../components/main.html" />
-    <link rel="prev" title="ml.clustering.bkmeans" href="../clustering/bkmeans/main.html" /> 
+    <link rel="next" title="ml.classifiers" href="../classifiers/main.html" />
+    <link rel="prev" title="ml" href="../main.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,13 +60,14 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../main.html">ml</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classifiers/main.html">ml.classifiers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
@@ -78,27 +79,26 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../datasets/main.html">ml.datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../clustering/main.html">ml.clustering</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ml.regression.linear_regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/main.html">ml.components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
 </ul>
 </li>
 </ul>
@@ -122,6 +122,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
@@ -129,6 +134,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/communication_qkd.html">QKD key-rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/multi_object_tracking.html">Multi object tracking</a></li>
 </ul>
 
         </div>
@@ -218,7 +224,7 @@ corresponding to (un)observed target values.</p></li>
 <dd><p>Check for equality for serialization purposes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -230,17 +236,17 @@ corresponding to (un)observed target values.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – number of rows to sample from <cite>A</cite>.</p></li>
-<li><p><strong>c</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – number of columns to sample from <cite>A</cite>.</p></li>
-<li><p><strong>rank</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – rank used to approximate matrix <cite>A</cite>.</p></li>
-<li><p><strong>n_samples</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – number of samples to estimate inner products.
+<li><p><strong>r</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a></span>) – number of rows to sample from <cite>A</cite>.</p></li>
+<li><p><strong>c</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a></span>) – number of columns to sample from <cite>A</cite>.</p></li>
+<li><p><strong>rank</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a></span>) – rank used to approximate matrix <cite>A</cite>.</p></li>
+<li><p><strong>n_samples</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a></span>) – number of samples to estimate inner products.
 Note: the sampling is  performed from entries of <cite>A</cite>,
 so there are <code class="docutils literal notranslate"><span class="pre">A.shape[0]</span> <span class="pre">*</span> <span class="pre">A.shape[1]</span></code> possible entries.</p></li>
-<li><p><strong>random_state</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>]) – random seed.</p></li>
-<li><p><strong>sigma_threshold</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>) – the argument <cite>rank</cite> is recomputed in case it is higher
+<li><p><strong>random_state</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – random seed.</p></li>
+<li><p><strong>sigma_threshold</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a></span>) – the argument <cite>rank</cite> is recomputed in case it is higher
 the number of singular values below this threhold.</p></li>
-<li><p><strong>sketcher_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – name of sketching method: <code class="docutils literal notranslate"><span class="pre">&quot;fkv&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;halko&quot;</span></code>.</p></li>
-<li><p><strong>func</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>]]) – function to transform singular values when estimating lambda
+<li><p><strong>sketcher_name</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – name of sketching method: <code class="docutils literal notranslate"><span class="pre">&quot;fkv&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;halko&quot;</span></code>.</p></li>
+<li><p><strong>func</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsFloat" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsFloat</span></code></a>]]</span>) – function to transform singular values when estimating lambda
 coefficients. This can be used for Tikhonov regularization purposes.</p></li>
 </ul>
 </dd>
@@ -254,12 +260,12 @@ coefficients. This can be used for Tikhonov regularization purposes.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – coefficient matrix <cite>A</cite>.</p></li>
-<li><p><strong>b</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – vector <cite>b</cite>.</p></li>
+<li><p><strong>A</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code></span>) – coefficient matrix <cite>A</cite>.</p></li>
+<li><p><strong>b</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code></span>) – vector <cite>b</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#tno.quantum.ml.regression.linear_regression.QILinearEstimator" title="tno.quantum.ml.regression.linear_regression._estimator.QILinearEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">QILinearEstimator</span></code></a></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.ml.regression.linear_regression.QILinearEstimator" title="tno.quantum.ml.regression.linear_regression._estimator.QILinearEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">QILinearEstimator</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -271,12 +277,12 @@ coefficients. This can be used for Tikhonov regularization purposes.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – coefficient matrix <cite>A</cite>.</p></li>
-<li><p><strong>n_entries_b</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – number of entries to be sampled from the predicted <cite>b</cite>.</p></li>
+<li><p><strong>A</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code></span>) – coefficient matrix <cite>A</cite>.</p></li>
+<li><p><strong>n_entries_b</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a></span>) – number of entries to be sampled from the predicted <cite>b</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">uint32</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">uint32</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Samples of predicted values and corresponding indices.</p>
@@ -291,13 +297,13 @@ coefficients. This can be used for Tikhonov regularization purposes.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – coefficient matrix <cite>A</cite>.</p></li>
-<li><p><strong>n_entries_x</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a>) – number of entries to be sampled from the solution vector <cite>x</cite>.
+<li><p><strong>A</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code></span>) – coefficient matrix <cite>A</cite>.</p></li>
+<li><p><strong>n_entries_x</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.SupportsInt" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsInt</span></code></a></span>) – number of entries to be sampled from the solution vector <cite>x</cite>.
 Set this to 0 to skip this sampling step.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">uint32</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">uint32</span></code>]], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Samples of predicted values and corresponding indices.</p>
@@ -313,14 +319,14 @@ Set this to 0 to skip this sampling step.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../clustering/bkmeans/main.html" class="btn btn-neutral float-left" title="ml.clustering.bkmeans" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../components/main.html" class="btn btn-neutral float-right" title="ml.components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../main.html" class="btn btn-neutral float-left" title="ml" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../classifiers/main.html" class="btn btn-neutral float-right" title="ml.classifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

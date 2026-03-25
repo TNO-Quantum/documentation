@@ -1,34 +1,34 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>optimization.qubo.preprocessors &mdash; TNO Quantum</title>
-      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../_static/togglebutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
-    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=6fa74e4f" />
+
   
-        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="shortcut icon" href="../../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="optimization.qubo.solvers" href="../solvers/main.html" />
-    <link rel="prev" title="optimization.qubo.components" href="../components/main.html" /> 
+    <link rel="next" title="optimization.qubo.components" href="../components/main.html" />
+    <link rel="prev" title="optimization.qubo" href="../main.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,13 +58,14 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../main.html">optimization.qubo</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solvers/main.html">optimization.qubo.solvers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
@@ -76,27 +77,26 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/components/main.html">ml.components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
 </ul>
 </li>
 </ul>
@@ -120,6 +120,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
@@ -127,6 +132,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/communication_qkd.html">QKD key-rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/multi_object_tracking.html">Multi object tracking</a></li>
 </ul>
 
         </div>
@@ -257,10 +263,10 @@ the QUBO objective.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>max_iter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – Maximum number of iterations of applying the rules.
+<li><p><strong>max_iter</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Maximum number of iterations of applying the rules.
 One iteration reduces the size of the QUBO by at most one. If not
 provided, it will be set to the size of the QUBO.</p></li>
-<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – verbose: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the rules which are being applied are printed.</p></li>
+<li><p><strong>verbose</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – verbose: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the rules which are being applied are printed.</p></li>
 </ul>
 </dd>
 </dl>
@@ -272,10 +278,10 @@ provided, it will be set to the size of the QUBO.</p></li>
 <dd><p>Performs the reduction algorithm for a maximum number of iterations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>qubo</strong> (<a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>) – QUBO to be preprocessed.</p>
+<dd class="field-odd"><p><strong>qubo</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a></span>) – QUBO to be preprocessed.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.PartialSolution" title="tno.quantum.optimization.qubo.components._preprocessing._partial_solution.PartialSolution"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartialSolution</span></code></a>, <a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>]</p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.PartialSolution" title="tno.quantum.optimization.qubo.components._preprocessing._partial_solution.PartialSolution"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartialSolution</span></code></a>, <a class="reference internal" href="../main.html#tno.quantum.optimization.qubo.QUBO" title="tno.quantum.optimization.qubo.components._qubo.QUBO"><code class="xref py py-class docutils literal notranslate"><span class="pre">QUBO</span></code></a>]</span></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Partial solution and corresponding preprocessed QUBO.</p>
@@ -291,14 +297,14 @@ provided, it will be set to the size of the QUBO.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../components/main.html" class="btn btn-neutral float-left" title="optimization.qubo.components" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../solvers/main.html" class="btn btn-neutral float-right" title="optimization.qubo.solvers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../main.html" class="btn btn-neutral float-left" title="optimization.qubo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../components/main.html" class="btn btn-neutral float-right" title="optimization.qubo.components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023-2025, TNO Quantum Code Lab.</p>
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

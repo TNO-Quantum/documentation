@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>problems.mot &mdash; TNO Quantum</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6fa74e4f" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="problems.mot.re_id" href="re_id.html" />
+    <link rel="prev" title="problems.n_minus_1.gate_based" href="../tno.quantum.problems.n_minus_1/gate_based/main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/multi_object_tracking.html">Multi object tracking</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">problems.mot</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="problems-mot">
+<h1>problems.mot<a class="headerlink" href="#problems-mot" title="Link to this heading"></a></h1>
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.1</div><p id="module-tno.quantum.problems.mot">The <code class="docutils literal notranslate"><span class="pre">mot</span></code> package provides Re-Identification (Re-ID) post-processing algorithms.</p>
+<p>The re-id algorithms are designed to enhance Multi-Object Tracking (MOT) pipelines.
+It is specifically intended to pair with <a class="reference external" href="https://docs.ultralytics.com/modes/track/">Ultralytics YOLO trackers</a> or similar object
+detection frameworks and leverages quantum-enhanced techniques and Binary Linear
+Programming (BLP) methods for advanced post-processing.</p>
+<p>The goal of this module is to resolve identity switches and improve tracking consistency
+across frames by applying advanced optimization techniques after the initial tracking
+stage. While Ultralytics provides robust detection and tracking, identity consistency
+can degrade in challenging scenarios such as occlusions, crowded scenes, or long-term
+tracking. This algorithm addresses those issues through network flow optimization
+and <a class="reference external" href="https://en.wikipedia.org/wiki/Quadratic_unconstrained_binary_optimization">QUBO</a>-based formulations.</p>
+<p>The <cite>re_id</cite> feature relies on a network flow optimization that can be approached in
+two ways: the classical method formulates the problem as a Mixed-Integer Linear Program
+(MILP), while the quantum approach casts it as a QUBO, which can be then be solved using
+various QUBO solvers from , including solvers that use a quantum backends.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">re_id</span></code> feature relies on a network flow optimization problem that can be
+approached in two ways:</p>
+<ul class="simple">
+<li><p><strong>Classical approach</strong>: Solves the problem using traditional <em>Mixed-Integer Linear     Program</em> solving techniques.</p></li>
+<li><p><strong>Quantum approach</strong>: Casts the problem as a <em>QUBO</em>, which can be solved usingvarious QUBO solvers from our <a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/solvers/main.html#module-tno.quantum.optimization.qubo.solvers" title="tno.quantum.optimization.qubo.solvers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tno.quantum.optimization.qubo.solvers</span></code></a> packageincluding those using quantum backends.</p></li>
+</ul>
+<p>The exact problem formulations can be found in the documentation of
+<a class="reference internal" href="#tno.quantum.problems.mot.FlowReID.run_classic" title="tno.quantum.problems.mot.FlowReID.run_classic"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_classic()</span></code></a> and <a class="reference internal" href="#tno.quantum.problems.mot.FlowReID.run_qubo" title="tno.quantum.problems.mot.FlowReID.run_qubo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_qubo()</span></code></a>. See below for basic
+usage examples. See our examples overview for a more advanced example on end-to-end
+usage with ultralytics.</p>
+<p>Classically:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="n">FlowReID</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="c1"># Load detection sequence</span>
+<span class="n">det_sequence</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">()</span>
+
+<span class="c1"># Initialize FlowReID</span>
+<span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
+
+<span class="c1"># Run classic solver</span>
+<span class="n">updated_sequence</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_classic</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classic Re-ID completed.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of frames processed: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">updated_sequence</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This prints the following result:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Classic Re-ID completed.</span>
+<span class="go">Number of frames processed: ...</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Quantum:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="n">FlowReID</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="c1"># Load detection sequence</span>
+<span class="n">det_sequence</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">()</span>
+
+<span class="c1"># Initialize FlowReID</span>
+<span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
+
+<span class="c1"># Configure quantum solver (Simulated Annealing)</span>
+<span class="n">solver_config_SA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;simulated_annealing_solver&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;num_reads&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;num_sweeps&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">},</span>
+    <span class="p">}</span>
+
+<span class="c1"># Alternatively, configure Quantum Annealing</span>
+<span class="n">solver</span> <span class="n">config_QA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;d_wave_sampler_solver&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;num_reads&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+            <span class="s2">&quot;annealing_time&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">&quot;reuse_embedding&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="c1"># Run QUBO-based solver</span>
+<span class="n">updated_sequence</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_qubo</span><span class="p">(</span><span class="n">det_sequence</span><span class="p">,</span> <span class="n">solver_config_SA</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quantum Re-ID completed.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of frames processed: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">updated_sequence</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This prints the following result:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Quantum Re-ID completed.</span>
+<span class="go">Number of frames processed: ...</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.DetectionSequence">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.mot.</span></span><span class="sig-name descname"><span class="pre">DetectionSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#DetectionSequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.DetectionSequence" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#tno.quantum.problems.mot.FrameDets" title="tno.quantum.problems.mot._tracker.FrameDets"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameDets</span></code></a>]</p>
+<p>Class containing a sequence of FrameDets.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.DetectionSequence.det_sequence">
+<span class="sig-name descname"><span class="pre">det_sequence</span></span><a class="headerlink" href="#tno.quantum.problems.mot.DetectionSequence.det_sequence" title="Link to this definition"></a></dt>
+<dd><p>List of FrameDets, each containing detections for a single frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.DetectionSequence.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#DetectionSequence.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.DetectionSequence.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initializes the tracker with a sequence of frame detections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#tno.quantum.problems.mot.FrameDets" title="tno.quantum.problems.mot._tracker.FrameDets"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameDets</span></code></a>]</span>) – A list of FrameDets.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.14)"><strong>TypeError</strong></a> – If any element in det_sequence is not an instance of FrameDets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.DetectionSequence.from_dataframe">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detections</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#DetectionSequence.from_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.DetectionSequence.from_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Creates an instance of the class from a pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>detections</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v3.0.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a></span>) – A DataFrame containing detections.
+Uses the from_dataframe method from the FrameDets class, so the
+DataFrame should be structured as described in the FrameDets class.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An instance of DetectionSequence consisting of FrameDets for each frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FlowReID">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.mot.</span></span><span class="sig-name descname"><span class="pre">FlowReID</span></span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/re_id.html#FlowReID"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FlowReID" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to initialize the flow re-identification object.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FlowReID.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/re_id.html#FlowReID.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FlowReID.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize FlowReID object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FlowReID.pick_sequences">
+<span class="sig-name descname"><span class="pre">pick_sequences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/re_id.html#FlowReID.pick_sequences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FlowReID.pick_sequences" title="Link to this definition"></a></dt>
+<dd><p>Picks frame sequences to run re-id on.</p>
+<p>Sequences containing new id’s are selected for the re-id module. The sequences
+are checked for compatibility with the re-id module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span>) – detection sequence</p></li>
+<li><p><strong>min_len</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – minimum length of picked sequences</p></li>
+<li><p><strong>max_len</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – maximum length of picked sequences</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List with start and end frames for the selected sequences.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FlowReID.run_classic">
+<span class="sig-name descname"><span class="pre">run_classic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/re_id.html#FlowReID.run_classic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FlowReID.run_classic" title="Link to this definition"></a></dt>
+<dd><p>Runs re-id using a classic MILP solver from SciPy.</p>
+<p>The classic approach solves the following <em>network flow model</em>:</p>
+<ul class="simple">
+<li><p><em>Capacity constraint</em>: At most one unit of flow per edge.</p></li>
+<li><p><em>Flow conservation</em>: Incoming flow equals outgoing flow for intermediate nodes.</p></li>
+<li><p><em>Boundary condition</em>: One unit of flow originates from each initial node.</p></li>
+</ul>
+<p>This approach uses SciPy’s MILP solver <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.milp.html#scipy.optimize.milp" title="(in SciPy v1.17.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">milp()</span></code></a>.</p>
+<p>The decision variables are:</p>
+<p>1. <span class="math notranslate nohighlight">\(x_{ijt} \in \{0, 1\}\)</span> representing whether detection <span class="math notranslate nohighlight">\(i\)</span> in
+frame <span class="math notranslate nohighlight">\(t\)</span> is associated with detection <span class="math notranslate nohighlight">\(j\)</span> in frame <span class="math notranslate nohighlight">\(t+1\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{ijt} = 1\)</span> Detection <span class="math notranslate nohighlight">\(i\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> and detection <span class="math notranslate nohighlight">\(j\)</span> at time <span class="math notranslate nohighlight">\(t+1\)</span> belong to the same object.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{ijt} = 0\)</span> No association.</p></li>
+</ul>
+<p>2. <span class="math notranslate nohighlight">\(y_{ij} \in \{0, 1\}\)</span> representing additional edges introduced when the
+number of detections in intermediate frames drops below the initial frame count.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y_{ij} = 1\)</span> Detection <span class="math notranslate nohighlight">\(i\)</span> in frame <span class="math notranslate nohighlight">\(f_1\)</span> is linked to detection <span class="math notranslate nohighlight">\(j\)</span> in frame <span class="math notranslate nohighlight">\(f_2\)</span> to maintain feasibility.</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_{ij} = 0\)</span> No link between these detections.</p></li>
+</ul>
+<p>When the number of detections drops below the initial layer, additional edges
+are introduced between frames <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> to maintain feasibility:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}
+    &amp; \sum_{j=1}^{nd_{f_1+1}} x_{ijf_1} + \sum_{j=1}^{nd_{f_2}} y_{ij} \leq 1, \quad i = 1, \dots, nd_{f_1} \\
+    &amp; \sum_{j=1}^{nd_{f_1-1}} x_{jif_1-1} = \sum_{j=1}^{nd_{f_1+1}} x_{ijf_1} + \sum_{j=1}^{nd_{f_2}} y_{ij}, \quad i = 1, \dots, nd_{f_1} \\
+    &amp; \sum_{j=1}^{nd_{f_2-1}} x_{jif_2-1} + \sum_{j=1}^{nd_{f_1}} y_{ji} = \sum_{j=1}^{nd_{f_2+1}} x_{ijf_2}, \quad i = 1, \dots, nd_{f_2}.
+\end{split}\end{split}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span>) – detection sequence to re-id.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The detection sequence after re-id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FlowReID.run_continuous_reid">
+<span class="sig-name descname"><span class="pre">run_continuous_reid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/re_id.html#FlowReID.run_continuous_reid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FlowReID.run_continuous_reid" title="Link to this definition"></a></dt>
+<dd><p>Runs re-id continuously.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span>) – detection sequence</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The detection sequence after re-id on several frame sequences.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FlowReID.run_qubo">
+<span class="sig-name descname"><span class="pre">run_qubo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/re_id.html#FlowReID.run_qubo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FlowReID.run_qubo" title="Link to this definition"></a></dt>
+<dd><p>Runs re-id using a qubo model.</p>
+<p>Instead of handling constraints explicitly, we add <strong>penalty terms</strong> to the objective function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\\\mathbf{c}^T \mathbf{x} + \lambda H(\mathbf{x})\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{c}^T \mathbf{x}\)</span>: Original cost function.</p></li>
+<li><p><span class="math notranslate nohighlight">\(H(\mathbf{x})\)</span>: Penalty function encoding constraints.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Penalty weight ensuring feasibility.</p></li>
+</ul>
+<p>By tuning <span class="math notranslate nohighlight">\(\lambda\)</span>, minimizing this unconstrained quadratic objective yields feasible solutions.</p>
+<p>For a constraint of the form <span class="math notranslate nohighlight">\(\mathbf{a}^T \mathbf{x} = b\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\\H_1(\mathbf{x}) = (\mathbf{a}^T \mathbf{x} - b)^2\end{split}\]</div>
+<p>This penalty is zero when the constraint is satisfied and positive otherwise.</p>
+<p>For a constraint of the form <span class="math notranslate nohighlight">\(\sum{x_i} \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\\H_2( \mathbf{x} ) = \sum_{i&lt;j}{x_i x_j}\end{split}\]</div>
+<p>This ensures that at most one variable in the set can take the value 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span>) – detection sequence to re-id.</p></li>
+<li><p><strong>solver_config</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/main.html#tno.quantum.optimization.qubo.SolverConfig" title="tno.quantum.optimization.qubo.components._solvers._solver_config.SolverConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverConfig</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Configuration for the qubo solver to use. Must be a
+<code class="docutils literal notranslate"><span class="pre">SolverConfig</span></code> or a mapping with <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;options&quot;</span></code> keys. If
+<code class="docutils literal notranslate"><span class="pre">None</span></code> (default) is provided, the
+<a class="reference internal" href="../../../packages/packages/tno.quantum.optimization.qubo/solvers/main.html#tno.quantum.optimization.qubo.solvers.SimulatedAnnealingSolver" title="tno.quantum.optimization.qubo.solvers.SimulatedAnnealingSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">SimulatedAnnealingSolver</span></code></a>
+will be used, i.e. <code class="docutils literal notranslate"><span class="pre">{&quot;name&quot;:</span> <span class="pre">&quot;simulated_annealing_solver&quot;,</span>
+<span class="pre">&quot;options&quot;:</span> <span class="pre">{}}</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The detection sequence after re-id. If the solver did not converge to a
+feasible solution, returns the input detection sequence.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.mot.</span></span><span class="sig-name descname"><span class="pre">FrameDets</span></span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#FrameDets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class containing all detections in one frame.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.frame_number">
+<span class="sig-name descname"><span class="pre">frame_number</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.frame_number" title="Link to this definition"></a></dt>
+<dd><p>Frame number.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.conf">
+<span class="sig-name descname"><span class="pre">conf</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.conf" title="Link to this definition"></a></dt>
+<dd><p>Confidence scores of the detections.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.cls">
+<span class="sig-name descname"><span class="pre">cls</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.cls" title="Link to this definition"></a></dt>
+<dd><p>Classes of the detections.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.xywh">
+<span class="sig-name descname"><span class="pre">xywh</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.xywh" title="Link to this definition"></a></dt>
+<dd><p>Box coordinates with shape (n_boxes, 4) using xywh format
+(coord of center, width, height).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.xyxy">
+<span class="sig-name descname"><span class="pre">xyxy</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.xyxy" title="Link to this definition"></a></dt>
+<dd><p>Box coordinates with shape (n_boxes, 4) using xyxy format
+(top left, bottom right).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.ids">
+<span class="sig-name descname"><span class="pre">ids</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.ids" title="Link to this definition"></a></dt>
+<dd><p>Ids associated with the box.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.size" title="Link to this definition"></a></dt>
+<dd><p>Number of detections in the frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#FrameDets.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initializes the FrameDets instance with default values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.from_dataframe">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detections</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#FrameDets.from_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.from_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Creates an instance of the class from a pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>detections</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v3.0.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a></span>) – <p>A DataFrame containing detections.
+The columns should be structured as follows:</p>
+<ul class="simple">
+<li><p>0: Frame number</p></li>
+<li><p>1: Detection ID (not used in this implementation)</p></li>
+<li><p>2: x center of the bounding box</p></li>
+<li><p>3: y center of the bounding box</p></li>
+<li><p>4: Width of the bounding box</p></li>
+<li><p>5: Height of the bounding box</p></li>
+<li><p>6: Confidence score of the detection</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.FrameDets" title="tno.quantum.problems.mot._tracker.FrameDets"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameDets</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An instance of FrameDets with detections for a single frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.from_dict">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">framedets_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#FrameDets.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.from_dict" title="Link to this definition"></a></dt>
+<dd><p>Creates an instance of the class from a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>framedets_dict</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]</span>) – A dictionary with one key per FrameDets attribute.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.FrameDets" title="tno.quantum.problems.mot._tracker.FrameDets"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameDets</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An instance of FrameDets with detections for a single frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.FrameDets.from_ultralytics_tracker">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_ultralytics_tracker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tracks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#FrameDets.from_ultralytics_tracker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.FrameDets.from_ultralytics_tracker" title="Link to this definition"></a></dt>
+<dd><p>Creates an instance of the class from the output of the ultralytics tracker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tracks</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span>) – <p>An array of shape (n_tracks, 6) where each row contains:</p>
+<ul class="simple">
+<li><p>x1: x coordinate of the top-left corner</p></li>
+<li><p>y1: y coordinate of the top-left corner</p></li>
+<li><p>x2: x coordinate of the bottom-right corner</p></li>
+<li><p>y2: y coordinate of the bottom-right corner</p></li>
+<li><p>id: Detection ID</p></li>
+<li><p>conf: Confidence score</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.FrameDets" title="tno.quantum.problems.mot._tracker.FrameDets"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameDets</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An instance of FrameDets with detections for a single frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.calculate_cost">
+<span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.mot.</span></span><span class="sig-name descname"><span class="pre">calculate_cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_utils.html#calculate_cost"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.calculate_cost" title="Link to this definition"></a></dt>
+<dd><p>Calculates the cost array of a detection sequence.</p>
+<p>The cost array is computed based on the Intersection over Union (IoU) between
+bounding boxes in consecutive frames of a detection sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span>) – A sequence of detections (FrameDets) for each frame,
+where each FrameDets contains bounding boxes in the format xyxy.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The cost values computed between all pairs of bounding boxes in consecutive
+frames, flattened into a 1D array.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.compute_iou">
+<span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.mot.</span></span><span class="sig-name descname"><span class="pre">compute_iou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">box1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_utils.html#compute_iou"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.compute_iou" title="Link to this definition"></a></dt>
+<dd><p>Computes the Intersection over Union (IoU) between two bounding boxes.</p>
+<p>The bounding boxes are represented in the format [x, y, x, y], with the first x, y
+being the bottom-left corner coordinates and the second pair being the top-right
+corner coordinates. The IoU value is a number between 0 and 1, where 0 means no
+overlap and 1 means complete overlap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>box1</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>]</em>) – The first bounding box in the format [x, y, x, y].</p></li>
+<li><p><strong>box2</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>]</em>) – The second bounding box in the format [x, y, x, y].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The IoU value between the two bounding boxes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tno.quantum.problems.mot.ultralytics_track">
+<span class="sig-prename descclassname"><span class="pre">tno.quantum.problems.mot.</span></span><span class="sig-name descname"><span class="pre">ultralytics_track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracker</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/tno/quantum/problems/mot/_tracker.html#ultralytics_track"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tno.quantum.problems.mot.ultralytics_track" title="Link to this definition"></a></dt>
+<dd><p>Runs the ultralytics tracking algorithm on the already extracted detections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>det_sequence</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span>) – sequence of detections per frame.</p></li>
+<li><p><strong>tracker</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">BYTETracker</span></code></span>) – tracker object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#tno.quantum.problems.mot.DetectionSequence" title="tno.quantum.problems.mot._tracker.DetectionSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">DetectionSequence</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An updated DetectionSequence with id’s.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tno.quantum.problems.n_minus_1/gate_based/main.html" class="btn btn-neutral float-left" title="problems.n_minus_1.gate_based" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="re_id.html" class="btn btn-neutral float-right" title="problems.mot.re_id" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

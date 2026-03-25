@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.problems.mot.dataset._visualization &mdash; TNO Quantum</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/custom.css?v=6fa74e4f" />
+
+  
+    <link rel="shortcut icon" href="../../../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../content/examples/multi_object_tracking.html">Multi object tracking</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.problems.mot.dataset._visualization</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.problems.mot.dataset._visualization</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">imageio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cv2.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">MatLike</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">NDArray</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DetectionSequence</span>
+
+<span class="n">mpl</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;Agg&quot;</span><span class="p">)</span>
+<span class="n">MAX_COLORS</span> <span class="o">=</span> <span class="mi">20</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_color_palettes</span><span class="p">(</span>
+    <span class="n">cmap_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;hsv&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">MAX_COLORS</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gets a list of colors from a given color map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cmap_name: color map name based on `matplotlib.colormaps`</span>
+<span class="sd">        num: number of colors</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of colors from the color map.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colormaps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">cmap_name</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cmap</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_detection</span><span class="p">(</span>
+    <span class="n">frame</span><span class="p">:</span> <span class="n">MatLike</span><span class="p">,</span>
+    <span class="n">box</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MatLike</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws the detection box and its label in the specified color.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        frame: the frame to draw on</span>
+<span class="sd">        box: box coordinates in bottom-left/top-right format</span>
+<span class="sd">        label: label text</span>
+<span class="sd">        color: color of the box</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The frame with the drawn box</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">box</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x1</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y1</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x2</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y2</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
+
+    <span class="c1"># draw detection box</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span>
+        <span class="n">frame</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">),</span>
+        <span class="n">color</span><span class="p">,</span>
+        <span class="n">thickness</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># draw label</span>
+    <span class="n">font_face</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">FONT_HERSHEY_SIMPLEX</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">thickness</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">),</span> <span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="mi">40</span><span class="p">),</span> <span class="n">color</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cv2</span><span class="o">.</span><span class="n">putText</span><span class="p">(</span>
+        <span class="n">frame</span><span class="p">,</span>
+        <span class="n">label</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">label</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">label</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="n">font_face</span><span class="p">,</span>
+        <span class="n">scale</span><span class="p">,</span>
+        <span class="p">(</span><span class="mi">244</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">244</span><span class="p">),</span>
+        <span class="n">thickness</span><span class="p">,</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">LINE_AA</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="make_video_with_detections">
+<a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.mot/dataset/main.html#tno.quantum.problems.mot.dataset.make_video_with_detections">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_video_with_detections</span><span class="p">(</span>
+    <span class="n">detections</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">,</span>
+    <span class="n">input_filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">output_filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">fps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">first_frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws the detection boxes over the frames of the original videos.</span>
+
+<span class="sd">    Each ID is shown in a different color.</span>
+<span class="sd">    If the detection sequence does not span the whole input video, the first and last</span>
+<span class="sd">    frames need to be specified.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        detections: the detection sequence</span>
+<span class="sd">        input_filename: name of the input video file</span>
+<span class="sd">        output_filename: name of the output video file</span>
+<span class="sd">        fps: frames per second of the output video</span>
+<span class="sd">        first_frame: frame number corresponding to detections[0].</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">get_color_palettes</span><span class="p">()</span>
+
+    <span class="n">input_video</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">input_filename</span><span class="p">)</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">input_video</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">))</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">input_video</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">))</span>
+
+    <span class="n">output_video</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">fps</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">input_video</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">input_video</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">ret</span><span class="p">)</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">first_frame</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">detections</span><span class="p">):</span>
+            <span class="k">break</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">first_frame</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">framedets</span> <span class="o">=</span> <span class="n">detections</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">first_frame</span><span class="p">]</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">_id</span><span class="p">)</span> <span class="k">for</span> <span class="n">_id</span> <span class="ow">in</span> <span class="n">framedets</span><span class="o">.</span><span class="n">ids</span><span class="p">]</span>
+        <span class="n">boxes</span> <span class="o">=</span> <span class="p">[</span><span class="n">framedets</span><span class="o">.</span><span class="n">xyxy</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">framedets</span><span class="o">.</span><span class="n">size</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">_id</span><span class="p">,</span> <span class="n">box</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">boxes</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">_id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">color</span> <span class="o">=</span> <span class="mi">244</span> <span class="o">*</span> <span class="n">colors</span><span class="p">[</span><span class="n">_id</span> <span class="o">%</span> <span class="n">MAX_COLORS</span><span class="p">]</span>
+            <span class="n">frame</span> <span class="o">=</span> <span class="n">draw_detection</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_id</span><span class="p">),</span> <span class="n">color</span><span class="p">)</span>
+
+        <span class="n">output_video</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+
+    <span class="n">output_video</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="n">input_video</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="make_gif_with_detections">
+<a class="viewcode-back" href="../../../../../../content/problems/packages/tno.quantum.problems.mot/dataset/main.html#tno.quantum.problems.mot.dataset.make_gif_with_detections">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_gif_with_detections</span><span class="p">(</span>
+    <span class="n">detections</span><span class="p">:</span> <span class="n">DetectionSequence</span><span class="p">,</span>
+    <span class="n">input_filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">output_filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">fps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">first_frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws the detection boxes over the frames of the original videos.</span>
+
+<span class="sd">    Each ID is shown in a different color.</span>
+<span class="sd">    If the detection sequence does not span the whole input video, the first and last</span>
+<span class="sd">    frames need to be specified.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        detections: the detection sequence</span>
+<span class="sd">        input_filename: name of the input video file</span>
+<span class="sd">        output_filename: name of the output gif</span>
+<span class="sd">        fps: frames per second of the output gif</span>
+<span class="sd">        first_frame: frame number corresponding to detections[0].</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">get_color_palettes</span><span class="p">()</span>
+    <span class="n">input_video</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">input_filename</span><span class="p">)</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">input_video</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">input_video</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">ret</span><span class="p">)</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">first_frame</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">detections</span><span class="p">):</span>
+            <span class="k">break</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">first_frame</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">framedets</span> <span class="o">=</span> <span class="n">detections</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">first_frame</span><span class="p">]</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">_id</span><span class="p">)</span> <span class="k">for</span> <span class="n">_id</span> <span class="ow">in</span> <span class="n">framedets</span><span class="o">.</span><span class="n">ids</span><span class="p">]</span>
+        <span class="n">boxes</span> <span class="o">=</span> <span class="p">[</span><span class="n">framedets</span><span class="o">.</span><span class="n">xyxy</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">framedets</span><span class="o">.</span><span class="n">size</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">_id</span><span class="p">,</span> <span class="n">box</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">boxes</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">_id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">color</span> <span class="o">=</span> <span class="mi">244</span> <span class="o">*</span> <span class="n">colors</span><span class="p">[</span><span class="n">_id</span> <span class="o">%</span> <span class="n">MAX_COLORS</span><span class="p">]</span>
+            <span class="n">frame</span> <span class="o">=</span> <span class="n">draw_detection</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_id</span><span class="p">),</span> <span class="n">color</span><span class="p">)</span>
+
+        <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+
+    <span class="n">input_video</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="n">imageio</span><span class="o">.</span><span class="n">mimsave</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="s2">&quot;list[Any]&quot;</span><span class="p">,</span> <span class="n">frames</span><span class="p">),</span> <span class="n">fps</span><span class="o">=</span><span class="n">fps</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
