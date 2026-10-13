@@ -13,6 +13,6 @@ communication.qkd_key_rate
 .. toctree::
    :maxdepth: 1
 
-   quantum/main
    classical/main
+   quantum/main
 

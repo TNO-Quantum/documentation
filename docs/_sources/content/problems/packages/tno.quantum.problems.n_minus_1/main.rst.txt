@@ -13,7 +13,7 @@ problems.n_minus_1
 .. toctree::
    :maxdepth: 1
 
-   io/main
    quantum_annealing/main
+   io/main
    gate_based/main
 

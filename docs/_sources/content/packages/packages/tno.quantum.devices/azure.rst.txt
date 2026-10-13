@@ -1,0 +1,8 @@
+devices.azure
+=============
+
+.. automodule:: tno.quantum.devices.azure
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

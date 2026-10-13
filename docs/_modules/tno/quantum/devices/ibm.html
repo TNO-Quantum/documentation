@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tno.quantum.devices.ibm &mdash; TNO Quantum</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6fa74e4f" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=b8b12719"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            TNO Quantum
+              <img src="../../../../_static/TNO_white.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Instructions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/instructions/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/main.html">communication.qkd_key_rate.classical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/cascade.html">communication.qkd_key_rate.classical.cascade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/privacy_amplification.html">communication.qkd_key_rate.classical.privacy_amplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/classical/winnow.html">communication.qkd_key_rate.classical.winnow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/main.html">communication.qkd_key_rate.quantum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84.html">communication.qkd_key_rate.quantum.bb84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bb84_single_photon.html">communication.qkd_key_rate.quantum.bb84_single_photon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.communication.qkd_key_rate/quantum/bbm92.html">communication.qkd_key_rate.quantum.bbm92</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/main.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/noise.html">utils.noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/serialization.html">utils.serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.utils/validation.html">utils.validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.devices/main.html">devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.devices/azure.html">devices.azure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html">devices.ibm</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Problems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.portfolio_optimization/main.html">problems.portfolio_optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.n_minus_1/main.html">problems.n_minus_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/main.html">problems.n_minus_1.quantum_annealing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.mot/re_id.html">problems.mot.re_id</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../content/problems/packages/tno.quantum.problems.mot/dataset/main.html">problems.mot.dataset</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/variational_classifier.html">Variational classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/portfolio_optimization.html">Portfolio optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/communication_qkd.html">QKD key-rate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/examples/multi_object_tracking.html">Multi object tracking</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">TNO Quantum</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tno.quantum.devices.ibm</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tno.quantum.devices.ibm</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""This module contains functionality related to the IBM quantum provider.</span>
+
+<span class="sd">The :py:class:`IBMDevice` class defines a PennyLane device (called ``ibm.remote``)</span>
+<span class="sd">which can be used execute circuits on the IBM backends.</span>
+<span class="sd">The following example shows how this can be done.</span>
+
+<span class="sd">Example:</span>
+<span class="sd">-------</span>
+
+<span class="sd">.. code-block:: python</span>
+
+<span class="sd">    # To use any of the IBM backends, make sure your account is saved.</span>
+<span class="sd">    # This method stores the account to disk, so it only needs to run once.</span>
+<span class="sd">    from tno.quantum.devices import ibm</span>
+
+<span class="sd">    ibm.save_account(</span>
+<span class="sd">        token="...",</span>
+<span class="sd">        instance="...",</span>
+<span class="sd">    )</span>
+
+<span class="sd">    # An IBM device can be constructed in two ways.</span>
+<span class="sd">    # (1) Either directly using `qml.device`</span>
+<span class="sd">    import pennylane as qml</span>
+
+<span class="sd">    dev = qml.device("ibm.remote", backend_name="ibm_strasbourg", wires=2)</span>
+
+<span class="sd">    # (2) Using the `DeviceConfig` class.</span>
+<span class="sd">    from tno.quantum.devices import DeviceConfig</span>
+
+<span class="sd">    config = DeviceConfig(</span>
+<span class="sd">        "ibm.remote",</span>
+<span class="sd">        options={"backend_name": "ibm_strasbourg", "wires": 2},</span>
+<span class="sd">    )</span>
+<span class="sd">    dev = config.get_instance()</span>
+
+<span class="sd">    # Now, we can create and execute a quantum circuit on the defined device.</span>
+<span class="sd">    @qml.qnode(dev, shots=100)</span>
+<span class="sd">    def circuit():</span>
+<span class="sd">        qml.Hadamard(0)</span>
+<span class="sd">        qml.CNOT([0, 1])</span>
+<span class="sd">        return qml.sample()</span>
+
+<span class="sd">    samples = circuit()</span>
+<span class="sd">"""</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pennylane.devices</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExecutionConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pennylane.tape</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumScriptOrBatch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pennylane.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Result</span><span class="p">,</span> <span class="n">ResultBatch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pennylane.wires</span><span class="w"> </span><span class="kn">import</span> <span class="n">WiresLike</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pennylane_qiskit.remote</span><span class="w"> </span><span class="kn">import</span> <span class="n">RemoteDevice</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_is_ibm_installed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">"qiskit_ibm_runtime"</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+
+<span class="k">if</span> <span class="n">_is_ibm_installed</span><span class="p">():</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_ibm_runtime</span><span class="w"> </span><span class="kn">import</span> <span class="n">QiskitRuntimeService</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_ibm_runtime.ibm_backend</span><span class="w"> </span><span class="kn">import</span> <span class="n">IBMBackend</span>
+
+<span class="n">_IBM_SERVICE</span><span class="p">:</span> <span class="n">QiskitRuntimeService</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">_IBM_NOT_INSTALLED_MSG</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">"because IBM quantum packages are not installed. "</span>
+    <span class="s2">"These can be installed via `tno.quantum.devices[ibm]`."</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="backends">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.backends">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">backends</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Return a list of names of all available IBM devices."""</span>
+    <span class="k">global</span> <span class="n">_IBM_SERVICE</span>  <span class="c1"># noqa: PLW0602</span>
+    <span class="n">connect</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">backend</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">backend</span> <span class="ow">in</span> <span class="n">_IBM_SERVICE</span><span class="o">.</span><span class="n">backends</span><span class="p">()]</span>  <span class="c1"># type: ignore[union-attr]</span></div>
+
+
+
+<div class="viewcode-block" id="backend">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.backend">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">backend</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IBMBackend</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Get IBM backend by name.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        name: Name of the IBM backend.</span>
+<span class="sd">    """</span>
+    <span class="k">global</span> <span class="n">_IBM_SERVICE</span>  <span class="c1"># noqa: PLW0602</span>
+    <span class="n">connect</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s2">"IBMBackend"</span><span class="p">,</span> <span class="n">_IBM_SERVICE</span><span class="o">.</span><span class="n">backend</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># type: ignore[union-attr]</span></div>
+
+
+
+<div class="viewcode-block" id="connect">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.connect">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">connect</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Connect to the IBM service.</span>
+
+<span class="sd">    Before calling this method, an IBM account must be saved, e.g. using</span>
+<span class="sd">    :py:meth:`save_account`. Otherwise, an exception will be raised.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        RuntimeError - If no IBM account is saved.s</span>
+<span class="sd">    """</span>
+    <span class="k">global</span> <span class="n">_IBM_SERVICE</span>  <span class="c1"># noqa: PLW0603</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_ibm_installed</span><span class="p">():</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Could not connect to IBM service, "</span> <span class="o">+</span> <span class="n">_IBM_NOT_INSTALLED_MSG</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">_IBM_SERVICE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">_IBM_SERVICE</span> <span class="o">=</span> <span class="n">QiskitRuntimeService</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="save_account">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.save_account">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">save_account</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">instance</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">channel</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"ibm_quantum_platform"</span><span class="p">,</span> <span class="s2">"ibm_cloud"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"ibm_quantum_platform"</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">set_as_default</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">overwrite</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Save IBM account.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        token: IBM Cloud API key.</span>
+<span class="sd">        instance: This is a parameter to specify the CRN  or service name.</span>
+<span class="sd">        channel: Channel type, either ``ibm_cloud`` or ``ibm_quantum_platform``.</span>
+<span class="sd">        name: Name of the account to save.</span>
+<span class="sd">        set_as_default: If :py:const:`True`, the account is saved as the default</span>
+<span class="sd">            account.</span>
+<span class="sd">        overwrite: If :py:const:`True`, the existing account is to be overwritten.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_ibm_installed</span><span class="p">():</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Failed to save IBM account, "</span> <span class="o">+</span> <span class="n">_IBM_NOT_INSTALLED_MSG</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">QiskitRuntimeService</span><span class="o">.</span><span class="n">save_account</span><span class="p">(</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span>
+        <span class="n">instance</span><span class="o">=</span><span class="n">instance</span><span class="p">,</span>
+        <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">set_as_default</span><span class="o">=</span><span class="n">set_as_default</span><span class="p">,</span>
+        <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="IBMDevice">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.IBMDevice">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">IBMDevice</span><span class="p">(</span><span class="n">RemoteDevice</span><span class="p">):</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="w">    </span><span class="sd">"""PennyLane device for IBM backends.</span>
+
+<span class="sd">    This device can be constructed using :py:obj:`qml.device("ibm.remote", ...)`.</span>
+<span class="sd">    """</span>
+
+<div class="viewcode-block" id="IBMDevice.__init__">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.IBMDevice.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">backend_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">wires</span><span class="p">:</span> <span class="n">WiresLike</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Initialize IBM device.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            backend_name: Name of the IBM backend.</span>
+<span class="sd">            wires: Wires.</span>
+<span class="sd">            kwargs: Additional keyword arguments to be passed to the underlying</span>
+<span class="sd">                :py:class:`~pennylane_qiskit.remote.RemoteDevice`.</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_ibm_installed</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Failed to instantiate device 'ibm.remote', "</span> <span class="o">+</span> <span class="n">_IBM_NOT_INSTALLED_MSG</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_backend_name</span> <span class="o">=</span> <span class="n">backend_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_backend</span> <span class="o">=</span> <span class="n">backend</span><span class="p">(</span><span class="n">backend_name</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="p">,</span> <span class="n">wires</span><span class="o">=</span><span class="n">wires</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="IBMDevice.execute">
+<a class="viewcode-back" href="../../../../content/packages/packages/tno.quantum.devices/ibm.html#tno.quantum.devices.ibm.IBMDevice.execute">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">circuits</span><span class="p">:</span> <span class="n">QuantumScriptOrBatch</span><span class="p">,</span>
+        <span class="n">execution_config</span><span class="p">:</span> <span class="n">ExecutionConfig</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Result</span> <span class="o">|</span> <span class="n">ResultBatch</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Execute circuits with execution config."""</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">execution_config</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2026, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

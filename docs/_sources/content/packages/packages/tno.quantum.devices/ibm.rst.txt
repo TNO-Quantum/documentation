@@ -1,0 +1,8 @@
+devices.ibm
+===========
+
+.. automodule:: tno.quantum.devices.ibm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

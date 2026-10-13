@@ -3,7 +3,7 @@ optimization.qubo
 
 .. raw:: html
 
-   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.2</div>
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">1.0.4</div>
 
 .. automodule:: tno.quantum.optimization.qubo
    :members:
@@ -14,7 +14,7 @@ optimization.qubo
    :maxdepth: 1
 
    preprocessors/main
-   components/main
    postprocessors/main
+   components/main
    solvers/main
 

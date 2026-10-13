@@ -14,6 +14,7 @@
    content/packages/packages/tno.quantum.ml/main
    content/packages/packages/tno.quantum.communication.qkd_key_rate/main
    content/packages/packages/tno.quantum.utils/main
+   content/packages/packages/tno.quantum.devices/main
 
 .. toctree::
    :hidden:
