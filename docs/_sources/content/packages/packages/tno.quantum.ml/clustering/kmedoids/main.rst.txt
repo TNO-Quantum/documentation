@@ -3,7 +3,7 @@ ml.clustering.kmedoids
 
 .. raw:: html
 
-   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.2</div>
+   <div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.3</div>
 
 .. automodule:: tno.quantum.ml.clustering.kmedoids
    :members:

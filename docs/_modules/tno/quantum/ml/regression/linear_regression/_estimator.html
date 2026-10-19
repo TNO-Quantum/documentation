@@ -55,30 +55,30 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/main.html">ml</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../content/packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 </ul>
 </li>
 </ul>
@@ -168,20 +168,13 @@
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">SupportsFloat</span><span class="p">,</span> <span class="n">SupportsInt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">SupportsFloat</span><span class="p">,</span> <span class="n">SupportsInt</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
-
 <span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.components</span><span class="w"> </span><span class="kn">import</span> <span class="n">SerializableEstimator</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.regression.linear_regression._quantum_inspired</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-    <span class="n">compute_ls_probs</span><span class="p">,</span>
-    <span class="n">estimate_lambdas</span><span class="p">,</span>
-    <span class="n">sample_from_b</span><span class="p">,</span>
-    <span class="n">sample_from_x</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.regression.linear_regression._sketching</span><span class="w"> </span><span class="kn">import</span> <span class="n">FKV</span><span class="p">,</span> <span class="n">Halko</span><span class="p">,</span> <span class="n">Sketcher</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">Serializable</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">check_arraylike</span><span class="p">,</span>
@@ -189,6 +182,14 @@
     <span class="n">check_random_state</span><span class="p">,</span>
     <span class="n">check_real</span><span class="p">,</span>
 <span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.regression.linear_regression._quantum_inspired</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">compute_ls_probs</span><span class="p">,</span>
+    <span class="n">estimate_lambdas</span><span class="p">,</span>
+    <span class="n">sample_from_b</span><span class="p">,</span>
+    <span class="n">sample_from_x</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.ml.regression.linear_regression._sketching</span><span class="w"> </span><span class="kn">import</span> <span class="n">FKV</span><span class="p">,</span> <span class="n">Halko</span><span class="p">,</span> <span class="n">Sketcher</span>
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 

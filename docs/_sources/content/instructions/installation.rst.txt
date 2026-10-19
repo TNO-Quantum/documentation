@@ -4,7 +4,7 @@ Installation
 .. role:: bash(code)
    :language: bash
 
-Our packages require Python ≥ 3.10 and are available on 
+Our packages support Python ≥ 3.11 and are available on 
 `PyPi <https://pypi.org/user/TNOQuantum/>`_.
 Each package can be installed by running :bash:`pip install <package-name>`.
 

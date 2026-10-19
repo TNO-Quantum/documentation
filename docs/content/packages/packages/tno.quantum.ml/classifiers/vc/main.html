@@ -28,7 +28,7 @@
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
     <link rel="next" title="ml.classifiers.vc.models" href="models/main.html" />
-    <link rel="prev" title="ml.classifiers" href="../main.html" /> 
+    <link rel="prev" title="ml.classifiers.svm.kernels" href="../svm/kernels.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,30 +58,30 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../main.html">ml</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/main.html">ml.components</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../main.html">ml.classifiers</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ml.classifiers.vc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="models/main.html">ml.classifiers.vc.models</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../svm/kernels.html">ml.classifiers.svm.kernels</a></li>
 </ul>
 </li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models/main.html">ml.classifiers.vc.models</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../clustering/main.html">ml.clustering</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 </ul>
 </li>
 </ul>
@@ -167,7 +167,7 @@
              
   <section id="ml-classifiers-vc">
 <h1>ml.classifiers.vc<a class="headerlink" href="#ml-classifiers-vc" title="Link to this heading"></a></h1>
-<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">3.0.1</div><p id="module-tno.quantum.ml.classifiers.vc">This module implements a variational quantum classifier.</p>
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">3.0.2</div><p id="module-tno.quantum.ml.classifiers.vc">This module implements a variational quantum classifier.</p>
 <p>The classifier is implemented to be consistent with the
 <a class="reference external" href="https://scikit-learn.org/stable/developers/develop.html">scikit-learn estimator API</a>,
 which means that the classifier can be used as any other (binary and multiclass) scikit-learn classifier and
@@ -274,7 +274,7 @@ by PennyLane can be specified by the <cite>backend</cite> keyword:</p>
 <dd><p>Obtain all supported QModels.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[<a class="reference external" href="https://docs.python.org/3/builtins/constants.html#Ellipsis" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>, <a class="reference internal" href="models/main.html#tno.quantum.ml.classifiers.vc.models.QModel" title="tno.quantum.ml.classifiers.vc.models._base.QModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">QModel</span></code></a>]]</span></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callable</span></code></a>[<a class="reference external" href="https://docs.python.org/3/builtins/constants.html#Ellipsis" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>, <a class="reference internal" href="models/main.html#tno.quantum.ml.classifiers.vc.models.QModel" title="tno.quantum.ml.classifiers.vc.models._base.QModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">QModel</span></code></a>]]</span></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dict with all supported quantum models.</p>
@@ -450,7 +450,7 @@ parameters and not others.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../main.html" class="btn btn-neutral float-left" title="ml.classifiers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../svm/kernels.html" class="btn btn-neutral float-left" title="ml.classifiers.svm.kernels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="models/main.html" class="btn btn-neutral float-right" title="ml.classifiers.vc.models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

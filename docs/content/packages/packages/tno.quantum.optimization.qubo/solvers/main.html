@@ -29,8 +29,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="ml" href="../../tno.quantum.ml/main.html" />
-    <link rel="prev" title="optimization.qubo.components" href="../components/main.html" /> 
+    <link rel="next" title="optimization.qubo.preprocessors" href="../preprocessors/main.html" />
+    <link rel="prev" title="optimization.qubo" href="../main.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,30 +60,30 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../main.html">optimization.qubo</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../preprocessors/main.html">optimization.qubo.preprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../postprocessors/main.html">optimization.qubo.postprocessors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/main.html">optimization.qubo.components</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">optimization.qubo.solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preprocessors/main.html">optimization.qubo.preprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessors/main.html">optimization.qubo.postprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.ml/main.html">ml</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/components/main.html">ml.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/classifiers/vc/main.html">ml.classifiers.vc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tno.quantum.ml/classifiers/vc/models/main.html">ml.classifiers.vc.models</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +168,7 @@
              
   <section id="optimization-qubo-solvers">
 <h1>optimization.qubo.solvers<a class="headerlink" href="#optimization-qubo-solvers" title="Link to this heading"></a></h1>
-<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.3</div><p id="module-tno.quantum.optimization.qubo.solvers">This package contains implementations of QUBO <a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.Solver" title="tno.quantum.optimization.qubo.components.Solver"><code class="xref py py-class docutils literal notranslate"><span class="pre">Solver</span></code></a>.</p>
+<div style="font-style: italic; float: right; position: relative; bottom: 50px; color: #555555;">2.0.2</div><p id="module-tno.quantum.optimization.qubo.solvers">This package contains implementations of QUBO <a class="reference internal" href="../components/main.html#tno.quantum.optimization.qubo.components.Solver" title="tno.quantum.optimization.qubo.components.Solver"><code class="xref py py-class docutils literal notranslate"><span class="pre">Solver</span></code></a>.</p>
 <p>The <a class="reference internal" href="#module-tno.quantum.optimization.qubo.solvers" title="tno.quantum.optimization.qubo.solvers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">solvers</span></code></a> package can be installed using pip:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">tno</span><span class="o">.</span><span class="n">quantum</span><span class="o">.</span><span class="n">optimization</span><span class="o">.</span><span class="n">qubo</span><span class="o">.</span><span class="n">solvers</span>
 </pre></div>
@@ -2271,8 +2271,8 @@ additional keyword definitions.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../components/main.html" class="btn btn-neutral float-left" title="optimization.qubo.components" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../tno.quantum.ml/main.html" class="btn btn-neutral float-right" title="ml" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../main.html" class="btn btn-neutral float-left" title="optimization.qubo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../preprocessors/main.html" class="btn btn-neutral float-right" title="optimization.qubo.preprocessors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
