@@ -29,8 +29,8 @@
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="ml.clustering.bkmeans" href="bkmeans/main.html" />
-    <link rel="prev" title="ml.classifiers.vc.models.probability_model" href="../classifiers/vc/models/probability_model.html" /> 
+    <link rel="next" title="ml.clustering.kmedoids" href="kmedoids/main.html" />
+    <link rel="prev" title="ml.regression.linear_regression" href="../regression.linear_regression/main.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,16 +60,13 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../main.html">ml</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../datasets/main.html">ml.datasets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/main.html">ml.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classifiers/main.html">ml.classifiers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
@@ -81,11 +78,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ml.clustering</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="bkmeans/main.html">ml.clustering.bkmeans</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
@@ -123,8 +123,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
@@ -438,8 +438,8 @@ each sample.</p>
 
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="bkmeans/main.html">ml.clustering.bkmeans</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </div>
 </section>
@@ -448,8 +448,8 @@ each sample.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../classifiers/vc/models/probability_model.html" class="btn btn-neutral float-left" title="ml.classifiers.vc.models.probability_model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="bkmeans/main.html" class="btn btn-neutral float-right" title="ml.clustering.bkmeans" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../regression.linear_regression/main.html" class="btn btn-neutral float-left" title="ml.regression.linear_regression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kmedoids/main.html" class="btn btn-neutral float-right" title="ml.clustering.kmedoids" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

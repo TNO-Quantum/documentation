@@ -13,8 +13,8 @@ optimization.qubo
 .. toctree::
    :maxdepth: 1
 
-   solvers/main
-   preprocessors/main
    components/main
+   solvers/main
    postprocessors/main
+   preprocessors/main
 

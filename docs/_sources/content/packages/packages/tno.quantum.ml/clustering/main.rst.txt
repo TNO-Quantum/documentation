@@ -13,6 +13,6 @@ ml.clustering
 .. toctree::
    :maxdepth: 1
 
-   bkmeans/main
    kmedoids/main
+   bkmeans/main
 

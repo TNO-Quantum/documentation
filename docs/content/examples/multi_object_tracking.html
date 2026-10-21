@@ -57,16 +57,13 @@
 <p class="caption" role="heading"><span class="caption-text">Packages</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/main.html">optimization.qubo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/components/main.html">optimization.qubo.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/solvers/main.html">optimization.qubo.solvers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/postprocessors/main.html">optimization.qubo.postprocessors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.optimization.qubo/preprocessors/main.html">optimization.qubo.preprocessors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.ml/main.html">ml</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/main.html">ml.classifiers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/svm/main.html">ml.classifiers.svm</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../packages/packages/tno.quantum.ml/classifiers/svm/kernels.html">ml.classifiers.svm.kernels</a></li>
@@ -78,11 +75,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/components/main.html">ml.components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/regression.linear_regression/main.html">ml.regression.linear_regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/main.html">ml.clustering</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/kmedoids/main.html">ml.clustering.kmedoids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packages/packages/tno.quantum.ml/clustering/bkmeans/main.html">ml.clustering.bkmeans</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/packages/tno.quantum.ml/datasets/main.html">ml.datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../packages/packages/tno.quantum.communication.qkd_key_rate/main.html">communication.qkd_key_rate</a><ul>
@@ -120,8 +120,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/quantum_annealing/datasets/main.html">problems.n_minus_1.quantum_annealing.datasets</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/gate_based/main.html">problems.n_minus_1.gate_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../problems/packages/tno.quantum.problems.n_minus_1/io/main.html">problems.n_minus_1.io</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../problems/packages/tno.quantum.problems.mot/main.html">problems.mot</a><ul>
@@ -248,32 +248,31 @@ the re-id module on top to fix an ID switch.</p>
 <span class="linenos">23</span>    <span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">files</span><span class="p">(</span><span class="s2">"ultralytics.cfg"</span><span class="p">)</span> <span class="o">/</span> <span class="s2">"trackers"</span> <span class="o">/</span> <span class="s2">"botsort.yaml"</span>
 <span class="linenos">24</span><span class="p">)</span>
 <span class="linenos">25</span><span class="n">cfg</span> <span class="o">=</span> <span class="n">IterableSimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">YAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">tracker_path</span><span class="p">))</span>
-<span class="linenos">26</span><span class="n">tracker</span> <span class="o">=</span> <span class="n">BOTSORT</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">frame_rate</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="linenos">26</span><span class="n">tracker</span> <span class="o">=</span> <span class="n">BOTSORT</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
 <span class="linenos">27</span><span class="n">detections</span> <span class="o">=</span> <span class="n">ultralytics_track</span><span class="p">(</span><span class="n">detections</span><span class="p">,</span> <span class="n">tracker</span><span class="p">)</span>
 <span class="linenos">28</span>
 <span class="linenos">29</span><span class="c1"># Select a snippet that contains an ID loss</span>
-<span class="linenos">30</span><span class="n">first_frame</span> <span class="o">=</span> <span class="mi">253</span>  <span class="c1"># some frame</span>
-<span class="linenos">31</span><span class="n">last_frame</span> <span class="o">=</span> <span class="n">first_frame</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="linenos">30</span><span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
+<span class="linenos">31</span><span class="n">first_frame</span><span class="p">,</span> <span class="n">last_frame</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">pick_sequences</span><span class="p">(</span><span class="n">detections</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="linenos">32</span><span class="n">detections_snippet</span> <span class="o">=</span> <span class="n">detections</span><span class="p">[</span><span class="n">first_frame</span><span class="p">:</span><span class="n">last_frame</span><span class="p">]</span>
-<span class="linenos">33</span><span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
-<span class="linenos">34</span><span class="n">reid_detections_snippet</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_classic</span><span class="p">(</span><span class="n">detections_snippet</span><span class="p">)</span>
-<span class="linenos">35</span>
-<span class="linenos">36</span><span class="c1"># Create visualization</span>
-<span class="linenos">37</span><span class="n">video_path</span> <span class="o">=</span> <span class="s2">"path/to/video"</span>
-<span class="linenos">38</span><span class="n">make_gif_with_detections</span><span class="p">(</span>
-<span class="linenos">39</span>    <span class="n">detections_snippet</span><span class="p">,</span>
-<span class="linenos">40</span>    <span class="n">input_filename</span><span class="o">=</span><span class="n">video_path</span><span class="p">,</span>
-<span class="linenos">41</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">"before.gif"</span><span class="p">,</span>
-<span class="linenos">42</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-<span class="linenos">43</span>    <span class="n">first_frame</span><span class="o">=</span><span class="n">first_frame</span><span class="p">,</span>
-<span class="linenos">44</span><span class="p">)</span>
-<span class="linenos">45</span><span class="n">make_gif_with_detections</span><span class="p">(</span>
-<span class="linenos">46</span>    <span class="n">reid_detections_snippet</span><span class="p">,</span>
-<span class="linenos">47</span>    <span class="n">input_filename</span><span class="o">=</span><span class="n">video_path</span><span class="p">,</span>
-<span class="linenos">48</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">"after.gif"</span><span class="p">,</span>
-<span class="linenos">49</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-<span class="linenos">50</span>    <span class="n">first_frame</span><span class="o">=</span><span class="n">first_frame</span><span class="p">,</span>
-<span class="linenos">51</span><span class="p">)</span>
+<span class="linenos">33</span><span class="n">reid_detections_snippet</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_classic</span><span class="p">(</span><span class="n">detections_snippet</span><span class="p">)</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="c1"># Create visualization</span>
+<span class="linenos">36</span><span class="n">video_path</span> <span class="o">=</span> <span class="s2">"path/to/video"</span>
+<span class="linenos">37</span><span class="n">make_gif_with_detections</span><span class="p">(</span>
+<span class="linenos">38</span>    <span class="n">detections_snippet</span><span class="p">,</span>
+<span class="linenos">39</span>    <span class="n">input_filename</span><span class="o">=</span><span class="n">video_path</span><span class="p">,</span>
+<span class="linenos">40</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">"before.gif"</span><span class="p">,</span>
+<span class="linenos">41</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="linenos">42</span>    <span class="n">first_frame</span><span class="o">=</span><span class="n">first_frame</span><span class="p">,</span>
+<span class="linenos">43</span><span class="p">)</span>
+<span class="linenos">44</span><span class="n">make_gif_with_detections</span><span class="p">(</span>
+<span class="linenos">45</span>    <span class="n">reid_detections_snippet</span><span class="p">,</span>
+<span class="linenos">46</span>    <span class="n">input_filename</span><span class="o">=</span><span class="n">video_path</span><span class="p">,</span>
+<span class="linenos">47</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">"after.gif"</span><span class="p">,</span>
+<span class="linenos">48</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="linenos">49</span>    <span class="n">first_frame</span><span class="o">=</span><span class="n">first_frame</span><span class="p">,</span>
+<span class="linenos">50</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -285,37 +284,50 @@ the re-id module on top to fix an ID switch.</p>
 <p>Instead of selecting a frame sequence manually, use the <cite>pick_sequences</cite> method
 to find frame sequences where an ID loss or ID switch is suspected.</p>
 <div class="toggle docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-<span class="linenos"> 3</span>    <span class="n">DetectionSequence</span><span class="p">,</span>
-<span class="linenos"> 4</span>    <span class="n">FlowReID</span><span class="p">,</span>
-<span class="linenos"> 5</span><span class="p">)</span>
-<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-<span class="linenos"> 7</span>    <span class="n">make_video_with_detections</span><span class="p">,</span>
-<span class="linenos"> 8</span><span class="p">)</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="c1"># Load detections from CSV file</span>
-<span class="linenos">11</span><span class="n">detections_csv_path</span> <span class="o">=</span> <span class="s2">"path/to/detections.csv"</span>
-<span class="linenos">12</span><span class="n">detections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">detections_csv_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="linenos">13</span><span class="n">detections</span> <span class="o">=</span> <span class="n">DetectionSequence</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span><span class="c1"># Pick sequences</span>
-<span class="linenos">16</span><span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
-<span class="linenos">17</span><span class="n">sequences</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">pick_sequences</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
-<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span>
-<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span><span class="si">}</span><span class="s2"> frame sequences for re-id."</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">importlib.resources</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">ultralytics.trackers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BOTSORT</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">ultralytics.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">YAML</span><span class="p">,</span> <span class="n">IterableSimpleNamespace</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 8</span>    <span class="n">DetectionSequence</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="n">FlowReID</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="n">ultralytics_track</span><span class="p">,</span>
+<span class="linenos">11</span><span class="p">)</span>
+<span class="linenos">12</span><span class="kn">from</span><span class="w"> </span><span class="nn">tno.quantum.problems.mot.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">13</span>    <span class="n">make_video_with_detections</span><span class="p">,</span>
+<span class="linenos">14</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Load detections from CSV file</span>
+<span class="linenos">17</span><span class="n">detections_csv_path</span> <span class="o">=</span> <span class="s2">"path/to/detections.csv"</span>
+<span class="linenos">18</span><span class="n">detections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">detections_csv_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">19</span><span class="n">detections</span> <span class="o">=</span> <span class="n">DetectionSequence</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
 <span class="linenos">20</span>
-<span class="linenos">21</span><span class="c1"># To run re-id continuously on each of the detected sequences, use</span>
-<span class="linenos">22</span><span class="c1"># run_continuous_reid.</span>
-<span class="linenos">23</span><span class="n">reid_detections</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_continuous_reid</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
-<span class="linenos">24</span>
-<span class="linenos">25</span><span class="c1"># Save the video after re-id</span>
-<span class="linenos">26</span><span class="n">make_video_with_detections</span><span class="p">(</span>
-<span class="linenos">27</span>    <span class="n">reid_detections</span><span class="p">,</span>
-<span class="linenos">28</span>    <span class="n">input_filename</span><span class="o">=</span><span class="s2">"example_video.avi"</span><span class="p">,</span>
-<span class="linenos">29</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">"after.avi"</span><span class="p">,</span>
-<span class="linenos">30</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-<span class="linenos">31</span><span class="p">)</span>
+<span class="linenos">21</span><span class="c1"># Run ultralytics tracking algorithm; pick_sequences needs track IDs</span>
+<span class="linenos">22</span><span class="n">tracker_path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+<span class="linenos">23</span>    <span class="n">importlib</span><span class="o">.</span><span class="n">resources</span><span class="o">.</span><span class="n">files</span><span class="p">(</span><span class="s2">"ultralytics.cfg"</span><span class="p">)</span> <span class="o">/</span> <span class="s2">"trackers"</span> <span class="o">/</span> <span class="s2">"botsort.yaml"</span>
+<span class="linenos">24</span><span class="p">)</span>
+<span class="linenos">25</span><span class="n">cfg</span> <span class="o">=</span> <span class="n">IterableSimpleNamespace</span><span class="p">(</span><span class="o">**</span><span class="n">YAML</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">tracker_path</span><span class="p">))</span>
+<span class="linenos">26</span><span class="n">detections</span> <span class="o">=</span> <span class="n">ultralytics_track</span><span class="p">(</span><span class="n">detections</span><span class="p">,</span> <span class="n">BOTSORT</span><span class="p">(</span><span class="n">cfg</span><span class="p">))</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1"># Pick sequences</span>
+<span class="linenos">29</span><span class="n">flow_reid_obj</span> <span class="o">=</span> <span class="n">FlowReID</span><span class="p">()</span>
+<span class="linenos">30</span><span class="n">sequences</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">pick_sequences</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
+<span class="linenos">31</span><span class="nb">print</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span>
+<span class="linenos">32</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span><span class="si">}</span><span class="s2"> frame sequences for re-id."</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="c1"># To run re-id continuously on each of the detected sequences, use</span>
+<span class="linenos">35</span><span class="c1"># run_continuous_reid.</span>
+<span class="linenos">36</span><span class="n">reid_detections</span> <span class="o">=</span> <span class="n">flow_reid_obj</span><span class="o">.</span><span class="n">run_continuous_reid</span><span class="p">(</span><span class="n">detections</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="c1"># Save the video after re-id</span>
+<span class="linenos">39</span><span class="n">make_video_with_detections</span><span class="p">(</span>
+<span class="linenos">40</span>    <span class="n">reid_detections</span><span class="p">,</span>
+<span class="linenos">41</span>    <span class="n">input_filename</span><span class="o">=</span><span class="s2">"path/to/video"</span><span class="p">,</span>
+<span class="linenos">42</span>    <span class="n">output_filename</span><span class="o">=</span><span class="s2">"after.avi"</span><span class="p">,</span>
+<span class="linenos">43</span>    <span class="n">fps</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+<span class="linenos">44</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
