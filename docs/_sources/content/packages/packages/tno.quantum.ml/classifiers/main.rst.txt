@@ -13,6 +13,6 @@ ml.classifiers
 .. toctree::
    :maxdepth: 1
 
-   svm/main
    vc/main
+   svm/main
 

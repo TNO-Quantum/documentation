@@ -14,7 +14,7 @@ optimization.qubo
    :maxdepth: 1
 
    components/main
-   solvers/main
    postprocessors/main
    preprocessors/main
+   solvers/main
 
